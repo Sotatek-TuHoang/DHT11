@@ -1,0 +1,5 @@
+
+                            frame header version    command word    data length     data        checksum
+                            3bytes                  1bytes          2byte           2 bytes     1byte
+Module send/report          0x55 0xaa 0x00          ID1 (TBD)       00 02           00 xx       CHS 
+serial uart report/send     0x55 0xaa 0x00          ID2 (TBD)       00 02           00 xx       CHS
