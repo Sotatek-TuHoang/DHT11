@@ -26,16 +26,25 @@
 #include "driver/uart.h"
 #include "nvs_flash.h"
 #include "nvs.h"
+#include "esp_wifi.h"
 #include <string.h>
 #include "nvs_function.h"
 #include "uart_function.h"
-
+#include "wifi_function.h"
+#include "button.h"
 /****************************************************************************/
 /***        Macro Definitions                                             ***/
 /****************************************************************************/
 #define DHT11_PIN               GPIO_NUM_4
-#define SEND_DATA_BUTTON        GPIO_NUM_32
-#define INTERVAL_BUTTON         GPIO_NUM_33
+
+#define LED_TEMPE_RED_PIN       GPIO_NUM_12
+#define LED_TEMPE_GREEN_PIN     GPIO_NUM_13
+#define LED_TEMPE_BLUE_PIN      GPIO_NUM_14
+
+#define LED_HUMI_RED_PIN        GPIO_NUM_25
+#define LED_HUMI_GREEN_PIN      GPIO_NUM_26
+#define LED_HUMI_BLUE_PIN       GPIO_NUM_27
+
 #define H_tempe_threshold       30
 #define L_tempe_threshold       25
 #define H_humi_threshold        80
@@ -44,110 +53,47 @@
 /****************************************************************************/
 /***        Type Definitions                                              ***/
 /****************************************************************************/
-bool send_data = true; // Flag control on/off upload data throught uart
-uint32_t data_interval = 2000; // Deffault interval upload data
+bool        bsend_data = true; // Flag control on/off upload data throught uart
+uint32_t    u32data_interval = 2000; // Deffault interval upload data
 
 /****************************************************************************/
 /***        Handle                                                        ***/
 /****************************************************************************/
-QueueHandle_t send_data_evt_queue = NULL;
-QueueHandle_t interval_evt_queue = NULL;
-QueueHandle_t uart_queue;
-TaskHandle_t uart_send_data_task_handle;
+QueueHandle_t   send_data_evt_queue = NULL;
+QueueHandle_t   interval_evt_queue = NULL;
+QueueHandle_t   uart_queue;
+TaskHandle_t    uart_send_data_task_handle;
 
 /****************************************************************************/
-/***        Function                                                      ***/
+/***        List of Function                                              ***/
 /****************************************************************************/
 
-//**********************************************************************************
 void led_control_task(void* parameter);
 void uart_send_data_task(void* parameter);
 void uart_cmd_task(void* parameter);
-
-static void IRAM_ATTR send_data_button_isr_handler(void* arg)
-{
-    uint32_t gpio_num = (uint32_t)arg;
-    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-    xQueueSendFromISR(send_data_evt_queue, &gpio_num, &xHigherPriorityTaskWoken);
-    if (xHigherPriorityTaskWoken)
-    {
-        portYIELD_FROM_ISR();
-    }
-}
-
-static void IRAM_ATTR interval_button_isr_handler(void* arg)
-{
-    uint32_t gpio_num = (uint32_t)arg;
-    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-    xQueueSendFromISR(interval_evt_queue, &gpio_num, &xHigherPriorityTaskWoken);
-    if (xHigherPriorityTaskWoken)
-    {
-        portYIELD_FROM_ISR();
-    }
-}
-
-/** @brief Button control upload data to Host
- */
-static void send_data_button(void* arg)
-{
-    uint32_t gpio_num;
-    for (;;) {
-        if (xQueueReceive(send_data_evt_queue, &gpio_num, portMAX_DELAY))
-        {
-            send_data = !send_data;
-            save_data_to_nvs(send_data, data_interval);
-        }
-    }
-}
-
-/** @brief Button control upload interval to Host
- */
-static void interval_button(void* arg)
-{
-    uint32_t gpio_num;
-    for (;;) {
-        if (xQueueReceive(interval_evt_queue, &gpio_num, portMAX_DELAY))
-        {
-            if (data_interval == 2000)
-            {
-                data_interval = 5000;  // Change to every 5 secends
-            }
-            else if (data_interval == 5000)
-            {
-                data_interval = 10000;  // Change to every 5 secends
-            }
-            else if (data_interval == 10000)
-            {
-                data_interval = 2000;  // Change to every 10 secends
-            }
-            else {}
-            save_data_to_nvs(send_data, data_interval);
-        }
-    }
-}
+static void send_data_button(void* arg);
+static void interval_button(void* arg);
+/****************************************************************************/
 
 /** @brief Caculate Checksum
  */
 char calculate_checksum(const char *data, size_t length) {
-    uint8_t checksum = 0;
+    uint8_t u8checksum = 0;
     for (size_t i = 0; i < length; i++)
     {
-        checksum += data[i];
+        u8checksum += data[i];
     }
-    checksum %= 0x100;
-    return checksum;
+    u8checksum %= 0x100;
+    return u8checksum;
 }
 
 void app_main()
 {
-    esp_err_t err = nvs_flash_init(); // Initialize NVS
-    if (err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND)
-    {
-    ESP_ERROR_CHECK(nvs_flash_erase());
-    err = nvs_flash_init();
-    }
-    ESP_ERROR_CHECK( err );
-    load_data_from_nvs(&send_data, &data_interval); // Read status from NVS
+    nvs_flash_init(); // Initialize NVS
+
+    load_data_from_nvs(&bsend_data, &u32data_interval); // Read status from NVS
+
+    wifi_init_sta();
 
     DHT11_init(DHT11_PIN); //Initialize DHT11
 
@@ -155,22 +101,8 @@ void app_main()
     led_rgb_init(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN);
 
     uart_init(); //Initialize uart
-
-    gpio_install_isr_service(0);
-    gpio_isr_handler_add(SEND_DATA_BUTTON, send_data_button_isr_handler, (void*) SEND_DATA_BUTTON);
-    gpio_isr_handler_add(INTERVAL_BUTTON, interval_button_isr_handler, (void*) INTERVAL_BUTTON);
-
-    esp_rom_gpio_pad_select_gpio(SEND_DATA_BUTTON);
-    esp_rom_gpio_pad_select_gpio(INTERVAL_BUTTON);
-
-    gpio_set_direction(SEND_DATA_BUTTON, GPIO_MODE_INPUT);
-    gpio_set_pull_mode(SEND_DATA_BUTTON, GPIO_PULLUP_ONLY);
-
-    gpio_set_direction(INTERVAL_BUTTON, GPIO_MODE_INPUT);
-    gpio_set_pull_mode(INTERVAL_BUTTON, GPIO_PULLUP_ONLY);
-
-    gpio_set_intr_type(SEND_DATA_BUTTON, GPIO_INTR_POSEDGE);
-    gpio_set_intr_type(INTERVAL_BUTTON, GPIO_INTR_POSEDGE);
+    
+    button_init();
 
     send_data_evt_queue = xQueueCreate(10, sizeof(uint32_t));
     interval_evt_queue = xQueueCreate(10, sizeof(uint32_t));
@@ -186,8 +118,8 @@ void app_main()
         if (reading.status == DHT11_OK)
         {
             printf("Temperature: %u C\nHumidity: %u%%\n", reading.temperature, reading.humidity);
-            printf("Data send: %s\n", send_data ? "Enabled" : "Disabled");
-            printf("Interval: %lu\n", data_interval);
+            printf("Data send: %s\n", bsend_data ? "Enabled" : "Disabled");
+            printf("Interval: %lu\n", u32data_interval);
         }
         else
         {
@@ -197,6 +129,51 @@ void app_main()
     }
 }
 
+/****************************************************************************/
+/***       Function                                                       ***/
+/****************************************************************************/
+
+/** @brief Button control upload data to Host
+ */
+static void send_data_button(void* arg)
+{
+    uint32_t gpio_num;
+    for (;;) {
+        if (xQueueReceive(send_data_evt_queue, &gpio_num, portMAX_DELAY))
+        {
+            bsend_data = !bsend_data;
+            save_data_to_nvs(bsend_data, u32data_interval);
+        }
+    }
+}
+
+/** @brief Button control upload interval to Host
+ */
+static void interval_button(void* arg)
+{
+    uint32_t gpio_num;
+    for (;;) {
+        if (xQueueReceive(interval_evt_queue, &gpio_num, portMAX_DELAY))
+        {
+            if (u32data_interval == 2000)
+            {
+                u32data_interval = 5000;  // Change to every 5 secends
+            }
+            else if (u32data_interval == 5000)
+            {
+                u32data_interval = 10000;  // Change to every 5 secends
+            }
+            else if (u32data_interval == 10000)
+            {
+                u32data_interval = 2000;  // Change to every 10 secends
+            }
+            else {}
+            save_data_to_nvs(bsend_data, u32data_interval);
+        }
+    }
+}
+
+
 /** @brief Control module from Host main througt UART
  */
 void uart_cmd_task(void* parameter)
@@ -205,7 +182,7 @@ void uart_cmd_task(void* parameter)
     char* uart_data_recei = (char*)malloc(9 * RD_BUF_SIZE);
     uint8_t HeaderHiByte_cmd        = 0x55;
     uint8_t HeaderLoByte_cmd        = 0xAA;
-    uint8_t Ver_cmd                 = 0x01;
+    uint8_t Ver_cmd                 = 0x02;
     uint8_t Id_SendData             = 0x03;
     uint8_t LoByteData_SendData     = 0x01;
     uint8_t Id_interval             = 0x04;
@@ -227,23 +204,23 @@ void uart_cmd_task(void* parameter)
                 {     
                     if ((uart_data_recei[3] == Id_SendData) && (uart_data_recei[7] == LoByteData_SendData))
                     {
-                        send_data = !send_data;
-                        save_data_to_nvs(send_data, data_interval);
+                        bsend_data = !bsend_data;
+                        save_data_to_nvs(bsend_data, u32data_interval);
                     }
                     else if ((uart_data_recei[3] == Id_interval) && (uart_data_recei[7] == LoByteData_interval_2s))
                     {
-                        data_interval = 2000;
-                        save_data_to_nvs(send_data, data_interval);
+                        u32data_interval = 2000;
+                        save_data_to_nvs(bsend_data, u32data_interval);
                     }
                     else if ((uart_data_recei[3] == Id_interval) && (uart_data_recei[7] == LoByteData_interval_5s))
                     {
-                        data_interval = 5000;
-                        save_data_to_nvs(send_data, data_interval);
+                        u32data_interval = 5000;
+                        save_data_to_nvs(bsend_data, u32data_interval);
                     }
                     else if ((uart_data_recei[3] == Id_interval) && (uart_data_recei[7] == LoByteData_interval_10s))
                     {
-                        data_interval = 10000;
-                        save_data_to_nvs(send_data, data_interval);
+                        u32data_interval = 10000;
+                        save_data_to_nvs(bsend_data, u32data_interval);
                     }
                 }
             }  
@@ -279,12 +256,14 @@ void uart_send_data_task(void* parameter)
     uint8_t LoByteData_Humi     = 0x00;
     uint8_t Chs_Humi            = 0x00;
 
-    char uart_data_tempe[9] = {HeaderHiByte_Tempe, HeaderLoByte_Tempe, Ver_Tempe, Id_Tempe, LeHiByteData_Tempe, LeLoByteData_Tempe, HiByteData_Tempe, LoByteData_Tempe, Chs_Tempe};
-    char uart_data_humi[9] = {HeaderHiByte_Humi, HeaderLoByte_Humi, Ver_Humi, Id_Humi, LeHiByteData_Humi, LeLoByteData_Humi, HiByteData_Humi, LoByteData_Humi, Chs_Humi};
+    char uart_data_tempe[9] = {HeaderHiByte_Tempe, HeaderLoByte_Tempe, Ver_Tempe, Id_Tempe,
+     LeHiByteData_Tempe, LeLoByteData_Tempe, HiByteData_Tempe, LoByteData_Tempe, Chs_Tempe};
+    char uart_data_humi[9] = {HeaderHiByte_Humi, HeaderLoByte_Humi, Ver_Humi, Id_Humi,
+     LeHiByteData_Humi, LeLoByteData_Humi, HiByteData_Humi, LoByteData_Humi, Chs_Humi};
     for (;;)
     {
         struct dht11_reading reading = DHT11_read();
-        if (reading.status == DHT11_OK && send_data)
+        if (reading.status == DHT11_OK && bsend_data)
         { 
             snprintf(tempe_hex, sizeof(tempe_hex), "%02X", reading.temperature);
             uart_data_tempe[7] = LoByteData_Tempe = strtol(tempe_hex, NULL, 16);
@@ -296,7 +275,7 @@ void uart_send_data_task(void* parameter)
             uart_data_humi[8] = Chs_Humi = calculate_checksum((char*)uart_data_humi, 8);
             uart_write_bytes(UART_NUM, uart_data_humi, sizeof(uart_data_humi));
         }
-        vTaskDelay(data_interval / portTICK_PERIOD_MS);
+        vTaskDelay(u32data_interval / portTICK_PERIOD_MS);
     }
 }
 
@@ -310,31 +289,36 @@ void led_control_task(void* parameter)
         if (reading.status == DHT11_OK)
         {
             // Warning temperature
-            if (reading.temperature > H_tempe_threshold)
+            if (reading.temperature > H_tempe_threshold) // LED Temp turning red if high temperature
             {
                 led_rgb_set_color(LED_TEMPE_RED_PIN, LED_TEMPE_GREEN_PIN, LED_TEMPE_BLUE_PIN, 1, 0, 0);
             }
-            else if (reading.temperature < L_tempe_threshold)
+            else if (reading.temperature < L_tempe_threshold) // LED Temp turning white if high temperature
             {
                 led_rgb_set_color(LED_TEMPE_RED_PIN, LED_TEMPE_GREEN_PIN, LED_TEMPE_BLUE_PIN, 1, 1, 1);
             }
-            else
+            else //// LED Temp turning green if good temperature
             {
                 led_rgb_set_color(LED_TEMPE_RED_PIN, LED_TEMPE_GREEN_PIN, LED_TEMPE_BLUE_PIN, 0, 1, 0);
             }
             // Warning humidity
-            if (reading.humidity > H_humi_threshold)
+            if (reading.humidity > H_humi_threshold) // LED HUmi turning blue when high humidity
             {
                 led_rgb_set_color(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN, 0, 0, 1);
             }
-            else if (reading.humidity < L_humi_threshold)
+            else if (reading.humidity < L_humi_threshold) // LED HUmi turning yellow when high humidity
             {
                 led_rgb_set_color(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN, 1, 1, 0);
             }
-            else
+            else // LED Humi turning green when good humidity
             {
                 led_rgb_set_color(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN, 0, 1, 0);
             }
+        }
+        else // both led turning off if cant read status form dht11
+        {
+            led_rgb_set_color(LED_TEMPE_RED_PIN, LED_TEMPE_GREEN_PIN, LED_TEMPE_BLUE_PIN, 0, 0, 0);
+            led_rgb_set_color(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN, 0, 0, 0);
         }
         vTaskDelay(2000 / portTICK_PERIOD_MS);
     }
