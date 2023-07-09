@@ -11,6 +11,14 @@
 #ifndef LED_RGB_H
 #define LED_RGB_H
 
+#define LED_TEMPE_RED_PIN       GPIO_NUM_12
+#define LED_TEMPE_GREEN_PIN     GPIO_NUM_13
+#define LED_TEMPE_BLUE_PIN      GPIO_NUM_14
+
+#define LED_HUMI_RED_PIN        GPIO_NUM_25
+#define LED_HUMI_GREEN_PIN      GPIO_NUM_26
+#define LED_HUMI_BLUE_PIN       GPIO_NUM_27
+
 #include "driver/gpio.h"
 
 

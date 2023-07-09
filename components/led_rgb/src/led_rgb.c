@@ -10,6 +10,19 @@
 /****************************************************************************/
 #include "led_rgb.h"
 #include "driver/gpio.h"
+#include "dht11.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/queue.h"
+
+#define H_tempe_threshold       30
+#define L_tempe_threshold       25
+#define H_humi_threshold        80
+#define L_humi_threshold        60
+
+extern uint8_t     u8status;
+extern uint8_t     u8temp;
+extern uint8_t     u8humi;
 
 void led_rgb_init(gpio_num_t red_pin, gpio_num_t green_pin, gpio_num_t blue_pin) {
     esp_rom_gpio_pad_select_gpio(red_pin);
@@ -24,4 +37,48 @@ void led_rgb_set_color(gpio_num_t red_pin, gpio_num_t green_pin, gpio_num_t blue
     gpio_set_level(red_pin, red);
     gpio_set_level(green_pin, green);
     gpio_set_level(blue_pin, blue);
+}
+
+/** @brief warning by led rgb
+ */
+void led_control_task(void* parameter)
+{
+    for (;;)
+    {
+        if (u8status == DHT11_OK)
+        {
+            // Warning temperature
+            if (u8temp > H_tempe_threshold) // LED Temp turning red if high temperature
+            {
+                led_rgb_set_color(LED_TEMPE_RED_PIN, LED_TEMPE_GREEN_PIN, LED_TEMPE_BLUE_PIN, 1, 0, 0);
+            }
+            else if (u8temp < L_tempe_threshold) // LED Temp turning white if high temperature
+            {
+                led_rgb_set_color(LED_TEMPE_RED_PIN, LED_TEMPE_GREEN_PIN, LED_TEMPE_BLUE_PIN, 1, 1, 1);
+            }
+            else //// LED Temp turning green if good temperature
+            {
+                led_rgb_set_color(LED_TEMPE_RED_PIN, LED_TEMPE_GREEN_PIN, LED_TEMPE_BLUE_PIN, 0, 1, 0);
+            }
+            // Warning humidity
+            if (u8humi > H_humi_threshold) // LED HUmi turning blue when high humidity
+            {
+                led_rgb_set_color(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN, 0, 0, 1);
+            }
+            else if (u8humi < L_humi_threshold) // LED HUmi turning yellow when high humidity
+            {
+                led_rgb_set_color(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN, 1, 1, 0);
+            }
+            else // LED Humi turning green when good humidity
+            {
+                led_rgb_set_color(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN, 0, 1, 0);
+            }
+        }
+        else // both led turning off if cant read status form dht11
+        {
+            led_rgb_set_color(LED_TEMPE_RED_PIN, LED_TEMPE_GREEN_PIN, LED_TEMPE_BLUE_PIN, 0, 0, 0);
+            led_rgb_set_color(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN, 0, 0, 0);
+        }
+        vTaskDelay(2000 / portTICK_PERIOD_MS);
+    }
 }

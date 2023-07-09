@@ -14,6 +14,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+void nvs_flash_function_init();
 void save_data_to_nvs(bool bsend_data, uint32_t u32data_interval);
 void load_data_from_nvs(bool* bsend_data, uint32_t* u32data_interval);
 

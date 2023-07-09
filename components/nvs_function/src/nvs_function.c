@@ -18,6 +18,17 @@
 #define NVS_SEND_DATA           "send_data"
 #define NVS_INTERVAL            "data_interval"
 
+void nvs_flash_function_init()
+{
+    esp_err_t err = nvs_flash_init(); // Initialize NVS
+    if (err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND)
+    {
+    ESP_ERROR_CHECK(nvs_flash_erase());
+    err = nvs_flash_init();
+    }
+    ESP_ERROR_CHECK( err );
+}
+
 void save_data_to_nvs(bool bsend_data, uint32_t u32data_interval)
 {
     nvs_handle_t nvs_handle;
