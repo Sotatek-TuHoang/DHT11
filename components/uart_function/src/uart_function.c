@@ -15,7 +15,7 @@
 #include <string.h>
 
 #include "uart_function.h"
-#include "nvs_function.h"
+#include "bee_nvs.h"
 #include "dht11.h"
 
 extern QueueHandle_t uart_queue;

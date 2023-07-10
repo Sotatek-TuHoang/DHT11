@@ -4,6 +4,7 @@
     "cmake.configureOnOpen": false,
     "files.associations": {
         "string.h": "c",
-        "button.h": "c"
+        "button.h": "c",
+        "uart_function.h": "c"
     }
 }

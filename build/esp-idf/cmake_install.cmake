@@ -399,7 +399,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("E:/Team1.Temperate-and-Humidity/build/esp-idf/button/cmake_install.cmake")
+  include("E:/Team1.Temperate-and-Humidity/build/esp-idf/bee_button/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/Team1.Temperate-and-Humidity/build/esp-idf/bee_nvs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -410,11 +415,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("E:/Team1.Temperate-and-Humidity/build/esp-idf/led_rgb/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("E:/Team1.Temperate-and-Humidity/build/esp-idf/nvs_function/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

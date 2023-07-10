@@ -29,7 +29,7 @@
 
 #include "dht11.h"
 #include "led_rgb.h"
-#include "nvs_function.h"
+#include "bee_nvs.h"
 #include "uart_function.h"
 #include "wifi_function.h"
 #include "bee_button.h"

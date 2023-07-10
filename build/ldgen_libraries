@@ -60,9 +60,9 @@ E:/Team1.Temperate-and-Humidity/build/esp-idf/ssd1306/libssd1306.a
 E:/Team1.Temperate-and-Humidity/build/esp-idf/ulp/libulp.a
 E:/Team1.Temperate-and-Humidity/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 E:/Team1.Temperate-and-Humidity/build/esp-idf/main/libmain.a
-E:/Team1.Temperate-and-Humidity/build/esp-idf/button/libbutton.a
+E:/Team1.Temperate-and-Humidity/build/esp-idf/bee_button/libbee_button.a
+E:/Team1.Temperate-and-Humidity/build/esp-idf/bee_nvs/libbee_nvs.a
 E:/Team1.Temperate-and-Humidity/build/esp-idf/dht11/libdht11.a
 E:/Team1.Temperate-and-Humidity/build/esp-idf/led_rgb/libled_rgb.a
-E:/Team1.Temperate-and-Humidity/build/esp-idf/nvs_function/libnvs_function.a
 E:/Team1.Temperate-and-Humidity/build/esp-idf/uart_function/libuart_function.a
 E:/Team1.Temperate-and-Humidity/build/esp-idf/wifi_function/libwifi_function.a
