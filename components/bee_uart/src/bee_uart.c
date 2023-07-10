@@ -18,12 +18,12 @@
 #include "bee_nvs.h"
 #include "dht11.h"
 
-extern QueueHandle_t uart_queue;
-extern uint8_t     u8status;
-extern uint8_t     u8temp;
-extern uint8_t     u8humi;
-extern bool        bsend_data;
-extern uint32_t    u32data_interval;
+extern QueueHandle_t    uart_queue;
+extern uint8_t          u8status;
+extern uint8_t          u8temp;
+extern uint8_t          u8humi;
+extern bool             bsend_data;
+extern uint32_t         u32data_interval;
 
 void uart_init()
 {
@@ -89,6 +89,7 @@ void uart_send_data_task(void* parameter)
      LeHiByteData_Humi, LeLoByteData_Humi, HiByteData_Humi, LoByteData_Humi, Chs_Humi};
     for (;;)
     {
+        interval_send = pdMS_TO_TICKS(u32data_interval);
         if ((xTaskGetTickCount() - last_time_send) >= interval_send)
         {
             last_time_send = xTaskGetTickCount();
@@ -105,7 +106,7 @@ void uart_send_data_task(void* parameter)
                 uart_write_bytes(UART_NUM, uart_data_humi, sizeof(uart_data_humi));
             }
         }
-        vTaskDelay(160 / portTICK_PERIOD_MS);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
 
