@@ -11,6 +11,8 @@
 #ifndef DHT11_H_
 #define DHT11_H_
 
+#define DHT11_PIN               GPIO_NUM_4
+
 #include "driver/gpio.h"
 
 enum dht11_status {

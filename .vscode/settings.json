@@ -6,6 +6,7 @@
         "string.h": "c",
         "button.h": "c",
         "uart_function.h": "c",
-        "bee_wifi.h": "c"
+        "bee_wifi.h": "c",
+        "inttypes.h": "c"
     }
 }
