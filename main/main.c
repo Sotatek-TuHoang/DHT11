@@ -28,10 +28,10 @@
 #include "esp_wifi.h"
 
 #include "dht11.h"
-#include "led_rgb.h"
+#include "bee_led_rgb.h"
 #include "bee_nvs.h"
-#include "uart_function.h"
-#include "wifi_function.h"
+#include "bee_uart.h"
+#include "bee_wifi.h"
 #include "bee_button.h"
 /****************************************************************************/
 /***        Macro Definitions                                             ***/
