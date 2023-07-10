@@ -9,7 +9,7 @@ E:/Team1.Temperate-and-Humidity/build/CMakeFiles/monitor.dir
 E:/Team1.Temperate-and-Humidity/build/CMakeFiles/flash.dir
 E:/Team1.Temperate-and-Humidity/build/CMakeFiles/encrypted-flash.dir
 E:/Team1.Temperate-and-Humidity/build/CMakeFiles/_project_elf_src.dir
-E:/Team1.Temperate-and-Humidity/build/CMakeFiles/main.elf.dir
+E:/Team1.Temperate-and-Humidity/build/CMakeFiles/bee_main.elf.dir
 E:/Team1.Temperate-and-Humidity/build/CMakeFiles/size.dir
 E:/Team1.Temperate-and-Humidity/build/CMakeFiles/size-files.dir
 E:/Team1.Temperate-and-Humidity/build/CMakeFiles/size-components.dir

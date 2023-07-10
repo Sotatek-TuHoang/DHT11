@@ -79,6 +79,6 @@ void led_control_task(void* parameter)
             led_rgb_set_color(LED_TEMPE_RED_PIN, LED_TEMPE_GREEN_PIN, LED_TEMPE_BLUE_PIN, 0, 0, 0);
             led_rgb_set_color(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN, 0, 0, 0);
         }
-        vTaskDelay(2000 / portTICK_PERIOD_MS);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
