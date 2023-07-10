@@ -50,6 +50,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
         ESP_LOGI(TAG_WIFI, "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
         xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
     }
+    vTaskDelay(100 / portTICK_PERIOD_MS);
 }
 
 void wifi_init_sta(void)
