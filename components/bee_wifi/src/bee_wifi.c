@@ -3,7 +3,7 @@
  * @file 	bee_wifi.c
  * @author 	tuha
  * @date 	3 July 2023
- * @brief	module for save data, status into nvs flash
+ * @brief	module for connect wifi
  *
  ***************************************************************************/
 
