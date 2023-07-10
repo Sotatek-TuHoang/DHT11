@@ -1,6 +1,6 @@
 /*****************************************************************************
  *
- * @file 	uart_function.c
+ * @file 	bee_uart.c
  * @author 	tuha
  * @date 	3 July 2023
  * @brief	module for project control uart
@@ -58,6 +58,9 @@ char calculate_checksum(const char *data, size_t length) {
  */
 void uart_send_data_task(void* parameter)
 {
+    TickType_t last_time_send = xTaskGetTickCount();
+    TickType_t interval_send = pdMS_TO_TICKS(u32data_interval);
+
     char tempe_hex[3];
     uint8_t HeaderHiByte_Tempe  = 0x55;
     uint8_t HeaderLoByte_Tempe  = 0xAA;
@@ -86,19 +89,23 @@ void uart_send_data_task(void* parameter)
      LeHiByteData_Humi, LeLoByteData_Humi, HiByteData_Humi, LoByteData_Humi, Chs_Humi};
     for (;;)
     {
-        if (u8status == DHT11_OK && bsend_data)
-        { 
-            snprintf(tempe_hex, sizeof(tempe_hex), "%02X", u8temp);
-            uart_data_tempe[7] = LoByteData_Tempe = strtol(tempe_hex, NULL, 16);
-            uart_data_tempe[8] = Chs_Tempe = calculate_checksum((char*)uart_data_tempe, 8);
-            uart_write_bytes(UART_NUM, uart_data_tempe, sizeof(uart_data_tempe));
+        if ((xTaskGetTickCount() - last_time_send) >= interval_send)
+        {
+            last_time_send = xTaskGetTickCount();
+            if (u8status == DHT11_OK && bsend_data)
+            { 
+                snprintf(tempe_hex, sizeof(tempe_hex), "%02X", u8temp);
+                uart_data_tempe[7] = LoByteData_Tempe = strtol(tempe_hex, NULL, 16);
+                uart_data_tempe[8] = Chs_Tempe = calculate_checksum((char*)uart_data_tempe, 8);
+                uart_write_bytes(UART_NUM, uart_data_tempe, sizeof(uart_data_tempe));
 
-            snprintf(humi_hex, sizeof(humi_hex), "%02X", u8humi);
-            uart_data_humi[7] = LoByteData_Humi = strtol(humi_hex, NULL, 16);
-            uart_data_humi[8] = Chs_Humi = calculate_checksum((char*)uart_data_humi, 8);
-            uart_write_bytes(UART_NUM, uart_data_humi, sizeof(uart_data_humi));
+                snprintf(humi_hex, sizeof(humi_hex), "%02X", u8humi);
+                uart_data_humi[7] = LoByteData_Humi = strtol(humi_hex, NULL, 16);
+                uart_data_humi[8] = Chs_Humi = calculate_checksum((char*)uart_data_humi, 8);
+                uart_write_bytes(UART_NUM, uart_data_humi, sizeof(uart_data_humi));
+            }
         }
-        vTaskDelay(u32data_interval / portTICK_PERIOD_MS);
+        vTaskDelay(160 / portTICK_PERIOD_MS);
     }
 }
 
