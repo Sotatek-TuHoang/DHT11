@@ -32,7 +32,7 @@
 #include "nvs_function.h"
 #include "uart_function.h"
 #include "wifi_function.h"
-#include "button.h"
+#include "bee_button.h"
 /****************************************************************************/
 /***        Macro Definitions                                             ***/
 /****************************************************************************/

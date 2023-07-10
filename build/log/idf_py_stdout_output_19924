@@ -1,0 +1,45 @@
+[1/39] Linking C static library esp-idf\efuse\libefuse.a
+[2/39] Linking C static library esp-idf\esp_ringbuf\libesp_ringbuf.a
+[3/39] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D E:\Team1.Temperate-and-Humidity\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 E:/Team1.Temperate-and-Humidity/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6720 bytes. 0x8e0 bytes (8%) free.
+[4/37] Linking C static library esp-idf\xtensa\libxtensa.a
+[5/37] Linking C static library esp-idf\espcoredump\libespcoredump.a
+[6/37] Linking C static library esp-idf\app_trace\libapp_trace.a
+[7/37] Linking C static library esp-idf\perfmon\libperfmon.a
+[8/37] Linking C static library esp-idf\esp_hid\libesp_hid.a
+[9/37] Linking C static library esp-idf\unity\libunity.a
+[10/37] Linking C static library esp-idf\wear_levelling\libwear_levelling.a
+[11/37] Linking C static library esp-idf\dht11\libdht11.a
+[12/37] Linking C static library esp-idf\json\libjson.a
+[13/37] Linking C static library esp-idf\esp_lcd\libesp_lcd.a
+[14/37] Linking C static library esp-idf\sdmmc\libsdmmc.a
+[15/37] Linking C static library esp-idf\mqtt\libmqtt.a
+[16/37] Linking C static library esp-idf\ssd1306\libssd1306.a
+[17/37] Linking C static library esp-idf\protobuf-c\libprotobuf-c.a
+[18/37] Linking C static library esp-idf\nvs_function\libnvs_function.a
+[19/37] Linking C static library esp-idf\wifi_function\libwifi_function.a
+[20/37] Linking C static library esp-idf\led_rgb\libled_rgb.a
+[21/37] Linking C static library esp-idf\console\libconsole.a
+[22/37] Linking C static library esp-idf\spiffs\libspiffs.a
+[23/37] Linking C static library esp-idf\uart_function\libuart_function.a
+[24/37] Linking C static library esp-idf\cmock\libcmock.a
+[25/37] Linking C static library esp-idf\protocomm\libprotocomm.a
+[26/37] Linking C static library esp-idf\esp_local_ctrl\libesp_local_ctrl.a
+[27/37] Linking C static library esp-idf\wifi_provisioning\libwifi_provisioning.a
+[28/37] Linking C static library esp-idf\fatfs\libfatfs.a
+[29/37] Building C object esp-idf/button/CMakeFiles/__idf_button.dir/src/bee_button.c.obj
+[30/37] Linking C static library esp-idf\button\libbutton.a
+[31/37] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[32/37] Linking C static library esp-idf\main\libmain.a
+[33/37] Generating ld/sections.ld
+[34/37] Building C object CMakeFiles/main.elf.dir/project_elf_src_esp32.c.obj
+[35/37] Linking CXX executable main.elf
+[36/37] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated E:/Team1.Temperate-and-Humidity/build/main.bin
+[37/37] cmd.exe /C "cd /D E:\Team1.Temperate-and-Humidity\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app E:/Team1.Temperate-and-Humidity/build/partition_table/partition-table.bin E:/Team1.Temperate-and-Humidity/build/main.bin"
+main.bin binary size 0xb5a20 bytes. Smallest app partition is 0x100000 bytes. 0x4a5e0 bytes (29%) free.
