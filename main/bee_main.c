@@ -153,11 +153,11 @@ static void interval_button(void* arg)
             }
             else if (u32data_interval == 5000)
             {
-                u32data_interval = 10000;  // Change to every 5 secends
+                u32data_interval = 10000;  // Change to every 10 secends
             }
             else if (u32data_interval == 10000)
             {
-                u32data_interval = 2000;  // Change to every 10 secends
+                u32data_interval = 2000;  // Change to every 2 secends
             }
             else {}
             save_data_to_nvs(bsend_data, u32data_interval);
