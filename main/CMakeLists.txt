@@ -1,2 +1,2 @@
-idf_component_register(SRCS "bee_DHT11Handle.c"
+idf_component_register(SRCS  "bee_main.c"
                     INCLUDE_DIRS ".")

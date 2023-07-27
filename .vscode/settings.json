@@ -1,3 +1,22 @@
 {
-    "idf.adapterTargetName": "esp32"
+    "idf.portWin": "COM5",
+    "idf.adapterTargetName": "esp32",
+    "cmake.configureOnOpen": false,
+    "files.associations": {
+        "string.h": "c",
+        "button.h": "c",
+        "uart_function.h": "c",
+        "bee_wifi.h": "c",
+        "inttypes.h": "c",
+        "bee_nvs.h": "c",
+        "bee_button.h": "c",
+        "bee_dht11.h": "c",
+        "stdint.h": "c",
+        "array": "c",
+        "string": "c",
+        "algorithm": "c",
+        "random": "c",
+        "stdbool.h": "c",
+        "bee_led_rgb.h": "c"
+    }
 }

@@ -1,0 +1,1127 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Jul 26 2023 16:45:18[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30238h (197176) map[0m
+[0;32mI (178) esp_image: segment 1: paddr=00040260 vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (184) esp_image: segment 2: paddr=00043a88 vaddr=40080000 size=0c590h ( 50576) load[0m
+[0;32mI (205) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b2e7ch (732796) map[0m
+[0;32mI (470) esp_image: segment 4: paddr=00102ea4 vaddr=4008c590 size=09f08h ( 40712) load[0m
+[0;32mI (498) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (510) cpu_start: Multicore app[0m
+[0;32mI (510) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40081468[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (528) cpu_start: Pro cpu start user code[0m
+[0;32mI (528) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (528) cpu_start: Application information:[0m
+[0;32mI (533) cpu_start: Project name:     bee_main[0m
+[0;32mI (538) cpu_start: App version:      3932a77-dirty[0m
+[0;32mI (543) cpu_start: Compile time:     Jul 26 2023 16:44:55[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  043d5d15ee749a21...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (560) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (570) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (588) heap_init: At 3FFB8140 len 00027EC0 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (600) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (607) heap_init: At 40096498 len 00009B68 (38 KiB): IRAM[0m
+[0;32mI (615) spi_flash: detected chip: generic[0m
+[0;32mI (618) spi_flash: flash io: dio[0m
+[0;32mI (623) app_start: Starting scheduler on CPU0[0m
+[0;32mI (627) app_start: Starting scheduler on CPU1[0m
+[0;32mI (627) main_task: Started on CPU0[0m
+[0;32mI (637) main_task: Calling app_main()[0m
+Error opening NVS handle! (ESP_ERR_NVS_NOT_FOUND)
+[0;32mI (1647) uart: queue free spaces: 6[0m
+I (1657) wifi:wifi driver task: 3ffca168, prio:23, stack:6656, core=0
+I (1657) wifi:wifi firmware version: b2f1f86
+I (1657) wifi:wifi certification version: v7.0
+I (1657) wifi:config NVS flash: enabled
+I (1657) wifi:config nano formating: disabled
+I (1667) wifi:Init data frame dynamic rx buffer num: 32
+I (1667) wifi:Init management frame dynamic rx buffer num: 32
+I (1677) wifi:Init management short buffer num: 32
+I (1677) wifi:Init dynamic tx buffer num: 32
+I (1687) wifi:Init static rx buffer size: 1600
+I (1687) wifi:Init static rx buffer num: 10
+I (1687) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1697) wifi_init: rx ba win: 6[0m
+[0;32mI (1697) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1707) wifi_init: udp mbox: 6[0m
+[0;32mI (1707) wifi_init: tcp mbox: 6[0m
+[0;32mI (1707) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1717) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1717) wifi_init: tcp mss: 1440[0m
+[0;32mI (1727) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1727) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1737) wifi prev: Starting provisioning[0m
+[0;32mI (1737) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+[0;33mW (1747) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+I (1917) wifi:mode : sta (b8:d6:1a:69:5a:cc)
+I (1917) wifi:enable tsf
+I (1927) wifi:mode : sta (b8:d6:1a:69:5a:cc) + softAP (b8:d6:1a:69:5a:cd)
+I (1927) wifi:Total power save buffer number: 16
+I (1927) wifi:Init max length of beacon: 752/752
+I (1927) wifi:Init max length of beacon: 752/752
+[0;32mI (1937) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+I (1937) wifi:Total power save buffer number: 16
+[0;32mI (1947) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1957) wifi_prov_mgr: Provisioning started with service name : BEE_695ACC [0m
+[0;32mI (1967) wifi prev: Provisioning started[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+I (9907) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1
+I (9907) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (9907) wifi prev: SoftAP transport: Connected![0m
+[0;32mI (10067) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (10567) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;33mW (12307) protocomm_httpd: Resetting socket session id as socket 57was closed[0m
+[0;33mW (12317) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (12317) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (32607) wifi prev: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : tu123456[0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+I (36447) wifi:primary chan differ, old=1, new=11, start CSA timer
+I (36857) wifi:switch to channel 11
+I (36857) wifi:ap channel adjust o:1,1 n:11,2
+I (36857) wifi:new:<11,0>, old:<1,0>, ap:<11,2>, sta:<0,0>, prof:1
+I (36857) wifi:new:<11,2>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+I (37787) wifi:state: init -> auth (b0)
+I (37797) wifi:state: auth -> assoc (0)
+I (37797) wifi:state: assoc -> run (10)
+I (37807) wifi:connected with TUPEO, aid = 3, channel 11, BW20, bssid = b2:7d:64:d8:92:71
+I (37807) wifi:security: WPA2-PSK, phy: bgn, rssi: -42
+I (37817) wifi:pm start, type: 1
+
+I (37867) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;32mI (38827) wifi prev: Connected with IP Address:192.168.137.14[0m
+[0;32mI (38827) esp_netif_handlers: sta ip: 192.168.137.14, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (38827) wifi_prov_mgr: STA Got IP[0m
+[0;32mI (38837) wifi prev: Provisioning successful[0m
+[0;32mI (38837) MQTT: Other event id:7[0m
+[0;32mI (38847) MQTT: Topic publish: VB/DMP/VBEEON/CUSTOM/SMH/B8D61A695ACC/telemetry
+[0m
+[0;32mI (38847) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/B8D61A695ACC/Command
+[0m
+[0;32mI (38857) main_task: Returned from app_main()[0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (40127) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (40437) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=37508[0m
+[0;32mI (40527) MQTT: MQTT_EVENT_PUBLISHED, msg_id=11458[0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+I (41967) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:10, winSize:64
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+I (44227) wifi:station: 70:5e:55:70:34:ed leave, AID = 1, bss_flags is 134259, bss:0x3ffd3318
+I (44227) wifi:new:<11,0>, old:<11,2>, ap:<11,2>, sta:<11,0>, prof:1
+I (44227) wifi:<ba-del>idx:2, tid:0
+I (44227) wifi:mode : sta (b8:d6:1a:69:5a:cc)
+[0;32mI (44247) wifi_prov_mgr: Provisioning stopped[0m
+[0;32mI (44247) wifi prev: SoftAP transport: Disconnected![0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (47807) MQTT: MQTT_EVENT_PUBLISHED, msg_id=64324[0m
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (53957) MQTT: MQTT_EVENT_PUBLISHED, msg_id=45543[0m
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (69007) MQTT: MQTT_EVENT_PUBLISHED, msg_id=20329[0m
+[0;32mI (69317) MQTT: MQTT_EVENT_PUBLISHED, msg_id=61444[0m
+[0;32mI (69617) MQTT: MQTT_EVENT_PUBLISHED, msg_id=7243[0m
+Temperature: 30 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (79677) UART: Start wifi reprov: 17[0m
+[0;32mI (79677) wifi_init: rx ba win: 6[0m
+[0;32mI (79677) wifi_init: tcpip mbox: 32[0m
+[0;32mI (79677) wifi_init: udp mbox: 6[0m
+[0;32mI (79677) wifi_init: tcp mbox: 6[0m
+[0;32mI (79687) wifi_init: tcp tx win: 5744[0m
+[0;32mI (79687) wifi_init: tcp rx win: 5744[0m
+[0;32mI (79697) wifi_init: tcp mss: 1440[0m
+[0;32mI (79697) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (79707) wifi_init: WiFi RX IRAM OP enabled[0m
+I (79707) wifi:state: run -> init (0)
+I (79717) wifi:pm stop, total sleep time: 38714232 us / 41892758 us
+
+I (79717) wifi:<ba-del>idx:0, tid:0
+I (79717) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (79727) wifi prev: Disconnected. Connecting to the AP again...[0m
+I (79737) wifi:mode : sta (b8:d6:1a:69:5a:cc) + softAP (b8:d6:1a:69:5a:cd)
+I (79737) wifi:Total power save buffer number: 16
+I (79747) wifi:Total power save buffer number: 16
+[0;31mE (79747) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 58[0m
+[0;32mI (79757) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;31mE (79757) mqtt_client: Poll read error: 119, aborting connection[0m
+[0;32mI (79767) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (79787) wifi_prov_mgr: Provisioning started with service name : BEE_695ACC [0m
+[0;32mI (79787) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (79797) wifi prev: Provisioning started[0m
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 1%
+I (82667) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<11,0>, prof:1
+I (82667) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (82667) wifi prev: SoftAP transport: Connected![0m
+[0;32mI (82867) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 1%
+I (83727) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:17, winSize:64
+[0;33mW (85067) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (85067) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Temperature: 29 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 2%
+Temperature: 29 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 29 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (89797) MQTT: Other event id:7[0m
+Temperature: 29 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 29 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 1 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 1 C
+Humidity Different: 0%
+[0;31mE (99807) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (99807) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (99807) mqtt_client: Error transport connect[0m
+[0;32mI (99807) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (99817) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 1 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 1 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (106007) wifi prev: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : tu123456[0m
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+I (109847) wifi:primary chan differ, old=1, new=11, start CSA timer
+I (110247) wifi:switch to channel 11
+I (110247) wifi:ap channel adjust o:1,1 n:11,2
+I (110247) wifi:new:<11,0>, old:<1,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (110247) wifi:new:<11,2>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (111177) wifi:state: init -> auth (b0)
+I (111187) wifi:state: auth -> assoc (0)
+I (111197) wifi:state: assoc -> run (10)
+I (111207) wifi:connected with TUPEO, aid = 4, channel 11, BW20, bssid = b2:7d:64:d8:92:71
+I (111207) wifi:security: WPA2-PSK, phy: bgn, rssi: -41
+I (111227) wifi:pm start, type: 1
+
+I (111287) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+I (111697) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:4, winSize:64
+[0;32mI (112237) wifi prev: Connected with IP Address:192.168.137.14[0m
+[0;32mI (112237) esp_netif_handlers: sta ip: 192.168.137.14, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (112237) wifi_prov_mgr: STA Got IP[0m
+[0;32mI (112247) wifi prev: Provisioning successful[0m
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (114817) MQTT: Other event id:7[0m
+[0;32mI (115177) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (115397) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=58913[0m
+[0;32mI (115487) MQTT: MQTT_EVENT_PUBLISHED, msg_id=48765[0m
+[0;32mI (115587) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35969[0m
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (115687) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47486[0m
+[0;32mI (115797) MQTT: MQTT_EVENT_PUBLISHED, msg_id=56461[0m
+[0;32mI (115897) MQTT: MQTT_EVENT_PUBLISHED, msg_id=63709[0m
+[0;32mI (115997) MQTT: MQTT_EVENT_PUBLISHED, msg_id=60017[0m
+I (117317) wifi:station: 70:5e:55:70:34:ed leave, AID = 1, bss_flags is 134259, bss:0x3ffd1488
+I (117317) wifi:new:<11,0>, old:<11,2>, ap:<11,2>, sta:<11,0>, prof:1
+I (117317) wifi:<ba-del>idx:2, tid:0
+I (117317) wifi:mode : sta (b8:d6:1a:69:5a:cc)
+[0;32mI (117337) wifi_prov_mgr: Provisioning stopped[0m
+[0;32mI (117337) wifi prev: SoftAP transport: Disconnected![0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (117857) MQTT: MQTT_EVENT_PUBLISHED, msg_id=29612[0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (130157) MQTT: MQTT_EVENT_PUBLISHED, msg_id=52102[0m
+[0;32mI (130447) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41196[0m
+[0;32mI (130757) MQTT: MQTT_EVENT_PUBLISHED, msg_id=13493[0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;31mE (139797) wifi_prov_mgr: Provisioning manager not initialized[0m
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (145197) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21444[0m
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (159937) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18277[0m
+[0;32mI (160247) MQTT: MQTT_EVENT_PUBLISHED, msg_id=42815[0m
+[0;32mI (160857) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37874[0m
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (175297) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62907[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (190047) MQTT: MQTT_EVENT_PUBLISHED, msg_id=42044[0m
+[0;32mI (190357) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10755[0m
+[0;32mI (190967) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10432[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (205097) MQTT: MQTT_EVENT_PUBLISHED, msg_id=61223[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (220157) MQTT: MQTT_EVENT_PUBLISHED, msg_id=50037[0m
+[0;32mI (220457) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10575[0m
+[0;32mI (220767) MQTT: MQTT_EVENT_PUBLISHED, msg_id=64501[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (234887) MQTT: MQTT_EVENT_PUBLISHED, msg_id=19340[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (250267) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47546[0m
+[0;32mI (250567) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6921[0m
+[0;32mI (250877) MQTT: MQTT_EVENT_PUBLISHED, msg_id=50687[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (265007) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53898[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (280057) MQTT: MQTT_EVENT_PUBLISHED, msg_id=20859[0m
+[0;32mI (280367) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16914[0m
+[0;32mI (280677) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35627[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (295117) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23646[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (310167) MQTT: MQTT_EVENT_PUBLISHED, msg_id=64543[0m
+[0;32mI (310477) MQTT: MQTT_EVENT_PUBLISHED, msg_id=59170[0m
+[0;32mI (310557) MQTT: MQTT_EVENT_PUBLISHED, msg_id=20365[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (325217) MQTT: MQTT_EVENT_PUBLISHED, msg_id=345[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (339967) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16759[0m
+[0;32mI (340277) MQTT: MQTT_EVENT_PUBLISHED, msg_id=32481[0m
+[0;32mI (340577) MQTT: MQTT_EVENT_PUBLISHED, msg_id=31541[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (354897) MQTT: MQTT_EVENT_PUBLISHED, msg_id=44206[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (370067) MQTT: MQTT_EVENT_PUBLISHED, msg_id=45467[0m
+[0;32mI (370377) MQTT: MQTT_EVENT_PUBLISHED, msg_id=42002[0m
+[0;32mI (370687) MQTT: MQTT_EVENT_PUBLISHED, msg_id=14561[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (384907) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21827[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (400177) MQTT: MQTT_EVENT_PUBLISHED, msg_id=49371[0m
+[0;32mI (400487) MQTT: MQTT_EVENT_PUBLISHED, msg_id=7993[0m
+[0;32mI (400797) MQTT: MQTT_EVENT_PUBLISHED, msg_id=50088[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (415227) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62957[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (429977) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53809[0m
+[0;32mI (430287) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53002[0m
+[0;32mI (430897) MQTT: MQTT_EVENT_PUBLISHED, msg_id=45364[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%

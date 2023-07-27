@@ -1,0 +1,301 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- idf_monitor on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081468: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e63a2: gpio_ll_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/hal/esp32/include/hal/gpio_ll.h:451 (discriminator 4)
+ (inlined by) gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:237 (discriminator 4)
+[0m
+[0;33m0x400d83d6: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:36
+[0m
+[0;33m0x400d8471: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:68
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e635a: gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:236 (discriminator 2)
+[0m
+[0;33m0x400d83cf: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:35
+[0m
+[0;33m0x400d8471: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:68
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e6340: gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:235
+[0m
+[0;33m0x400d83d6: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:36
+[0m
+[0;33m0x400d8471: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:68
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e634e: gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:236 (discriminator 2)
+[0m
+[0;33m0x400d83dd: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:37
+[0m
+[0;33m0x400d8471: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:68
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e6398: gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:236 (discriminator 7)
+[0m
+[0;33m0x400d83cf: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:35
+[0m
+[0;33m0x400d8425: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:55
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e6398: gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:236 (discriminator 7)
+[0m
+[0;33m0x400d83d6: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:36
+[0m
+[0;33m0x400d8425: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:55
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e6340: gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:235
+[0m
+[0;33m0x400d83d6: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:36
+[0m
+[0;33m0x400d8471: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:68
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e634e: gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:236 (discriminator 2)
+[0m
+[0;33m0x400d83dd: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:37
+[0m
+[0;33m0x400d8471: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:68
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e63a2: gpio_ll_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/hal/esp32/include/hal/gpio_ll.h:451 (discriminator 4)
+ (inlined by) gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:237 (discriminator 4)
+[0m
+[0;33m0x400d83d6: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:36
+[0m
+[0;33m0x400d8471: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:68
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e6398: gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:236 (discriminator 7)
+[0m
+[0;33m0x400d83cf: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:35
+[0m
+[0;33m0x400d8425: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:55
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e6398: gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:236 (discriminator 7)
+[0m
+[0;33m0x400d83d6: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:36
+[0m
+[0;33m0x400d8425: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:55
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e63a9: gpio_ll_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/hal/esp32/include/hal/gpio_ll.h:452
+ (inlined by) gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:237
+[0m
+[0;33m0x400d83cf: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:35
+[0m
+[0;33m0x400d8471: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:68
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e63a2: gpio_ll_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/hal/esp32/include/hal/gpio_ll.h:451 (discriminator 4)
+ (inlined by) gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:237 (discriminator 4)
+[0m
+[0;33m0x400d83d6: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:36
+[0m
+[0;33m0x400d8471: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:68
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e6398: gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:236 (discriminator 7)
+[0m
+[0;33m0x400d83cf: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:35
+[0m
+[0;33m0x400d8425: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:55
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e6398: gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:236 (discriminator 7)
+[0m
+[0;33m0x400d83d6: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:36
+[0m
+[0;33m0x400d8425: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:55
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400e9d9b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e9f22: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082e2d: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1226
+[0m
+[0;33m0x400e6340: gpio_set_level at C:/Espressif/frameworks/esp-idf-v5.1/components/driver/gpio/gpio.c:235
+[0m
+[0;33m0x400d83d6: led_rgb_set_color at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:36
+[0m
+[0;33m0x400d8471: led_control at E:/Phase2 beta/components/bee_led_rgb/bee_led_rgb.c:68
+[0m
+[0;33m0x400d7c4d: app_main at E:/Phase2 beta/main/bee_main.c:52
+[0m
+[0;33m0x4018103f: main_task at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0m
