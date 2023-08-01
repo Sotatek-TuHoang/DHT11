@@ -24,6 +24,81 @@ void nvs_flash_function_init()
     err = nvs_flash_init();
     }
     ESP_ERROR_CHECK( err );
+
+}
+
+void save_wifi_cred_to_nvs(const char *cSsid, const char *cPassword)
+{
+    nvs_handle_t nvs_handle;
+    esp_err_t err;
+
+    // Mở NVS
+    err = nvs_open(NVS_WIFI_CRED, NVS_READWRITE, &nvs_handle);
+    if (err != ESP_OK)
+    {
+        printf("Error opening NVS handle! (%s)\n", esp_err_to_name(err));
+        return;
+    }
+
+    // Lưu ssid wifi vào NVS
+    err = nvs_set_str(nvs_handle, NVS_WIFI_SSID, cSsid);
+    if (err != ESP_OK)
+    {
+        printf("Error saving wifi SSID to NVS! (%s)\n", esp_err_to_name(err));
+    }
+
+    // Lưu password wifi vào NVS
+    err = nvs_set_str(nvs_handle, NVS_WIFI_PASS, cPassword);
+    if (err != ESP_OK)
+    {
+        printf("Error saving wifi password to NVS! (%s)\n", esp_err_to_name(err));
+    }
+
+    // Đóng NVS handle
+    nvs_close(nvs_handle);
+}
+
+void load_old_wifi_cred(char *cSsid, char *cPassword)
+{
+    nvs_handle_t nvs_handle;
+    esp_err_t err;
+
+    // Mở NVS
+    err = nvs_open(NVS_WIFI_CRED, NVS_READONLY, &nvs_handle);
+    if (err != ESP_OK)
+    {
+        printf("Error opening NVS handle! (%s)\n", esp_err_to_name(err));
+        return;
+    }
+
+    // Đọc SSID wifi từ NVS
+    size_t ssid_len = 32;
+    err = nvs_get_str(nvs_handle, NVS_WIFI_SSID, cSsid, &ssid_len);
+
+    if (err == ESP_ERR_NVS_NOT_FOUND)
+    {
+        printf("Error reading old SSID wifi from NVS! (%s)\n", esp_err_to_name(err));
+    }
+    else if (err != ESP_OK)
+    {
+        printf("Error reading wifi SSID from NVS! (%s)\n", esp_err_to_name(err));
+    }
+
+    // Đọc password wifi từ NVS
+    size_t password_len = 64;
+    err = nvs_get_str(nvs_handle, NVS_WIFI_PASS, cPassword, &password_len);
+
+    if (err == ESP_ERR_NVS_NOT_FOUND)
+    {
+        printf("Error reading old wifi password from NVS! (%s)\n", esp_err_to_name(err));
+    }
+    else if (err != ESP_OK)
+    {
+        printf("Error reading wifi password from NVS! (%s)\n", esp_err_to_name(err));
+    }
+
+    // Đóng NVS handle
+    nvs_close(nvs_handle);
 }
 
 void save_mqtt_data_to_nvs(uint8_t u8data_interval_mqtt)
@@ -31,7 +106,7 @@ void save_mqtt_data_to_nvs(uint8_t u8data_interval_mqtt)
     nvs_handle_t nvs_handle;
     esp_err_t err;
     // Mở NVS
-    err = nvs_open(NVS_NAMESPACE, NVS_READWRITE, &nvs_handle);
+    err = nvs_open(NVS_DATA_CONFIG, NVS_READWRITE, &nvs_handle);
     if (err != ESP_OK)
     {
         printf("Error opening NVS handle! (%s)\n", esp_err_to_name(err));
@@ -50,7 +125,7 @@ void save_uart_data_to_nvs(bool bsend_data, uint8_t u8data_interval_uart)
     nvs_handle_t nvs_handle;
     esp_err_t err;
     // Mở NVS
-    err = nvs_open(NVS_NAMESPACE, NVS_READWRITE, &nvs_handle);
+    err = nvs_open(NVS_DATA_CONFIG, NVS_READWRITE, &nvs_handle);
     if (err != ESP_OK)
     {
         printf("Error opening NVS handle! (%s)\n", esp_err_to_name(err));
@@ -77,7 +152,7 @@ void load_data_from_nvs(bool* bsend_data, uint8_t* u8data_interval_uart, uint8_t
     nvs_handle_t nvs_handle;
     esp_err_t err;
     // Mở NVS
-    err = nvs_open(NVS_NAMESPACE, NVS_READONLY, &nvs_handle);
+    err = nvs_open(NVS_DATA_CONFIG, NVS_READONLY, &nvs_handle);
     if (err != ESP_OK)
     {
         printf("Error opening NVS handle! (%s)\n", esp_err_to_name(err));
@@ -122,5 +197,3 @@ void load_data_from_nvs(bool* bsend_data, uint8_t* u8data_interval_uart, uint8_t
     // Đóng NVS
     nvs_close(nvs_handle);
 }
-
-

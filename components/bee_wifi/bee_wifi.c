@@ -18,9 +18,9 @@
 #include <esp_event.h>
 #include <wifi_provisioning/manager.h>
 #include <wifi_provisioning/scheme_softap.h>
-#include "nvs_flash.h"
 
 #include "bee_wifi.h"
+#include "bee_nvs.h"
 
 static const char *TAG = "wifi prev";
 
@@ -28,6 +28,9 @@ const int WIFI_CONNECTED_EVENT = BIT0;
 static EventGroupHandle_t wifi_event_group;
 
 static bool reprov = false; 
+
+static char cReceived_ssid[32];
+static char cReceived_password[64];
 
 static void event_handler(void* arg, esp_event_base_t event_base,
                           int32_t event_id, void* event_data)
@@ -45,6 +48,10 @@ static void event_handler(void* arg, esp_event_base_t event_base,
                          "\n\tSSID     : %s\n\tPassword : %s",
                          (const char *) wifi_sta_cfg->ssid,
                          (const char *) wifi_sta_cfg->password);
+
+                snprintf(cReceived_ssid, sizeof(cReceived_ssid), "%s", (const char *)wifi_sta_cfg->ssid);
+                snprintf(cReceived_password, sizeof(cReceived_password), "%s", (const char *)wifi_sta_cfg->password);
+
                 break;
             }
             case WIFI_PROV_CRED_FAIL:
@@ -54,11 +61,12 @@ static void event_handler(void* arg, esp_event_base_t event_base,
                          "\n\tPlease reset to factory and retry provisioning",
                          (*reason == WIFI_PROV_STA_AUTH_ERROR) ?
                          "Wi-Fi station authentication failed" : "Wi-Fi access-point not found");
-                wifi_prov_mgr_reset_sm_state_for_reprovision();
+                wifi_prov_mgr_reset_sm_state_on_failure();
                 break;
             }
             case WIFI_PROV_CRED_SUCCESS:
                 ESP_LOGI(TAG, "Provisioning successful");
+                save_wifi_cred_to_nvs(cReceived_ssid, cReceived_password);
                 break;
             case WIFI_PROV_END:
                 /* De-initialize manager once provisioning is finished */
@@ -135,17 +143,6 @@ esp_err_t custom_prov_data_handler(uint32_t session_id, const uint8_t *inbuf, ss
 
 void wifi_prov(void)
 {
-    /* Initialize NVS partition */
-    esp_err_t ret = nvs_flash_init();
-    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND)
-    {
-        /* NVS partition was truncated
-         * and needs to be erased */
-        ESP_ERROR_CHECK(nvs_flash_erase());
-
-        /* Retry nvs_flash_init */
-        ESP_ERROR_CHECK(nvs_flash_init());
-    }
 
     /* Initialize TCP/IP */
     ESP_ERROR_CHECK(esp_netif_init());
@@ -183,6 +180,8 @@ void wifi_prov(void)
     {
         ESP_LOGI(TAG, "Starting provisioning");
 
+        reprov = true;
+
         char service_name[12];
         get_device_service_name(service_name, sizeof(service_name));
 
@@ -213,7 +212,7 @@ void wifi_prov(void)
 void wifi_reprov_timeout_task(void* pvParameters)
 {
     TickType_t current_time = xTaskGetTickCount();
-    TickType_t timeout = pdMS_TO_TICKS(10000); // Timeout period, adjust as needed
+    TickType_t timeout = pdMS_TO_TICKS(60000); // Timeout period, adjust as needed
 
     while ((xTaskGetTickCount() - current_time) < timeout)
     {
@@ -222,22 +221,33 @@ void wifi_reprov_timeout_task(void* pvParameters)
 
     wifi_prov_mgr_stop_provisioning();
 
-    /* Initialize NVS partition */
-    esp_err_t ret = nvs_flash_init();
-    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND)
-    {
-        /* NVS partition was truncated
-         * and needs to be erased */
-        ESP_ERROR_CHECK(nvs_flash_erase());
+    wifi_config_t wifi_sta_cfg;
 
-        /* Retry nvs_flash_init */
-        ESP_ERROR_CHECK(nvs_flash_init());
-    }
-    wifi_prov_mgr_deinit();
-    wifi_init_sta();
+    // Đọc thông tin SSID và Password từ NVS
+    char cSsid[32];
+    char cPassword[64];
+
+    load_old_wifi_cred(cSsid, cPassword);
+
+    // Thiết lập cấu hình Wi-Fi với thông tin từ NVS
+    memset(&wifi_sta_cfg, 0, sizeof(wifi_config_t));
+    strncpy((char*)wifi_sta_cfg.sta.ssid, cSsid, sizeof(wifi_sta_cfg.sta.ssid));
+    strncpy((char*)wifi_sta_cfg.sta.password, cPassword, sizeof(wifi_sta_cfg.sta.password));
+
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+
+    // Khởi tạo Wi-Fi ở chế độ STA với cấu hình đã đọc từ NVS
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_sta_cfg));
+    ESP_ERROR_CHECK(esp_wifi_start());
+
+    wifi_prov_mgr_stop_provisioning();
+    ESP_ERROR_CHECK(esp_wifi_connect());
 
     vTaskDelete(NULL);
 }
+
 
 void wifi_reprov(void)
 {
