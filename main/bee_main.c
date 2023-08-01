@@ -62,10 +62,12 @@ void app_main()
     xTaskCreate(send_data_button, "send_data_button", 2048, NULL, 2, NULL);
     
     wifi_prov();
+
     mqtt_app_start();
-    
+
     xTaskCreate(send_mqtt_data_task, "send_mqtt_data_task", 2048, NULL, 7, NULL);
     xTaskCreate(receive_mqtt_config_task, "receive_mqtt_config_task", 2048, NULL, 5, NULL);
+
 }
 /****************************************************************************/
 /***        END OF FILE                                                   ***/

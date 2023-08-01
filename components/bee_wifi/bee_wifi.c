@@ -32,6 +32,8 @@ static bool reprov = false;
 static char cReceived_ssid[32];
 static char cReceived_password[64];
 
+static TaskHandle_t timeout_task = NULL;
+
 static void event_handler(void* arg, esp_event_base_t event_base,
                           int32_t event_id, void* event_data)
 {
@@ -71,6 +73,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
             case WIFI_PROV_END:
                 /* De-initialize manager once provisioning is finished */
                 wifi_prov_mgr_deinit();
+                vTaskDelete(timeout_task);
                 reprov = false;
                 break;
             default:
@@ -178,6 +181,11 @@ void wifi_prov(void)
 
     if (!provisioned)
     {
+        esp_wifi_stop();
+        esp_wifi_deinit();
+        wifi_prov_mgr_deinit();
+        
+        #if 0
         ESP_LOGI(TAG, "Starting provisioning");
 
         reprov = true;
@@ -198,6 +206,7 @@ void wifi_prov(void)
         ESP_ERROR_CHECK(wifi_prov_mgr_start_provisioning(security, (const void *) sec_params, service_name, service_key));
 
         wifi_prov_mgr_endpoint_register("custom-data", custom_prov_data_handler, NULL);
+        #endif
         
     }
     else
@@ -278,6 +287,7 @@ void wifi_reprov(void)
         /* Start provisioning service */
         ESP_ERROR_CHECK(wifi_prov_mgr_start_provisioning(security, (const void *) sec_params, service_name, service_key));
         wifi_prov_mgr_endpoint_register("custom-data", custom_prov_data_handler, NULL);
-        xTaskCreate(wifi_reprov_timeout_task, "wifi_reprov_timeout_task", 4096, NULL, 1, NULL);
+        
+        xTaskCreate(wifi_reprov_timeout_task, "wifi_reprov_timeout_task", 4096, NULL, 1, &timeout_task);
     }
 }

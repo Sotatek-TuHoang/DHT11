@@ -1,0 +1,1326 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug  1 2023 16:51:20[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=303d0h (197584) map[0m
+[0;32mI (177) esp_image: segment 1: paddr=000403f8 vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=00043c20 vaddr=40080000 size=0c3f8h ( 50168) load[0m
+[0;32mI (204) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b30d0h (733392) map[0m
+[0;32mI (469) esp_image: segment 4: paddr=001030f8 vaddr=4008c3f8 size=0a0a0h ( 41120) load[0m
+[0;32mI (497) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (509) cpu_start: Multicore app[0m
+[0;32mI (509) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40081468[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (527) cpu_start: Pro cpu start user code[0m
+[0;32mI (527) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (527) cpu_start: Application information:[0m
+[0;32mI (532) cpu_start: Project name:     bee_main[0m
+[0;32mI (537) cpu_start: App version:      efaa860-dirty[0m
+[0;32mI (543) cpu_start: Compile time:     Aug  1 2023 16:58:58[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  261ca7c4b561d5c7...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (560) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (569) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (587) heap_init: At 3FFB81A0 len 00027E60 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (600) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (606) heap_init: At 40096498 len 00009B68 (38 KiB): IRAM[0m
+[0;32mI (614) spi_flash: detected chip: generic[0m
+[0;32mI (617) spi_flash: flash io: dio[0m
+[0;32mI (622) app_start: Starting scheduler on CPU0[0m
+[0;32mI (626) app_start: Starting scheduler on CPU1[0m
+[0;32mI (626) main_task: Started on CPU0[0m
+[0;32mI (636) main_task: Calling app_main()[0m
+[0;32mI (1666) uart: queue free spaces: 6[0m
+I (1676) wifi:wifi driver task: 3ffc9f28, prio:23, stack:6656, core=0
+I (1686) wifi:wifi firmware version: b2f1f86
+I (1686) wifi:wifi certification version: v7.0
+I (1686) wifi:config NVS flash: enabled
+I (1686) wifi:config nano formating: disabled
+I (1696) wifi:Init data frame dynamic rx buffer num: 32
+I (1696) wifi:Init management frame dynamic rx buffer num: 32
+I (1706) wifi:Init management short buffer num: 32
+I (1706) wifi:Init dynamic tx buffer num: 32
+I (1716) wifi:Init static rx buffer size: 1600
+I (1716) wifi:Init static rx buffer num: 10
+I (1726) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1726) wifi_init: rx ba win: 6[0m
+[0;32mI (1726) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1736) wifi_init: udp mbox: 6[0m
+[0;32mI (1736) wifi_init: tcp mbox: 6[0m
+[0;32mI (1746) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1746) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1746) wifi_init: tcp mss: 1440[0m
+[0;32mI (1756) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1756) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1766) wifi prev: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1766) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1876) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+I (1876) wifi:enable tsf
+Error reading from DHT11: 255
+Error read count: 1
+[0;32mI (4296) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 2
+[0;32mI (6706) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 3
+[0;32mI (9126) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 4
+[0;32mI (11536) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 5
+Error reading from DHT11: 255
+Error read count: 6
+[0;32mI (13976) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 7
+[0;32mI (16406) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 8
+[0;32mI (18816) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 9
+[0;32mI (21246) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 10
+[0;32mI (23296) UART: Start wifi reprov: 17[0m
+[0;31mE (23306) mqtt_client: Client was not initialized[0m
+[0;32mI (23306) wifi_init: rx ba win: 6[0m
+[0;32mI (23306) wifi_init: tcpip mbox: 32[0m
+[0;32mI (23306) wifi_init: udp mbox: 6[0m
+[0;32mI (23306) wifi_init: tcp mbox: 6[0m
+[0;32mI (23316) wifi_init: tcp tx win: 5744[0m
+[0;32mI (23316) wifi_init: tcp rx win: 5744[0m
+[0;32mI (23326) wifi_init: tcp mss: 1440[0m
+[0;32mI (23326) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (23336) wifi_init: WiFi RX IRAM OP enabled[0m
+I (23346) wifi:mode : sta (7c:9e:bd:61:6d:ac) + softAP (7c:9e:bd:61:6d:ad)
+I (23346) wifi:Total power save buffer number: 16
+I (23346) wifi:Init max length of beacon: 752/752
+I (23356) wifi:Init max length of beacon: 752/752
+I (23356) wifi:Total power save buffer number: 16
+[0;32mI (23366) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (23376) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (23376) wifi_prov_mgr: Provisioning started with service name : BEE_616DAC [0m
+[0;32mI (23386) wifi prev: Provisioning started[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (26096) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1
+I (26106) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (26106) wifi prev: SoftAP transport: Connected![0m
+[0;32mI (26396) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (27406) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:19, winSize:64
+Error reading from DHT11: 255
+[0;33mW (28996) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (29006) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (57736) wifi prev: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : tu123456[0m
+Error reading from DHT11: 255
+I (61576) wifi:primary chan differ, old=1, new=11, start CSA timer
+Error reading from DHT11: 255
+I (61976) wifi:switch to channel 11
+I (61976) wifi:ap channel adjust o:1,1 n:11,2
+I (61976) wifi:new:<11,0>, old:<1,0>, ap:<11,2>, sta:<0,0>, prof:1
+I (61976) wifi:new:<11,2>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (62706) wifi:state: init -> auth (b0)
+I (62716) wifi:state: auth -> assoc (0)
+I (62716) wifi:state: assoc -> run (10)
+I (62736) wifi:connected with TUPEO, aid = 4, channel 11, BW20, bssid = b2:7d:64:d8:92:71
+I (62736) wifi:security: WPA2-PSK, phy: bgn, rssi: -43
+I (62746) wifi:pm start, type: 1
+
+I (62796) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+Error reading from DHT11: 255
+[0;32mI (63756) wifi prev: Connected with IP Address:192.168.137.223[0m
+[0;32mI (63756) esp_netif_handlers: sta ip: 192.168.137.223, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (63756) wifi_prov_mgr: STA Got IP[0m
+[0;32mI (63766) wifi prev: Provisioning successful[0m
+[0;32mI (63776) MQTT: Other event id:7[0m
+[0;32mI (63776) MQTT: Topic publish: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/telemetry
+[0m
+[0;32mI (63776) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/Command
+[0m
+[0;32mI (63786) main_task: Returned from app_main()[0m
+[0;32mI (65056) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (65366) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=9803[0m
+[0;32mI (65456) MQTT: MQTT_EVENT_PUBLISHED, msg_id=13585[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (68436) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:10, winSize:64
+I (69366) wifi:station: 70:5e:55:70:34:ed leave, AID = 1, bss_flags is 134243, bss:0x3ffd4360
+I (69366) wifi:new:<11,0>, old:<11,2>, ap:<11,2>, sta:<11,0>, prof:1
+I (69366) wifi:<ba-del>idx:2, tid:0
+I (69366) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+[0;32mI (69386) wifi_prov_mgr: Provisioning stopped[0m
+[0;32mI (69386) wifi prev: SoftAP transport: Disconnected![0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+flash read err, 1000
+ets_main.c 371 
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug  1 2023 16:51:20[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=303d0h (197584) map[0m
+[0;32mI (177) esp_image: segment 1: paddr=000403f8 vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=00043c20 vaddr=40080000 size=0c3f8h ( 50168) load[0m
+[0;32mI (204) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b30d0h (733392) map[0m
+[0;32mI (469) esp_image: segment 4: paddr=001030f8 vaddr=4008c3f8 size=0a0a0h ( 41120) load[0m
+[0;32mI (498) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (509) cpu_start: Multicore app[0m
+[0;32mI (510) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40081468[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (528) cpu_start: Pro cpu start user code[0m
+[0;32mI (528) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (528) cpu_start: Application information:[0m
+[0;32mI (532) cpu_start: Project name:     bee_main[0m
+[0;32mI (537) cpu_start: App version:      efaa860-dirty[0m
+[0;32mI (543) cpu_start: Compile time:     Aug  1 2023 16:58:58[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  261ca7c4b561d5c7...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (560) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (570) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (588) heap_init: At 3FFB81A0 len 00027E60 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (600) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (607) heap_init: At 40096498 len 00009B68 (38 KiB): IRAM[0m
+[0;32mI (614) spi_flash: detected chip: generic[0m
+[0;32mI (618) spi_flash: flash io: dio[0m
+[0;32mI (622) app_start: Starting scheduler on CPU0[0m
+[0;32mI (627) app_start: Starting scheduler on CPU1[0m
+[0;32mI (627) main_task: Started on CPU0[0m
+[0;32mI (637) main_task: Calling app_main()[0m
+[0;32mI (1677) uart: queue free spaces: 6[0m
+I (1687) wifi:wifi driver task: 3ffc9ec4, prio:23, stack:6656, core=0
+I (1697) wifi:wifi firmware version: b2f1f86
+I (1697) wifi:wifi certification version: v7.0
+I (1697) wifi:config NVS flash: enabled
+I (1697) wifi:config nano formating: disabled
+I (1707) wifi:Init data frame dynamic rx buffer num: 32
+I (1707) wifi:Init management frame dynamic rx buffer num: 32
+I (1717) wifi:Init management short buffer num: 32
+I (1717) wifi:Init dynamic tx buffer num: 32
+I (1727) wifi:Init static rx buffer size: 1600
+I (1727) wifi:Init static rx buffer num: 10
+I (1737) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1737) wifi_init: rx ba win: 6[0m
+[0;32mI (1737) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1747) wifi_init: udp mbox: 6[0m
+[0;32mI (1747) wifi_init: tcp mbox: 6[0m
+[0;32mI (1757) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1757) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1757) wifi_init: tcp mss: 1440[0m
+[0;32mI (1767) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1767) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1777) wifi prev: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1787) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1887) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+I (1887) wifi:enable tsf
+Error reading from DHT11: 255
+Error read count: 1
+I (4307) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (4307) wifi:state: init -> auth (b0)
+I (5307) wifi:state: auth -> init (200)
+I (5307) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (5307) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 2
+Error reading from DHT11: 255
+Error read count: 3
+[0;32mI (7727) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 4
+I (10137) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (10147) wifi:state: init -> auth (b0)
+I (11147) wifi:state: auth -> init (200)
+I (11147) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (11147) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 5
+[0;32mI (13567) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 6
+Error reading from DHT11: 255
+Error read count: 7
+I (15977) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (15977) wifi:state: init -> auth (b0)
+I (16977) wifi:state: auth -> init (200)
+I (16977) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (16977) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 8
+[0;32mI (19397) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 9
+Error reading from DHT11: 255
+Error read count: 10
+I (21807) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (21817) wifi:state: init -> auth (b0)
+I (22817) wifi:state: auth -> init (200)
+I (22817) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (22817) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (25237) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (27647) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (27647) wifi:state: init -> auth (b0)
+Error reading from DHT11: 255
+I (27697) wifi:state: auth -> assoc (0)
+I (27697) wifi:state: assoc -> run (10)
+I (27717) wifi:connected with TUPEO, aid = 5, channel 11, BW20, bssid = b2:7d:64:d8:92:71
+I (27717) wifi:security: WPA2-PSK, phy: bgn, rssi: -36
+I (27717) wifi:pm start, type: 1
+
+I (27807) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;32mI (28727) wifi prev: Connected with IP Address:192.168.137.223[0m
+[0;32mI (28727) esp_netif_handlers: sta ip: 192.168.137.223, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (28727) MQTT: Other event id:7[0m
+[0;32mI (28737) MQTT: Topic publish: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/telemetry
+[0m
+[0;32mI (28737) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/Command
+[0m
+[0;32mI (28747) main_task: Returned from app_main()[0m
+[0;32mI (28947) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (29257) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=23538[0m
+[0;32mI (29557) MQTT: MQTT_EVENT_PUBLISHED, msg_id=56203[0m
+Error reading from DHT11: 255
+I (29867) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:11, winSize:64
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (39377) UART: Interval send data to host main: 5[0m
+Error reading from DHT11: 255
+[0;32mI (39797) MQTT: MQTT_EVENT_PUBLISHED, msg_id=33345[0m
+[0;32mI (39957) UART: Interval send data to host main: 10[0m
+[0;32mI (40307) MQTT: MQTT_EVENT_PUBLISHED, msg_id=14366[0m
+[0;32mI (40417) UART: Interval send data to host main: 10[0m
+[0;32mI (40607) UART: Interval send data to host main: 10[0m
+[0;32mI (40617) MQTT: MQTT_EVENT_PUBLISHED, msg_id=45468[0m
+[0;32mI (40707) MQTT: MQTT_EVENT_PUBLISHED, msg_id=15254[0m
+[0;32mI (40777) UART: Interval send data to host main: 10[0m
+[0;32mI (40927) MQTT: MQTT_EVENT_PUBLISHED, msg_id=59763[0m
+[0;32mI (40947) UART: Interval send data to host main: 10[0m
+[0;32mI (41237) MQTT: MQTT_EVENT_PUBLISHED, msg_id=20803[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (43997) MQTT: MQTT_EVENT_PUBLISHED, msg_id=27215[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (55487) UART: Start wifi reprov: 17[0m
+[0;32mI (55497) wifi_init: rx ba win: 6[0m
+[0;32mI (55497) wifi_init: tcpip mbox: 32[0m
+[0;32mI (55497) wifi_init: udp mbox: 6[0m
+[0;32mI (55497) wifi_init: tcp mbox: 6[0m
+[0;32mI (55497) wifi_init: tcp tx win: 5744[0m
+[0;32mI (55507) wifi_init: tcp rx win: 5744[0m
+[0;32mI (55507) wifi_init: tcp mss: 1440[0m
+[0;32mI (55507) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (55517) wifi_init: WiFi RX IRAM OP enabled[0m
+I (55527) wifi:state: run -> init (0)
+I (55527) wifi:pm stop, total sleep time: 23970737 us / 27803871 us
+
+I (55527) wifi:<ba-del>idx:0, tid:0
+I (55537) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (55537) wifi prev: Disconnected. Connecting to the AP again...[0m
+I (55547) wifi:mode : sta (7c:9e:bd:61:6d:ac) + softAP (7c:9e:bd:61:6d:ad)
+I (55557) wifi:Total power save buffer number: 16
+I (55557) wifi:Init max length of beacon: 752/752
+I (55567) wifi:Init max length of beacon: 752/752
+I (55567) wifi:Total power save buffer number: 16
+[0;31mE (55567) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54[0m
+[0;32mI (55577) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;31mE (55577) mqtt_client: Poll read error: 119, aborting connection[0m
+[0;32mI (55587) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (55607) wifi_prov_mgr: Provisioning started with service name : BEE_616DAC [0m
+[0;32mI (55607) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (55617) wifi prev: Provisioning started[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (65617) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (72787) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<11,0>, prof:1
+I (72787) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (72787) wifi prev: SoftAP transport: Connected![0m
+Error reading from DHT11: 255
+[0;31mE (75627) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (75627) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (75627) mqtt_client: Error transport connect[0m
+[0;32mI (75627) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (75637) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (76777) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (76777) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (76787) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (76797) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (76807) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (77127) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:17, winSize:64
+Error reading from DHT11: 255
+[0;33mW (79037) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (79037) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (90637) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (100647) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (100647) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (100647) mqtt_client: Error transport connect[0m
+[0;32mI (100647) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (100657) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (115617) wifi_init: rx ba win: 6[0m
+[0;32mI (115617) wifi_init: tcpip mbox: 32[0m
+[0;32mI (115617) wifi_init: udp mbox: 6[0m
+[0;32mI (115617) wifi_init: tcp mbox: 6[0m
+[0;32mI (115617) wifi_init: tcp tx win: 5744[0m
+[0;32mI (115627) wifi_init: tcp rx win: 5744[0m
+[0;32mI (115627) wifi_init: tcp mss: 1440[0m
+[0;32mI (115637) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (115637) wifi_init: WiFi RX IRAM OP enabled[0m
+I (115647) wifi:station: 70:5e:55:70:34:ed leave, AID = 1, bss_flags is 134259, bss:0x3ffd7428
+I (115657) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<11,0>, prof:1
+[0;32mI (115657) MQTT: Other event id:7[0m
+I (115657) wifi:<ba-del>idx:2, tid:0
+I (115667) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+Error reading from DHT11: 255
+[0;32mI (115657) wifi prev: SoftAP transport: Disconnected![0m
+[0;31mE (115697) esp-tls: [sock=54] delayed connect error: Software caused connection abort[0m
+[0;31mE (115697) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (115707) mqtt_client: Error transport connect[0m
+[0;32mI (115707) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (115717) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (116717) wifi_prov_mgr: Provisioning stopped[0m
+Error reading from DHT11: 255
+[0;32mI (118157) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (120577) wifi prev: Disconnected. Connecting to the AP again...[0m
+I (120587) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (121307) wifi:state: init -> auth (b0)
+I (121317) wifi:state: auth -> assoc (0)
+I (121317) wifi:state: assoc -> run (10)
+I (121327) wifi:connected with TUPEO, aid = 6, channel 11, BW20, bssid = b2:7d:64:d8:92:71
+I (121327) wifi:security: WPA2-PSK, phy: bgn, rssi: -36
+I (121337) wifi:pm start, type: 1
+
+I (121407) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+Error reading from DHT11: 255
+[0;32mI (122347) wifi prev: Connected with IP Address:192.168.137.223[0m
+[0;32mI (122347) esp_netif_handlers: sta ip: 192.168.137.223, mask: 255.255.255.0, gw: 192.168.137.1[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (130717) MQTT: Other event id:7[0m
+[0;32mI (131247) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (131547) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=22670[0m
+Error reading from DHT11: 255
+[0;32mI (131857) MQTT: MQTT_EVENT_PUBLISHED, msg_id=506[0m
+I (132157) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:11, winSize:64
+[0;32mI (132167) MQTT: MQTT_EVENT_PUBLISHED, msg_id=5529[0m
+Error reading from DHT11: 255
+[0;32mI (134007) MQTT: MQTT_EVENT_PUBLISHED, msg_id=43452[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (148837) MQTT: MQTT_EVENT_PUBLISHED, msg_id=58455[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (164117) MQTT: MQTT_EVENT_PUBLISHED, msg_id=64248[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (178857) MQTT: MQTT_EVENT_PUBLISHED, msg_id=60022[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (194017) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62649[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (208967) MQTT: MQTT_EVENT_PUBLISHED, msg_id=63802[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (224017) MQTT: MQTT_EVENT_PUBLISHED, msg_id=51942[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (239067) MQTT: MQTT_EVENT_PUBLISHED, msg_id=57499[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (254127) MQTT: MQTT_EVENT_PUBLISHED, msg_id=8330[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (269177) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41158[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (283917) MQTT: MQTT_EVENT_PUBLISHED, msg_id=13286[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (298977) MQTT: MQTT_EVENT_PUBLISHED, msg_id=7063[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (314027) MQTT: MQTT_EVENT_PUBLISHED, msg_id=61268[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (329077) MQTT: MQTT_EVENT_PUBLISHED, msg_id=17128[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (344137) MQTT: MQTT_EVENT_PUBLISHED, msg_id=11564[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (358877) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18364[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (373937) MQTT: MQTT_EVENT_PUBLISHED, msg_id=7198[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (388987) MQTT: MQTT_EVENT_PUBLISHED, msg_id=43463[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (404037) MQTT: MQTT_EVENT_PUBLISHED, msg_id=59711[0m
+Error reading from DHT11: 255
+[0;32mI (406987) Button: Send data button clicked: 0[0m
+[0;32mI (406997) Button: Send data button clicked: 1[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (419087) MQTT: MQTT_EVENT_PUBLISHED, msg_id=54091[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (434147) MQTT: MQTT_EVENT_PUBLISHED, msg_id=26982[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (448887) MQTT: MQTT_EVENT_PUBLISHED, msg_id=9315[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (463947) MQTT: MQTT_EVENT_PUBLISHED, msg_id=50371[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (478997) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39905[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (494047) MQTT: MQTT_EVENT_PUBLISHED, msg_id=44547[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (509097) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37193[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (524157) MQTT: MQTT_EVENT_PUBLISHED, msg_id=40284[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (538897) MQTT: MQTT_EVENT_PUBLISHED, msg_id=13936[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (553957) MQTT: MQTT_EVENT_PUBLISHED, msg_id=31816[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (569007) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47541[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (583847) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39632[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (599107) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37319[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (614167) MQTT: MQTT_EVENT_PUBLISHED, msg_id=33841[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (628907) MQTT: MQTT_EVENT_PUBLISHED, msg_id=26510[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (643967) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18169[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (659017) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41624[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (674067) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4089[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (689117) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39088[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (703857) MQTT: MQTT_EVENT_PUBLISHED, msg_id=45034[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (718917) MQTT: MQTT_EVENT_PUBLISHED, msg_id=22898[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (733977) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39465[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (749027) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30891[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (764077) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6823[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (779137) MQTT: MQTT_EVENT_PUBLISHED, msg_id=54983[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (794187) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39653[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (808927) MQTT: MQTT_EVENT_PUBLISHED, msg_id=5555[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (823987) MQTT: MQTT_EVENT_PUBLISHED, msg_id=61528[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (839037) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23085[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (854087) MQTT: MQTT_EVENT_PUBLISHED, msg_id=43020[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (869147) MQTT: MQTT_EVENT_PUBLISHED, msg_id=1357[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (883887) MQTT: MQTT_EVENT_PUBLISHED, msg_id=57393[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (898937) MQTT: MQTT_EVENT_PUBLISHED, msg_id=1850[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (913997) MQTT: MQTT_EVENT_PUBLISHED, msg_id=13593[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (929047) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4334[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (958847) MQTT: MQTT_EVENT_PUBLISHED, msg_id=5097[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (973897) MQTT: MQTT_EVENT_PUBLISHED, msg_id=48083[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (988957) MQTT: MQTT_EVENT_PUBLISHED, msg_id=51102[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1004007) MQTT: MQTT_EVENT_PUBLISHED, msg_id=31765[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1019057) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4326[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1034107) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37662[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1048857) MQTT: MQTT_EVENT_PUBLISHED, msg_id=29433[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1063907) MQTT: MQTT_EVENT_PUBLISHED, msg_id=12895[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1078967) MQTT: MQTT_EVENT_PUBLISHED, msg_id=9103[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1094017) MQTT: MQTT_EVENT_PUBLISHED, msg_id=12657[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1109067) MQTT: MQTT_EVENT_PUBLISHED, msg_id=59782[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1124117) MQTT: MQTT_EVENT_PUBLISHED, msg_id=60198[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1138867) MQTT: MQTT_EVENT_PUBLISHED, msg_id=20208[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1153917) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37995[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1168977) MQTT: MQTT_EVENT_PUBLISHED, msg_id=1637[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1184027) MQTT: MQTT_EVENT_PUBLISHED, msg_id=12457[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1198857) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46470[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1214127) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53395[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1228867) MQTT: MQTT_EVENT_PUBLISHED, msg_id=27690[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1244237) MQTT: MQTT_EVENT_PUBLISHED, msg_id=9698[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1258877) MQTT: MQTT_EVENT_PUBLISHED, msg_id=50390[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1274037) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41372[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1289087) MQTT: MQTT_EVENT_PUBLISHED, msg_id=42749[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1304137) MQTT: MQTT_EVENT_PUBLISHED, msg_id=36992[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1318887) MQTT: MQTT_EVENT_PUBLISHED, msg_id=8062[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1333937) MQTT: MQTT_EVENT_PUBLISHED, msg_id=38208[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1348997) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23201[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1363927) MQTT: MQTT_EVENT_PUBLISHED, msg_id=59914[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1379097) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47190[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1393827) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16292[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1408897) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6121[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1423837) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37346[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1439007) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10099[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1454057) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62605[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1468887) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35002[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1484157) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21419[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1499217) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35302[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1513957) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35105[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1529017) MQTT: MQTT_EVENT_PUBLISHED, msg_id=60671[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1543847) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23040[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (1559117) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46216[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
