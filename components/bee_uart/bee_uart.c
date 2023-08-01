@@ -30,7 +30,7 @@ extern uint8_t u8humi;
 extern bool    bsend_data;
 extern uint8_t u8data_interval_uart;
 
-void uart_init()
+void uart_init(void)
 {
     uart_config_t uart_config =
     {
@@ -147,11 +147,11 @@ void uart_cmd_task(void* pvParameters)
                     send_data_mqtt("Id_interval", LoByteData_interval_10s);
                     save_uart_data_to_nvs(bsend_data, u8data_interval_uart);
                 }
-                else if ((uart_data_recei[3] == Id_wifi_reprov) && (uart_data_recei[7] == LoByteData_wifi_reprov))
+                else if ((uart_data_recei[3] == Id_wifi_prov) && (uart_data_recei[7] == LoByteData_wifi_prov))
                 {
-                    ESP_LOGI (TAG, "Start wifi reprov: %d", LoByteData_wifi_reprov);
-                    send_data_mqtt("Id_wifi_reprov", LoByteData_wifi_reprov);
-                    wifi_reprov();
+                    ESP_LOGI (TAG, "Start wifi prov: %d", LoByteData_wifi_prov);
+                    send_data_mqtt("Id_wifi_prov", LoByteData_wifi_prov);
+                    wifi_prov();
                 }
             }  
         }

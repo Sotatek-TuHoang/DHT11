@@ -1,0 +1,661 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug  2 2023 00:01:10[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3031ch (197404) map[0m
+[0;32mI (177) esp_image: segment 1: paddr=00040344 vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=00043b6c vaddr=40080000 size=0c4ach ( 50348) load[0m
+[0;32mI (204) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b2fb8h (733112) map[0m
+[0;32mI (469) esp_image: segment 4: paddr=00102fe0 vaddr=4008c4ac size=09fb4h ( 40884) load[0m
+[0;32mI (497) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (497) boot: Disabling RNG early entropy source...[0m
+[0;32mI (509) cpu_start: Multicore app[0m
+[0;32mI (509) cpu_start: Pro cpu up.[0m
+[0;32mI (509) cpu_start: Starting app cpu, entry point is 0x40081454[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (527) cpu_start: Pro cpu start user code[0m
+[0;32mI (527) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (527) cpu_start: Application information:[0m
+[0;32mI (532) cpu_start: Project name:     bee_main[0m
+[0;32mI (537) cpu_start: App version:      039ebd4-dirty[0m
+[0;32mI (542) cpu_start: Compile time:     Aug  2 2023 00:00:50[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  1bd4d5c11b4854f7...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (560) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (564) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (569) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (581) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (587) heap_init: At 3FFB81A0 len 00027E60 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (600) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (606) heap_init: At 40096460 len 00009BA0 (38 KiB): IRAM[0m
+[0;32mI (614) spi_flash: detected chip: generic[0m
+[0;32mI (617) spi_flash: flash io: dio[0m
+[0;33mW (621) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (635) app_start: Starting scheduler on CPU0[0m
+[0;32mI (639) app_start: Starting scheduler on CPU1[0m
+[0;32mI (639) main_task: Started on CPU0[0m
+[0;32mI (649) main_task: Calling app_main()[0m
+[0;32mI (1679) uart: queue free spaces: 6[0m
+I (1689) wifi:wifi driver task: 3ffc9fcc, prio:23, stack:6656, core=0
+I (1699) wifi:wifi firmware version: b2f1f86
+I (1699) wifi:wifi certification version: v7.0
+I (1709) wifi:config NVS flash: enabled
+I (1709) wifi:config nano formating: disabled
+I (1709) wifi:Init data frame dynamic rx buffer num: 32
+I (1709) wifi:Init management frame dynamic rx buffer num: 32
+I (1719) wifi:Init management short buffer num: 32
+I (1719) wifi:Init dynamic tx buffer num: 32
+I (1729) wifi:Init static rx buffer size: 1600
+I (1729) wifi:Init static rx buffer num: 10
+I (1739) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1739) wifi_init: rx ba win: 6[0m
+[0;32mI (1739) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1749) wifi_init: udp mbox: 6[0m
+[0;32mI (1749) wifi_init: tcp mbox: 6[0m
+[0;32mI (1759) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1759) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1759) wifi_init: tcp mss: 1440[0m
+[0;32mI (1769) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1769) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1779) wifi prev: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1789) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1899) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+I (1899) wifi:enable tsf
+I (1909) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (1919) wifi:state: init -> auth (b0)
+I (1919) wifi:state: auth -> assoc (0)
+I (1919) wifi:state: assoc -> run (10)
+I (1929) wifi:connected with TUPEO, aid = 4, channel 6, BW20, bssid = b2:7d:64:d8:92:71
+I (1929) wifi:security: WPA2-PSK, phy: bgn, rssi: -46
+I (1939) wifi:pm start, type: 1
+
+I (1999) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;32mI (2939) wifi prev: Connected with IP Address:192.168.137.63[0m
+[0;32mI (2939) esp_netif_handlers: sta ip: 192.168.137.63, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (2939) MQTT: Other event id:7[0m
+[0;32mI (2949) MQTT: Topic publish: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/telemetry
+[0m
+[0;32mI (2949) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/Command
+[0m
+[0;32mI (2959) main_task: Returned from app_main()[0m
+[0;32mI (3639) MQTT: MQTT_EVENT_CONNECTED[0m
+Error reading from DHT11: 255
+Error read count: 1
+[0;32mI (3739) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=59026[0m
+Error reading from DHT11: 255
+Error read count: 2
+I (5679) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:10, winSize:64
+Error reading from DHT11: 255
+Error read count: 3
+[0;32mI (9379) UART: Start wifi prov: 17[0m
+[0;32mI (9389) wifi_init: rx ba win: 6[0m
+[0;32mI (9389) wifi_init: tcpip mbox: 32[0m
+[0;32mI (9389) wifi_init: udp mbox: 6[0m
+[0;32mI (9389) wifi_init: tcp mbox: 6[0m
+[0;32mI (9389) wifi_init: tcp tx win: 5744[0m
+[0;32mI (9389) wifi_init: tcp rx win: 5744[0m
+[0;32mI (9399) wifi_init: tcp mss: 1440[0m
+[0;32mI (9399) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (9409) wifi_init: WiFi RX IRAM OP enabled[0m
+I (9419) wifi:state: run -> init (0)
+I (9419) wifi:pm stop, total sleep time: 6586472 us / 7476244 us
+
+I (9419) wifi:<ba-del>idx:0, tid:0
+I (9429) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (9429) wifi prev: Disconnected. Connecting to the AP again...[0m
+I (9439) wifi:mode : sta (7c:9e:bd:61:6d:ac) + softAP (7c:9e:bd:61:6d:ad)
+I (9449) wifi:Total power save buffer number: 16
+I (9449) wifi:Init max length of beacon: 752/752
+I (9449) wifi:Init max length of beacon: 752/752
+I (9459) wifi:Total power save buffer number: 16
+[0;31mE (9459) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54[0m
+[0;32mI (9459) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;31mE (9479) mqtt_client: Poll read error: 119, aborting connection[0m
+[0;32mI (9479) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (9499) wifi_prov_mgr: Provisioning started with service name : BEE_616DAC [0m
+[0;32mI (9499) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9509) wifi prev: Provisioning started[0m
+Error reading from DHT11: 255
+Error read count: 4
+Error reading from DHT11: 255
+Error read count: 5
+Error reading from DHT11: 255
+Error read count: 6
+Error reading from DHT11: 255
+Error read count: 7
+Error reading from DHT11: 255
+Error read count: 8
+I (18299) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<6,0>, prof:1
+I (18299) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (18299) wifi prev: SoftAP transport: Connected![0m
+[0;32mI (18419) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (18989) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:17, winSize:64
+[0;32mI (19509) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error read count: 9
+[0;33mW (20989) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (20989) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Error reading from DHT11: 255
+Error read count: 10
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (29519) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (29519) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (29519) mqtt_client: Error transport connect[0m
+[0;32mI (29519) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (29529) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (38599) wifi prev: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : 1[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (42439) wifi:primary chan differ, old=1, new=6, start CSA timer
+I (42839) wifi:switch to channel 6
+I (42839) wifi:ap channel adjust o:1,1 n:6,2
+I (42839) wifi:new:<6,0>, old:<1,0>, ap:<6,2>, sta:<6,0>, prof:1
+I (42839) wifi:new:<6,2>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+I (43569) wifi:state: init -> auth (b0)
+I (43579) wifi:state: auth -> assoc (0)
+I (43589) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+[0;32mI (44529) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+I (46129) wifi:state: run -> init (fc0)
+I (46129) wifi:new:<6,0>, old:<6,2>, ap:<6,2>, sta:<6,0>, prof:1
+[0;32mI (46129) wifi prev: Disconnected. Connecting to the AP again...[0m
+[0;31mE (46139) wifi_prov_mgr: STA Disconnected[0m
+[0;31mE (46139) wifi_prov_mgr: Disconnect reason : 15[0m
+[0;31mE (46139) wifi_prov_mgr: STA Auth Error[0m
+[0;31mE (46149) wifi prev: Provisioning failed!
+	Reason : Wi-Fi station authentication failed
+	Please reset to factory and retry provisioning[0m
+[0;32mI (46349) wifi prev: SoftAP transport: Disconnected![0m
+Error reading from DHT11: 255
+[0;32mI (48969) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (54539) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (54539) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (54539) mqtt_client: Error transport connect[0m
+[0;32mI (54539) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (54549) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (55789) wifi prev: SoftAP transport: Disconnected![0m
+I (55789) wifi:<ba-del>idx:2, tid:0
+I (55789) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+I (55789) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (55799) wifi prev: SoftAP transport: Connected![0m
+[0;32mI (55939) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (56299) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Error reading from DHT11: 255
+[0;33mW (58069) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (58069) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;33mW (64819) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (64829) security1: Closing old session with id 1978742450[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (69549) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (73149) wifi prev: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : w[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (76989) wifi:primary chan differ, old=6, new=6, start CSA timer
+I (76989) wifi:new:<6,2>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+Error reading from DHT11: 255
+I (77769) wifi:state: init -> auth (b0)
+I (77779) wifi:state: auth -> assoc (0)
+I (77789) wifi:state: assoc -> run (10)
+[0;31mE (79559) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (79559) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (79559) mqtt_client: Error transport connect[0m
+[0;32mI (79559) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (79569) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+I (80329) wifi:state: run -> init (fc0)
+I (80329) wifi:new:<6,0>, old:<6,2>, ap:<6,2>, sta:<6,0>, prof:1
+[0;32mI (80329) wifi prev: Disconnected. Connecting to the AP again...[0m
+[0;31mE (80339) wifi_prov_mgr: STA Disconnected[0m
+[0;31mE (80339) wifi_prov_mgr: Disconnect reason : 15[0m
+[0;31mE (80349) wifi_prov_mgr: STA Auth Error[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4008d131  PS      : 0x00060c33  A0      : 0x8008b623  A1      : 0x3ffc73e0  
+A2      : 0x3ffb9968  A3      : 0x00060c20  A4      : 0x00000000  A5      : 0x00060c23  
+A6      : 0xb33fffff  A7      : 0xb33fffff  A8      : 0x3ffb9984  A9      : 0x00010080  
+A10     : 0x002c002c  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00060c23  
+A14     : 0xb33fffff  A15     : 0xb33fffff  SAR     : 0x00000015  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x002c0034  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4008d12e:0x3ffc73e0 0x4008b620:0x3ffc7400 0x400d8703:0x3ffc7420 0x401802f9:0x3ffc7450 0x4017fd9e:0x3ffc7480 0x4017fe75:0x3ffc74c0 0x4008c579:0x3ffc74e0
+
+
+
+
+ELF file SHA256: 1bd4d5c11b4854f7
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug  2 2023 00:01:10[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3031ch (197404) map[0m
+[0;32mI (178) esp_image: segment 1: paddr=00040344 vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=00043b6c vaddr=40080000 size=0c4ach ( 50348) load[0m
+[0;32mI (205) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b2fb8h (733112) map[0m
+[0;32mI (469) esp_image: segment 4: paddr=00102fe0 vaddr=4008c4ac size=09fb4h ( 40884) load[0m
+[0;32mI (498) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (509) cpu_start: Multicore app[0m
+[0;32mI (510) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40081454[0m
+[0;32mI (496) cpu_start: App cpu up.[0m
+[0;32mI (528) cpu_start: Pro cpu start user code[0m
+[0;32mI (528) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (528) cpu_start: Application information:[0m
+[0;32mI (533) cpu_start: Project name:     bee_main[0m
+[0;32mI (538) cpu_start: App version:      039ebd4-dirty[0m
+[0;32mI (543) cpu_start: Compile time:     Aug  2 2023 00:00:50[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  1bd4d5c11b4854f7...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (561) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (570) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (588) heap_init: At 3FFB81A0 len 00027E60 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (601) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (607) heap_init: At 40096460 len 00009BA0 (38 KiB): IRAM[0m
+[0;32mI (615) spi_flash: detected chip: generic[0m
+[0;32mI (618) spi_flash: flash io: dio[0m
+[0;33mW (622) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (636) app_start: Starting scheduler on CPU0[0m
+[0;32mI (640) app_start: Starting scheduler on CPU1[0m
+[0;32mI (640) main_task: Started on CPU0[0m
+[0;32mI (650) main_task: Calling app_main()[0m
+[0;32mI (1680) uart: queue free spaces: 6[0m
+I (1690) wifi:wifi driver task: 3ffca050, prio:23, stack:6656, core=0
+I (1700) wifi:wifi firmware version: b2f1f86
+I (1700) wifi:wifi certification version: v7.0
+I (1710) wifi:config NVS flash: enabled
+I (1710) wifi:config nano formating: disabled
+I (1710) wifi:Init data frame dynamic rx buffer num: 32
+I (1710) wifi:Init management frame dynamic rx buffer num: 32
+I (1720) wifi:Init management short buffer num: 32
+I (1720) wifi:Init dynamic tx buffer num: 32
+I (1730) wifi:Init static rx buffer size: 1600
+I (1730) wifi:Init static rx buffer num: 10
+I (1740) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1740) wifi_init: rx ba win: 6[0m
+[0;32mI (1740) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1750) wifi_init: udp mbox: 6[0m
+[0;32mI (1750) wifi_init: tcp mbox: 6[0m
+[0;32mI (1760) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1760) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1760) wifi_init: tcp mss: 1440[0m
+[0;32mI (1770) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1770) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1780) wifi prev: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1800) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1910) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+I (1910) wifi:enable tsf
+Error reading from DHT11: 255
+Error read count: 1
+I (4320) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (4320) wifi:state: init -> auth (b0)
+I (4330) wifi:state: auth -> assoc (0)
+I (4330) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+Error read count: 2
+I (6850) wifi:state: run -> init (fc0)
+I (6850) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (6850) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 3
+[0;32mI (9270) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 4
+Error reading from DHT11: 255
+Error read count: 5
+I (11700) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (11700) wifi:state: init -> auth (b0)
+I (11700) wifi:state: auth -> assoc (0)
+I (11710) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+Error read count: 6
+I (14240) wifi:state: run -> init (fc0)
+I (14240) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (14240) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 7
+[0;32mI (16660) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 8
+I (19070) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (19070) wifi:state: init -> auth (b0)
+I (19080) wifi:state: auth -> assoc (0)
+I (19080) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+Error read count: 9
+I (21620) wifi:state: run -> init (fc0)
+I (21620) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (21620) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 10
+Error reading from DHT11: 255
+[0;32mI (24060) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (26470) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (26470) wifi:state: init -> auth (b0)
+I (27470) wifi:state: auth -> init (200)
+I (27470) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (27480) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (29890) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (32300) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (32310) wifi:state: init -> auth (b0)
+I (33310) wifi:state: auth -> init (200)
+I (33310) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (33310) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (35730) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (38140) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (38140) wifi:state: init -> auth (b0)
+I (38190) wifi:state: auth -> assoc (0)
+I (38190) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (40740) wifi:state: run -> init (fc0)
+I (40750) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (40750) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (43160) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (45580) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (45580) wifi:state: init -> auth (b0)
+I (45580) wifi:state: auth -> assoc (0)
+I (45590) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (48120) wifi:state: run -> init (fc0)
+I (48120) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (48120) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (50540) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (52950) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (52950) wifi:state: init -> auth (b0)
+I (52960) wifi:state: auth -> assoc (0)
+I (52960) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (55490) wifi:state: run -> init (fc0)
+I (55490) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (55490) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (57910) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (60320) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (60320) wifi:state: init -> auth (b0)
+I (60330) wifi:state: auth -> assoc (0)
+I (60330) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (62860) wifi:state: run -> init (fc0)
+I (62860) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (62870) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (65280) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (67700) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (67700) wifi:state: init -> auth (b0)
+I (67700) wifi:state: auth -> assoc (0)
+I (67710) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (70240) wifi:state: run -> init (fc0)
+I (70240) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (70240) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (72660) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (75070) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (75070) wifi:state: init -> auth (b0)
+I (75080) wifi:state: auth -> assoc (0)
+I (75080) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (77610) wifi:state: run -> init (fc0)
+I (77610) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (77610) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (80030) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (82440) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (82440) wifi:state: init -> auth (b0)
+I (82450) wifi:state: auth -> assoc (0)
+I (82450) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (84980) wifi:state: run -> init (fc0)
+I (84980) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (84980) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (87400) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (89810) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (89820) wifi:state: init -> auth (b0)
+I (89820) wifi:state: auth -> assoc (0)
+I (89820) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (92360) wifi:state: run -> init (fc0)
+I (92360) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (92360) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (94780) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (97190) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (97190) wifi:state: init -> auth (b0)
+I (97200) wifi:state: auth -> assoc (0)
+I (97200) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (99730) wifi:state: run -> init (fc0)
+I (99730) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (99730) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (102150) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (104560) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (104560) wifi:state: init -> auth (b0)
+I (104560) wifi:state: auth -> assoc (0)
+I (104570) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (107100) wifi:state: run -> init (fc0)
+I (107100) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (107100) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (109520) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (111930) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (111930) wifi:state: init -> auth (b0)
+I (111940) wifi:state: auth -> assoc (0)
+I (111940) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (114470) wifi:state: run -> init (fc0)
+I (114470) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (114480) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (116890) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (119310) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (119310) wifi:state: init -> auth (b0)
+I (119310) wifi:state: auth -> assoc (0)
+I (119320) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (121850) wifi:state: run -> init (fc0)
+I (121850) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (121850) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (124270) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (126680) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (126680) wifi:state: init -> auth (b0)
+I (126680) wifi:state: auth -> assoc (0)
+I (126690) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (129220) wifi:state: run -> init (fc0)
+I (129220) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (129220) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (131640) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (134050) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (134050) wifi:state: init -> auth (b0)
+I (134060) wifi:state: auth -> assoc (0)
+I (134060) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (136590) wifi:state: run -> init (fc0)
+I (136590) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (136590) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (139010) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (141420) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (141430) wifi:state: init -> auth (b0)
+I (141430) wifi:state: auth -> assoc (0)
+I (141430) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (143970) wifi:state: run -> init (fc0)
+I (143970) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (143970) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (146380) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (148800) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (148800) wifi:state: init -> auth (b0)
+I (148800) wifi:state: auth -> assoc (0)
+I (148810) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (151340) wifi:state: run -> init (fc0)
+I (151340) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (151340) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (153760) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (156170) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (156170) wifi:state: init -> auth (b0)
+I (156180) wifi:state: auth -> assoc (0)
+I (156180) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (158710) wifi:state: run -> init (fc0)
+I (158710) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (158710) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (161130) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (163540) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (163540) wifi:state: init -> auth (b0)
+I (163550) wifi:state: auth -> assoc (0)
+I (163550) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (166090) wifi:state: run -> init (fc0)
+I (166090) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (166090) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (168510) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (170920) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (170920) wifi:state: init -> auth (b0)
+I (170930) wifi:state: auth -> assoc (0)
+I (170930) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (173460) wifi:state: run -> init (fc0)
+I (173460) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (173460) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (175880) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+I (178290) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (178290) wifi:state: init -> auth (b0)
+I (178300) wifi:state: auth -> assoc (0)
+I (178310) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (180840) wifi:state: run -> init (fc0)
+I (180840) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (180840) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (183260) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255

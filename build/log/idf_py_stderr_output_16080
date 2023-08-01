@@ -1,0 +1,33 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- idf_monitor on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081468: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x4008d16f: uxListRemove at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/list.c:204
+[0m
+[0;33m0x400014fd: strlen in ROM
+[0m
+[0;33m0x4000150d: strlen in ROM
+[0m
+[0;33m0x4008d16c: uxListRemove at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/list.c:198
+[0m
+[0;33m0x4008b658: vTaskDelete at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/tasks.c:1434 (discriminator 4)
+[0m
+[0;33m0x400d8689: event_handler at E:/Phase2 beta/components/bee_wifi/bee_wifi.c:76
+[0m
+[0;33m0x401802c5: handler_execute at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_event/esp_event.c:137
+[0m
+[0;33m0x4017fd6a: esp_event_loop_run at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_event/esp_event.c:582 (discriminator 3)
+[0m
+[0;33m0x4017fe41: esp_event_loop_run_task at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_event/esp_event.c:107 (discriminator 15)
+[0m
+[0;33m0x4008c5b1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081468: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0m

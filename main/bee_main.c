@@ -27,7 +27,7 @@ uint8_t u8data_interval_uart = 2; // Deffault interval upload data uart
 uint8_t u8data_interval_mqtt = 30; // Deffault interval upload data mqtt
 
 /****************************************************************************/
-/***        List of Function                                              ***/
+/***        List of Tasks                                                 ***/
 /****************************************************************************/
 void read_dht11(void* pvParameters);
 void led_control_task(void* pvParameters);
@@ -61,7 +61,7 @@ void app_main()
     xTaskCreate(interval_button, "interval_button", 2048, NULL, 3, NULL);
     xTaskCreate(send_data_button, "send_data_button", 2048, NULL, 2, NULL);
     
-    wifi_prov();
+    wifi_init_func();
 
     mqtt_app_start();
 

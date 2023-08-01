@@ -92,7 +92,7 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
     }
 }
 
-void get_mac()
+void get_mac(void)
 {
     esp_wifi_get_mac(ESP_IF_WIFI_STA, u8mac);
     snprintf(cMac_str, sizeof(cMac_str), "%02X%02X%02X%02X%02X%02X", u8mac[0], u8mac[1], u8mac[2], u8mac[3], u8mac[4], u8mac[5]);
@@ -133,7 +133,7 @@ void send_data_mqtt(const char *object, int values)
     free(json_str);
 }
 
-static void send_warning()
+static void send_warning(void)
 {
     cJSON *json_warning = cJSON_CreateObject();
     cJSON_AddStringToObject(json_warning, "thing_token", cMac_str);
@@ -149,7 +149,7 @@ static void send_warning()
     free(json_str);
 }
 
-static void check_warning()
+static void check_warning(void)
 {
     if (u8error_cnt == 10)
     {
@@ -203,7 +203,7 @@ static void check_warning()
     }
 }
 
-static void send_keep_alive()
+static void send_keep_alive(void)
 {
     cJSON *json_keep_alive = cJSON_CreateObject();
     cJSON_AddStringToObject(json_keep_alive, "thing_token", cMac_str);

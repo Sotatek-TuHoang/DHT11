@@ -45,13 +45,13 @@
 #define LoByteData_interval_5s   0x05
 #define LoByteData_interval_10s  0x10
 
-//define cmd wifi reprov
-#define Id_wifi_reprov          0x05
-#define LoByteData_wifi_reprov  0x11
+//define cmd wifi prov
+#define Id_wifi_prov          0x05
+#define LoByteData_wifi_prov  0x11
 
 #include "driver/uart.h"
 
-void uart_init();
+void uart_init(void);
 char calculate_checksum(const char *data, size_t length);
 void uart_send_data_task(void* pvParameters);
 void uart_cmd_task(void* pvParameters);

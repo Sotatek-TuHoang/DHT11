@@ -23,7 +23,6 @@
 #define PASSWORD            "123abcA@!"
 
 void mqtt_app_start(void);
-void get_mac();
 void send_mqtt_data_task(void* pvParameters);
 void reveive_mqtt_config_task(void* pvParameters);
 void send_data_mqtt(const char *object, int values);

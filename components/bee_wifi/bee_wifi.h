@@ -11,8 +11,8 @@
 #ifndef BEE_WIFI_H_
 #define BEE_WIFI_H_
 
+void wifi_init_func(void);
 void wifi_prov(void);
-void wifi_reprov();
 
 #endif /* BEE_WIFI_H_ */
 
