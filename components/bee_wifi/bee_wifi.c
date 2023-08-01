@@ -254,6 +254,8 @@ void prov_timeout_task(void* pvParameters)
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 
+    ESP_LOGI(TAG,"\nProv TIMEOUT!!!\n");
+
     wifi_config_t wifi_sta_cfg;
 
     // Đọc thông tin SSID và Password từ NVS
@@ -293,6 +295,10 @@ void prov_fail_task(void* pvParameters)
     {
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
+
+    ESP_LOGI(TAG,"\nReprov fail TIMEOUT!!!\n");
+
+    wifi_prov_mgr_stop_provisioning();
 
     vTaskDelete(prov_fail_handle); // Xóa task khi hoàn thành
 }

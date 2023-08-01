@@ -149,4 +149,430 @@ I (21769) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<6,0>, prof:1
 I (21769) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
 [0;32mI (21769) wifi prev: SoftAP transport: Connected![0m
 [0;32mI (21869) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
-I (22319) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ss
+I (22319) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Error reading from DHT11: 255
+[0;33mW (23979) protocomm_httpd: Resetting socket session id as socket 57was closed[0m
+[0;33mW (23989) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (23989) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (27979) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (37989) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (37989) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (37989) mqtt_client: Error transport connect[0m
+[0;32mI (37989) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (37999) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (38269) wifi prev: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : 1[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (42109) wifi:primary chan differ, old=1, new=6, start CSA timer
+I (42509) wifi:switch to channel 6
+I (42509) wifi:ap channel adjust o:1,1 n:6,2
+I (42509) wifi:new:<6,0>, old:<1,0>, ap:<6,2>, sta:<6,0>, prof:1
+I (42519) wifi:new:<6,2>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+I (43249) wifi:state: init -> auth (b0)
+Error reading from DHT11: 255
+I (44249) wifi:state: auth -> init (200)
+I (44249) wifi:new:<6,0>, old:<6,2>, ap:<6,2>, sta:<6,0>, prof:1
+[0;32mI (44249) wifi prev: Disconnected. Connecting to the AP again...[0m
+[0;31mE (44259) wifi_prov_mgr: STA Disconnected[0m
+[0;31mE (44259) wifi_prov_mgr: Disconnect reason : 2[0m
+[0;31mE (44269) wifi_prov_mgr: STA Auth Error[0m
+[0;31mE (44269) wifi prev: Provisioning failed!
+	Reason : Wi-Fi station authentication failed
+	Please reset to factory and retry provisioning[0m
+[0;32mI (44489) wifi prev: SoftAP transport: Disconnected![0m
+Error reading from DHT11: 255
+[0;32mI (47099) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (52669) wifi prev: SoftAP transport: Disconnected![0m
+I (52669) wifi:<ba-del>idx:2, tid:0
+I (52669) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+I (52669) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (52679) wifi prev: SoftAP transport: Connected![0m
+[0;32mI (52789) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (52999) MQTT: Other event id:7[0m
+I (53179) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Error reading from DHT11: 255
+[0;33mW (54939) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (54939) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;33mW (61099) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (61099) security1: Closing old session with id 466124869[0m
+Error reading from DHT11: 255
+[0;31mE (63009) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (63009) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (63009) mqtt_client: Error transport connect[0m
+[0;32mI (63009) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (63019) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (70219) wifi prev: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : fgggggg[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (74059) wifi:primary chan differ, old=6, new=6, start CSA timer
+I (74059) wifi:new:<6,2>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+I (74779) wifi:state: init -> auth (b0)
+Error reading from DHT11: 255
+I (75779) wifi:state: auth -> init (200)
+I (75779) wifi:new:<6,0>, old:<6,2>, ap:<6,2>, sta:<6,0>, prof:1
+[0;32mI (75779) wifi prev: Disconnected. Connecting to the AP again...[0m
+[0;31mE (75789) wifi_prov_mgr: STA Disconnected[0m
+[0;31mE (75789) wifi_prov_mgr: Disconnect reason : 2[0m
+[0;31mE (75799) wifi_prov_mgr: STA Auth Error[0m
+[0;31mE (75799) wifi prev: Provisioning failed!
+	Reason : Wi-Fi station authentication failed
+	Please reset to factory and retry provisioning[0m
+Error reading from DHT11: 255
+[0;32mI (78019) MQTT: Other event id:7[0m
+[0;32mI (78639) wifi prev: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (84859) wifi prev: SoftAP transport: Disconnected![0m
+I (84859) wifi:<ba-del>idx:2, tid:0
+I (84869) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+I (84869) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (84869) wifi prev: SoftAP transport: Connected![0m
+[0;32mI (84989) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (85379) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Error reading from DHT11: 255
+[0;33mW (87109) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (87109) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Error reading from DHT11: 255
+[0;31mE (88029) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (88029) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (88029) mqtt_client: Error transport connect[0m
+[0;32mI (88029) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (88039) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;33mW (93739) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (93739) security1: Closing old session with id 466124869[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (98619) wifi prev: SoftAP transport: Disconnected![0m
+I (98619) wifi:<ba-del>idx:2, tid:0
+I (98619) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+I (98619) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (98629) wifi prev: SoftAP transport: Connected![0m
+[0;32mI (98759) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;33mW (99049) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+Error reading from DHT11: 255
+I (99739) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:17, winSize:64
+[0;33mW (99809) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (99809) security1: Closing old session with id 466124869[0m
+Error reading from DHT11: 255
+[0;32mI (103039) MQTT: Other event id:7[0m
+[0;33mW (103599) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (103599) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (108729) wifi prev: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : rrrrrrr[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (112569) wifi:primary chan differ, old=6, new=6, start CSA timer
+I (112569) wifi:new:<6,2>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+[0;31mE (113049) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (113049) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (113049) mqtt_client: Error transport connect[0m
+[0;32mI (113059) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (113059) MQTT: MQTT_EVENT_DISCONNECTED[0m
+I (113299) wifi:state: init -> auth (b0)
+[0;32mI (113309) wifi prev: SoftAP transport: Disconnected![0m
+I (113329) wifi:state: auth -> assoc (0)
+I (113349) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+[0;32mI (114289) wifi prev: SoftAP transport: Disconnected![0m
+I (114289) wifi:<ba-del>idx:2, tid:0
+I (114289) wifi:new:<6,0>, old:<6,2>, ap:<6,2>, sta:<6,0>, prof:1
+I (114289) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (114299) wifi prev: SoftAP transport: Connected![0m
+[0;32mI (114429) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (114889) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Error reading from DHT11: 255
+I (115879) wifi:state: run -> init (fc0)
+I (115889) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+[0;32mI (115889) wifi prev: Disconnected. Connecting to the AP again...[0m
+[0;31mE (115889) wifi_prov_mgr: STA Disconnected[0m
+[0;31mE (115889) wifi_prov_mgr: Disconnect reason : 15[0m
+[0;31mE (115899) wifi_prov_mgr: STA Auth Error[0m
+[0;31mE (115899) wifi prev: Provisioning failed!
+	Reason : Wi-Fi station authentication failed
+	Please reset to factory and retry provisioning[0m
+[0;33mW (117089) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (117089) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Error reading from DHT11: 255
+[0;32mI (118729) wifi prev: Disconnected. Connecting to the AP again...[0m
+[0;32mI (118849) wifi prev: SoftAP transport: Disconnected![0m
+I (118849) wifi:<ba-del>idx:2, tid:0
+I (118859) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+I (118859) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (118859) wifi prev: SoftAP transport: Connected![0m
+[0;32mI (118919) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+Error reading from DHT11: 255
+I (121069) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+[0;33mW (121079) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (121089) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Error reading from DHT11: 255
+[0;32mI (123069) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;33mW (125979) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (125979) security1: Closing old session with id 466124869[0m
+[0;31mE (126829) security1: Key mismatch. Close connection[0m
+[0;31mE (126829) security1: Session setup error -1[0m
+[0;31mE (126829) protocomm_httpd: Data handler failed[0m
+[0;33mW (126829) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;31mE (126869) security1: Key mismatch. Close connection[0m
+[0;31mE (126869) security1: Session setup error -1[0m
+[0;31mE (126869) protocomm_httpd: Data handler failed[0m
+[0;33mW (126869) httpd_uri: httpd_uri: uri handler execution failed[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (133079) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (133079) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (133079) mqtt_client: Error transport connect[0m
+[0;32mI (133079) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (133089) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;33mW (134619) security1: Invalid state of session 0 (expected 1). Restarting session.[0m
+[0;31mE (134619) security1: Closing old session with id 466124869[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (144749) UART: Interval send data to host main: 5[0m
+[0;32mI (145559) UART: Interval send data to host main: 10[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (147989) wifi prev: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : rrrrr[0m
+[0;32mI (148089) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (151829) wifi:primary chan differ, old=6, new=6, start CSA timer
+I (151829) wifi:new:<6,2>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+I (152559) wifi:state: init -> auth (b0)
+I (152569) wifi:state: auth -> assoc (0)
+I (152579) wifi:state: assoc -> run (10)
+Error reading from DHT11: 255
+I (155119) wifi:state: run -> init (fc0)
+I (155119) wifi:new:<6,0>, old:<6,2>, ap:<6,2>, sta:<6,0>, prof:1
+[0;32mI (155119) wifi prev: Disconnected. Connecting to the AP again...[0m
+[0;31mE (155129) wifi_prov_mgr: STA Disconnected[0m
+[0;31mE (155129) wifi_prov_mgr: Disconnect reason : 15[0m
+[0;31mE (155129) wifi_prov_mgr: STA Auth Error[0m
+I (155139) wifi:<ba-del>idx:2, tid:0
+I (155139) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1
+I (155149) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (155159) wifi prev: SoftAP transport: Disconnected![0m
+[0;31mE (155159) wifi prev: Provisioning failed!
+	Reason : Wi-Fi station authentication failed
+	Please reset to factory and retry provisioning[0m
+[0;32mI (155169) wifi prev: SoftAP transport: Connected![0m
+[0;32mI (155229) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (157959) wifi prev: Disconnected. Connecting to the AP again...[0m
+[0;31mE (158099) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (158099) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (158099) mqtt_client: Error transport connect[0m
+[0;32mI (158099) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (158109) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (173109) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (183119) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (183119) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (183119) mqtt_client: Error transport connect[0m
+[0;32mI (183119) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (183129) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (198129) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (208139) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (208139) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (208139) mqtt_client: Error transport connect[0m
+[0;32mI (208139) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (208149) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (223149) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (233159) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (233159) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (233159) mqtt_client: Error transport connect[0m
+[0;32mI (233159) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (233169) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (248169) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (258179) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (258179) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (258179) mqtt_client: Error transport connect[0m
+[0;32mI (258179) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (258189) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (273189) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (283199) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (283199) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (283199) mqtt_client: Error transport connect[0m
+[0;32mI (283199) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (283209) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (298209) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (308219) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (308219) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (308219) mqtt_client: Error transport connect[0m
+[0;32mI (308219) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (308229) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (323229) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (333239) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (333239) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (333239) mqtt_client: Error transport connect[0m
+[0;32mI (333239) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (333249) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (348249) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (358259) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (358259) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (358259) mqtt_client: Error transport connect[0m
+[0;32mI (358259) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (358269) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (373269) MQTT: Other event id:7[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (383279) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (383279) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (383279) mqtt_client: Error transport connect[0m
+[0;32mI (383279) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (383289) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
