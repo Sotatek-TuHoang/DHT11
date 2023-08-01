@@ -134,6 +134,13 @@ static void event_handler(void* arg, esp_event_base_t event_base,
 /****************************************************************************/
 /***        Functions                                                     ***/
 /****************************************************************************/
+static void wifi_init_sta(void)
+{
+    /* Start Wi-Fi in station mode */
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+    ESP_ERROR_CHECK(esp_wifi_start());
+}
+
 static void get_device_service_name(char *service_name, size_t max)
 {
     uint8_t u8eth_mac[6];
@@ -207,8 +214,7 @@ void wifi_init_func(void)
     {
         ESP_LOGI(TAG, "Already provisioned, starting Wi-Fi STA");
         wifi_prov_mgr_deinit();
-        ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
-        ESP_ERROR_CHECK(esp_wifi_start());
+        wifi_init_sta();
     }
     xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_EVENT, true, true, portMAX_DELAY);
 }
@@ -218,6 +224,7 @@ void wifi_prov(void)
     if (!bProv)
     {
         bProv = true;
+
         /* Configuration for the provisioning manager */
         wifi_prov_mgr_config_t config =
         {
@@ -254,7 +261,7 @@ void prov_timeout_task(void* pvParameters)
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 
-    ESP_LOGI(TAG,"\nProv TIMEOUT!!!\n");
+    ESP_LOGI(TAG,"Prov TIMEOUT!!!\n");
 
     wifi_config_t wifi_sta_cfg;
 
@@ -296,7 +303,7 @@ void prov_fail_task(void* pvParameters)
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 
-    ESP_LOGI(TAG,"\nReprov fail TIMEOUT!!!\n");
+    ESP_LOGI(TAG,"Reprov fail TIMEOUT!!!\n");
 
     wifi_prov_mgr_stop_provisioning();
 
