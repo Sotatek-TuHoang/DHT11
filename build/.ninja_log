@@ -948,3 +948,5 @@
 10797	11134	7126684889660653	E:/Phase2 beta/build/.bin_timestamp	7338955cf9f980c3
 11134	11231	0	esp-idf/esptool_py/CMakeFiles/app_check_size	3bc90e188e8000a5
 11134	11231	0	E:/Phase2 beta/build/esp-idf/esptool_py/CMakeFiles/app_check_size	3bc90e188e8000a5
+11231	35373	0	CMakeFiles/flash	107fbb839994c5ef
+11231	35373	0	E:/Phase2 beta/build/CMakeFiles/flash	107fbb839994c5ef

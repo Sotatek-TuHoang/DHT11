@@ -20,7 +20,7 @@
 #include "bee_mqtt.h"
 
 /****************************************************************************/
-/***        Type Definitions                                              ***/
+/***        Global variables                                              ***/
 /****************************************************************************/
 bool bsend_data = true; // Flag control on/off upload data throught uart
 uint8_t u8data_interval_uart = 2; // Deffault interval upload data uart
