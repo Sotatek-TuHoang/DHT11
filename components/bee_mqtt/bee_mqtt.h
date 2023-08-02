@@ -25,7 +25,7 @@
 void mqtt_app_start(void);
 void send_mqtt_data_task(void* pvParameters);
 void reveive_mqtt_config_task(void* pvParameters);
-void send_data_mqtt(const char *object, int values);
+void pub_data(const char *object, int values);
 
 #endif /* BEE_MQTT_H */
 

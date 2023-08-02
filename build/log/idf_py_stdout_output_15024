@@ -662,4 +662,265 @@ Error reading from DHT11: 255
 Error reading from DHT11: 255
 Error reading from DHT11: 255
 Error reading from DHT11: 255
-[0;32mI (491289) 
+[0;32mI (491289) MQTT: Other event id:7[0m
+[0;31mE (491289) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (491289) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (491289) mqtt_client: Error transport connect[0m
+[0;32mI (491299) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (491299) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (501309) MQTT: Other event id:7[0m
+[0;31mE (501309) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (501309) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (501309) mqtt_client: Error transport connect[0m
+[0;32mI (501319) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (501319) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (511329) MQTT: Other event id:7[0m
+[0;31mE (511329) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (511329) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (511329) mqtt_client: Error transport connect[0m
+[0;32mI (511339) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (511339) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (521349) MQTT: Other event id:7[0m
+[0;31mE (521349) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (521349) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (521349) mqtt_client: Error transport connect[0m
+[0;32mI (521359) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (521359) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (531369) MQTT: Other event id:7[0m
+[0;31mE (531369) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (531369) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (531369) mqtt_client: Error transport connect[0m
+[0;32mI (531379) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (531379) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (541389) MQTT: Other event id:7[0m
+[0;31mE (541389) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (541389) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (541389) mqtt_client: Error transport connect[0m
+[0;32mI (541399) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (541399) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (551409) MQTT: Other event id:7[0m
+[0;31mE (551409) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (551409) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (551409) mqtt_client: Error transport connect[0m
+[0;32mI (551419) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (551419) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (561429) MQTT: Other event id:7[0m
+[0;31mE (561429) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (561429) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (561429) mqtt_client: Error transport connect[0m
+[0;32mI (561439) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (561439) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (571449) MQTT: Other event id:7[0m
+[0;31mE (571449) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (571449) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (571449) mqtt_client: Error transport connect[0m
+[0;32mI (571459) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (571459) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (581469) MQTT: Other event id:7[0m
+[0;31mE (581469) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (581469) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (581469) mqtt_client: Error transport connect[0m
+[0;32mI (581479) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (581479) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (591489) MQTT: Other event id:7[0m
+[0;31mE (591489) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (591489) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (591489) mqtt_client: Error transport connect[0m
+[0;32mI (591499) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (591499) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (601509) MQTT: Other event id:7[0m
+[0;31mE (601509) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (601509) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (601509) mqtt_client: Error transport connect[0m
+[0;32mI (601519) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (601519) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (611529) MQTT: Other event id:7[0m
+[0;31mE (611529) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (611529) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (611529) mqtt_client: Error transport connect[0m
+[0;32mI (611539) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (611539) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (621549) MQTT: Other event id:7[0m
+[0;31mE (621549) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (621549) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (621549) mqtt_client: Error transport connect[0m
+[0;32mI (621559) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (621559) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (631569) MQTT: Other event id:7[0m
+[0;31mE (631569) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (631569) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (631569) mqtt_client: Error transport connect[0m
+[0;32mI (631579) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (631579) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (641589) MQTT: Other event id:7[0m
+[0;31mE (641589) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (641589) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (641589) mqtt_client: Error transport connect[0m
+[0;32mI (641599) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (641599) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (651609) MQTT: Other event id:7[0m
+[0;31mE (651609) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (651609) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (651609) mqtt_client: Error transport connect[0m
+[0;32mI (651619) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (651619) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (661629) MQTT: Other event id:7[0m
+[0;31mE (661629) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (661629) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (661629) mqtt_client: Error transport connect[0m
+[0;32mI (661639) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (661639) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (671649) MQTT: Other event id:7[0m
+[0;31mE (671649) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (671649) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (671649) mqtt_client: Error transport connect[0m
+[0;32mI (671659) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (671659) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (681669) MQTT: Other event id:7[0m
+[0;31mE (681669) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (681669) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (681669) mqtt_client: Error transport connect[0m
+[0;32mI (681679) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (681679) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (691689) MQTT: Other event id:7[0m
+[0;31mE (691689) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (691689) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (691689) mqtt_client: Error transport connect[0m
+[0;32mI (691699) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (691699) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (701709) MQTT: Other event id:7[0m
+[0;31mE (701709) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (701709) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (701709) mqtt_client: Error transport connect[0m
+[0;32mI (701719) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (701719) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (711729) MQTT: Other event id:7[0m
+[0;31mE (711729) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (711729) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (711729) mqtt_client: Error transport connect[0m
+[0;32mI (711739) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (711739) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (721749) MQTT: Other event id:7[0m
+[0;31mE (721749) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (721749) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (721749) mqtt_client: Error transport connect[0m
+[0;32mI (721759) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (721759) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255

@@ -5,6 +5,10 @@
 * @brief	module for send data through mqtt
 * @brief	and receive command from host main through mqtt
 ***************************************************************************/
+
+/****************************************************************************/
+/***        Include files                                                 ***/
+/****************************************************************************/
 #include "mqtt_client.h"
 #include "esp_wifi.h"
 #include "freertos/FreeRTOS.h"
@@ -17,6 +21,9 @@
 #include "bee_nvs.h"
 #include "bee_uart.h"
 
+/****************************************************************************/
+/***        Extern Variables                                              ***/
+/****************************************************************************/
 extern uint8_t u8temp;
 extern uint8_t u8humi;
 extern uint8_t u8status;
@@ -24,7 +31,9 @@ extern uint8_t u8error_cnt;
 extern uint8_t u8temp_diff;
 extern uint8_t u8humi_diff;
 extern uint8_t u8data_interval_mqtt;
-
+/****************************************************************************/
+/***        Local Variables                                               ***/
+/****************************************************************************/
 static uint8_t u8warning_values;
 static uint8_t u8tmp_warning_values;
 static bool bRead_status    = 0;
@@ -42,8 +51,11 @@ static char rxBuffer_MQTT[500];
 
 static const char *TAG = "MQTT";
 static esp_mqtt_client_handle_t client = NULL;
-QueueHandle_t mqtt_cmd_queue;
+static QueueHandle_t mqtt_cmd_queue;
 
+/****************************************************************************/
+/***        Event Handler                                                 ***/
+/****************************************************************************/
 void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data)
 {
     esp_mqtt_event_handle_t event = event_data;
@@ -92,7 +104,7 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
     }
 }
 
-void get_mac(void)
+static void get_mac(void)
 {
     esp_wifi_get_mac(ESP_IF_WIFI_STA, u8mac);
     snprintf(cMac_str, sizeof(cMac_str), "%02X%02X%02X%02X%02X%02X", u8mac[0], u8mac[1], u8mac[2], u8mac[3], u8mac[4], u8mac[5]);
@@ -117,7 +129,7 @@ void mqtt_app_start(void)
     mqtt_cmd_queue = xQueueCreate(10, sizeof(cJSON*));
 }
 
-void send_data_mqtt(const char *object, int values)
+void pub_data(const char *object, int values)
 {
     cJSON *json_data = cJSON_CreateObject();
     cJSON_AddStringToObject(json_data, "thing_token", cMac_str);
@@ -280,8 +292,8 @@ void send_mqtt_data_task(void *pvParameters)
             if ((xTaskGetTickCount() - lt_send_data_mqtt) >= interval_data_mqtt)
             {
                 lt_send_data_mqtt = xTaskGetTickCount();
-                send_data_mqtt("bee_temp", u8temp);
-                send_data_mqtt("bee_humi", u8humi);
+                pub_data("bee_temp", u8temp);
+                pub_data("bee_humi", u8humi);
             }
         }
 
@@ -320,13 +332,13 @@ void receive_mqtt_config_task(void *pvParameters)
                 
                 if ((strcmp(cCmd_name, "Bee.conf") == 0) && (strcmp(cObject_type, "data") == 0) && (values == 1))
                 {
-                    send_data_mqtt("bee_temp", u8temp);
+                    pub_data("bee_temp", u8temp);
                     MQTT_cmd_to_uart(values);
                     ESP_LOGI (TAG, "cmd temp ok\n");
                 }
                 else if ((strcmp(cCmd_name, "Bee.conf") == 0) && (strcmp(cObject_type, "data") == 0) && (values == 2))
                 {
-                    send_data_mqtt("bee_humi", u8humi);
+                    pub_data("bee_humi", u8humi);
                     MQTT_cmd_to_uart(values);
                     ESP_LOGI (TAG, "cmd humi ok\n");
                 }

@@ -124,33 +124,33 @@ void uart_cmd_task(void* pvParameters)
                     bsend_data = !bsend_data;
                     ESP_LOGI (TAG, "Send data to host main: %d", bsend_data);
                     save_uart_data_to_nvs(bsend_data, u8data_interval_uart);
-                    send_data_mqtt("Id_SendData", bsend_data);
+                    pub_data("Id_SendData", bsend_data);
                 }
                 else if ((uart_data_recei[3] == Id_interval) && (uart_data_recei[7] == LoByteData_interval_2s))
                 {
                     u8data_interval_uart = 2;
                     ESP_LOGI (TAG, "Interval send data to host main: %d", u8data_interval_uart);
-                    send_data_mqtt("Id_interval", LoByteData_interval_2s);
+                    pub_data("Id_interval", LoByteData_interval_2s);
                     save_uart_data_to_nvs(bsend_data, u8data_interval_uart);
                 }
                 else if ((uart_data_recei[3] == Id_interval) && (uart_data_recei[7] == LoByteData_interval_5s))
                 {
                     u8data_interval_uart = 5;
                     ESP_LOGI (TAG, "Interval send data to host main: %d", u8data_interval_uart);
-                    send_data_mqtt("Id_interval", LoByteData_interval_5s);
+                    pub_data("Id_interval", LoByteData_interval_5s);
                     save_uart_data_to_nvs(bsend_data, u8data_interval_uart);
                 }
                 else if ((uart_data_recei[3] == Id_interval) && (uart_data_recei[7] == LoByteData_interval_10s))
                 {
                     u8data_interval_uart = 10;
                     ESP_LOGI (TAG, "Interval send data to host main: %d", u8data_interval_uart);
-                    send_data_mqtt("Id_interval", LoByteData_interval_10s);
+                    pub_data("Id_interval", LoByteData_interval_10s);
                     save_uart_data_to_nvs(bsend_data, u8data_interval_uart);
                 }
                 else if ((uart_data_recei[3] == Id_wifi_prov) && (uart_data_recei[7] == LoByteData_wifi_prov))
                 {
                     ESP_LOGI (TAG, "Start wifi prov: %d", LoByteData_wifi_prov);
-                    send_data_mqtt("Id_wifi_prov", LoByteData_wifi_prov);
+                    pub_data("Id_wifi_prov", LoByteData_wifi_prov);
                     wifi_prov();
                 }
             }  
