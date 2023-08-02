@@ -131,27 +131,14 @@ void mqtt_app_start(void)
 }
 
 /****************************************************************************/
-/***        Global Functions                                              ***/
-/****************************************************************************/
-void pub_data(const char *object, int values)
-{
-    cJSON *json_data = cJSON_CreateObject();
-    cJSON_AddStringToObject(json_data, "thing_token", cMac_str);
-    cJSON_AddStringToObject(json_data, "cmd_name", "Bee.data");
-    cJSON_AddStringToObject(json_data, "object_type", object);
-    cJSON_AddNumberToObject(json_data, "values", values);
-    cJSON_AddNumberToObject(json_data, "trans_code", ++u8trans_code);
-
-    char *json_str = cJSON_Print(json_data);
-    esp_mqtt_client_publish(client, cTopic_pub, json_str, 0, 1, 0);
-
-    cJSON_Delete(json_data);
-    free(json_str);
-}
-
-/****************************************************************************/
 /***        Local Functions                                               ***/
 /****************************************************************************/
+static bool check_wifi_connected() {
+    wifi_ap_record_t ap_info;
+    esp_err_t ret = esp_wifi_sta_get_ap_info(&ap_info);
+    return (ret == ESP_OK);
+}
+
 static void send_warning(void)
 {
     cJSON *json_warning = cJSON_CreateObject();
@@ -213,7 +200,7 @@ static void check_warning(void)
             bHumi_diff = 0;
         }
     }
-
+    /*Sử dụng 5 bit cuối để hiển thị trạng thái cảnh báo*/
     u8tmp_warning_values = (bRead_status << 4) | (bTemp_threshold << 3) | (bHumi_threshold << 2) | (bTemp_diff << 1) | bHumi_diff;
     if (u8tmp_warning_values != u8warning_values)
     {
@@ -285,6 +272,27 @@ static void MQTT_cmd_to_uart(int values)
     uart_write_bytes(UART_NUM, cMQTT_cmd, sizeof(cMQTT_cmd));
 }
 
+/****************************************************************************/
+/***        Global Functions                                              ***/
+/****************************************************************************/
+void pub_data(const char *object, int values)
+{
+    if (check_wifi_connected())
+    {
+        cJSON *json_data = cJSON_CreateObject();
+        cJSON_AddStringToObject(json_data, "thing_token", cMac_str);
+        cJSON_AddStringToObject(json_data, "cmd_name", "Bee.data");
+        cJSON_AddStringToObject(json_data, "object_type", object);
+        cJSON_AddNumberToObject(json_data, "values", values);
+        cJSON_AddNumberToObject(json_data, "trans_code", ++u8trans_code);
+
+        char *json_str = cJSON_Print(json_data);
+        esp_mqtt_client_publish(client, cTopic_pub, json_str, 0, 1, 0);
+
+        cJSON_Delete(json_data);
+        free(json_str);
+    }
+}
 /****************************************************************************/
 /***        Tasks                                                         ***/
 /****************************************************************************/
@@ -369,3 +377,6 @@ void receive_mqtt_config_task(void *pvParameters)
         }
     }
 }
+/****************************************************************************/
+/***        END OF FILE                                                   ***/
+/****************************************************************************/

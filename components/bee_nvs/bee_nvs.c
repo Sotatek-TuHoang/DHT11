@@ -8,13 +8,17 @@
  ***************************************************************************/
 
 /****************************************************************************/
+/***        Include file                                                  ***/
+/****************************************************************************/
 #include "bee_nvs.h"
 #include "esp_system.h"
 #include "esp_err.h"
 #include "nvs_flash.h"
 #include "nvs.h"
 #include "stdint.h"
-
+/****************************************************************************/
+/***        Init Functions in App main                                    ***/
+/****************************************************************************/
 void nvs_flash_function_init()
 {
     esp_err_t err = nvs_flash_init(); // Initialize NVS
@@ -26,7 +30,9 @@ void nvs_flash_function_init()
     ESP_ERROR_CHECK( err );
 
 }
-
+/****************************************************************************/
+/***        NVS Functions                                                 ***/
+/****************************************************************************/
 void save_wifi_cred_to_nvs(const char *cSsid, const char *cPassword)
 {
     nvs_handle_t nvs_handle;
@@ -112,7 +118,7 @@ void save_mqtt_data_to_nvs(uint8_t u8data_interval_mqtt)
         printf("Error opening NVS handle! (%s)\n", esp_err_to_name(err));
         return;
     }
-    // Lưu trạng thái send_data vào NVS
+    // Lưu trạng thái tần suất gửi bản tin data mqtt vào NVS
     err = nvs_set_u8(nvs_handle, NVS_MQTT_INTERVAL, u8data_interval_mqtt);
     if (err != ESP_OK)
     {
@@ -137,7 +143,7 @@ void save_uart_data_to_nvs(bool bsend_data, uint8_t u8data_interval_uart)
     {
         printf("Error saving send_data to NVS! (%s)\n", esp_err_to_name(err));
     }
-    // Lưu giá trị data_interval vào NVS
+    // Lưu giá trị tần suất gửi data qua uart vào NVS
     err = nvs_set_u8(nvs_handle, NVS_UART_INTERVAL, u8data_interval_uart);
     if (err != ESP_OK)
     {
@@ -197,3 +203,6 @@ void load_data_from_nvs(bool* bsend_data, uint8_t* u8data_interval_uart, uint8_t
     // Đóng NVS
     nvs_close(nvs_handle);
 }
+/****************************************************************************/
+/***        END OF FILE                                                   ***/
+/****************************************************************************/

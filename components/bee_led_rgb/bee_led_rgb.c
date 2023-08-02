@@ -8,15 +8,23 @@
  ***************************************************************************/
 
 /****************************************************************************/
+/***        Include files                                                 ***/
+/****************************************************************************/
 #include "bee_led_rgb.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "bee_dht11.h"
 
+/****************************************************************************/
+/***        Extern variables                                              ***/
+/****************************************************************************/
 extern uint8_t     u8status;
 extern uint8_t     u8temp;
 extern uint8_t     u8humi;
 
+/****************************************************************************/
+/***        Init Functions in App main                                    ***/
+/****************************************************************************/
 void led_rgb_init(gpio_num_t red_pin, gpio_num_t green_pin, gpio_num_t blue_pin) {
     esp_rom_gpio_pad_select_gpio(red_pin);
     gpio_set_direction(red_pin, GPIO_MODE_OUTPUT);
@@ -32,8 +40,9 @@ void led_rgb_set_color(gpio_num_t red_pin, gpio_num_t green_pin, gpio_num_t blue
     gpio_set_level(blue_pin, blue);
 }
 
-/** @brief warning by led rgb
- */
+/****************************************************************************/
+/***        Led control task                                              ***/
+/****************************************************************************/
 void led_control_task(void* pvParameters)
 {
     for (;;)
@@ -75,3 +84,6 @@ void led_control_task(void* pvParameters)
         vTaskDelay(20 / portTICK_PERIOD_MS);
     }
 }
+/****************************************************************************/
+/***        END OF FILE                                                   ***/
+/****************************************************************************/
