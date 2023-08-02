@@ -3,7 +3,7 @@
  * @file 	bee_wifi.c
  * @author 	tuha
  * @date 	3 July 2023
- * @brief	module for connect wifi
+ * @brief	module for provising and connect wifi by smart config (SoftAP)
  *
  ***************************************************************************/
 
