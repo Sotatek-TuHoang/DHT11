@@ -317,8 +317,6 @@ void prov_fail_task(void* pvParameters)
     
     wifi_prov_mgr_stop_provisioning();;
 
-    wifi_prov_mgr_stop_provisioning();
-
     reconnect_old_wifi();
 
     vTaskDelete(prov_fail_handle); // Xóa task khi hoàn thành
