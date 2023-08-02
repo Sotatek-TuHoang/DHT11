@@ -30,4 +30,6 @@
 void led_rgb_init(gpio_num_t red_pin, gpio_num_t green_pin, gpio_num_t blue_pin);
 void led_rgb_set_color(gpio_num_t red_pin, gpio_num_t green_pin, gpio_num_t blue_pin, bool red, bool green, bool blue);
 
+void led_control_task(void* pvParameters);
+
 #endif /* BEE_LED_RGB_H */

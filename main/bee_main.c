@@ -27,17 +27,6 @@ uint8_t u8data_interval_uart = 2; // Deffault interval upload data uart
 uint8_t u8data_interval_mqtt = 30; // Deffault interval upload data mqtt
 
 /****************************************************************************/
-/***        List of Tasks                                                 ***/
-/****************************************************************************/
-void read_dht11(void* pvParameters);
-void led_control_task(void* pvParameters);
-void uart_send_data_task(void* pvParameters);
-void uart_cmd_task(void* pvParameters);
-void send_data_button(void* arg);
-void interval_button(void* arg);
-void send_mqtt_data_task(void* pvParameters);
-void receive_mqtt_config_task(void* pvParameters);
-/****************************************************************************/
 
 void app_main()
 {

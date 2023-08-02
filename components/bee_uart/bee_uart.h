@@ -55,4 +55,8 @@ void uart_init(void);
 char calculate_checksum(const char *data, size_t length);
 void uart_send_data_task(void* pvParameters);
 void uart_cmd_task(void* pvParameters);
+
+void uart_send_data_task(void* pvParameters);
+void uart_cmd_task(void* pvParameters);
+
 #endif /* BEE_UART_H_ */

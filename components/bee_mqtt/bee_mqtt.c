@@ -53,6 +53,8 @@ static const char *TAG = "MQTT";
 static esp_mqtt_client_handle_t client = NULL;
 static QueueHandle_t mqtt_cmd_queue;
 
+static bool bMQTT_CONNECTED = false;
+
 /****************************************************************************/
 /***        Event Handler                                                 ***/
 /****************************************************************************/
@@ -65,11 +67,13 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
     {
         case MQTT_EVENT_CONNECTED:
             ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
+            bMQTT_CONNECTED = true;
             esp_mqtt_client_subscribe(client, cTopic_sub, 0);
             break;
 
         case MQTT_EVENT_DISCONNECTED:
             ESP_LOGI(TAG, "MQTT_EVENT_DISCONNECTED");
+            bMQTT_CONNECTED = false;
             break;
 
         case MQTT_EVENT_SUBSCRIBED:
@@ -128,17 +132,35 @@ void mqtt_app_start(void)
     ESP_LOGI(TAG, "Topic subscribe: %s\n", cTopic_sub);
 
     mqtt_cmd_queue = xQueueCreate(10, sizeof(cJSON*));
+
+}
+
+/****************************************************************************/
+/***        Global Functions                                              ***/
+/****************************************************************************/
+void pub_data(const char *object, int values)
+{
+    if (bMQTT_CONNECTED == true)
+    {
+        cJSON *json_data = cJSON_CreateObject();
+        cJSON_AddStringToObject(json_data, "thing_token", cMac_str);
+        cJSON_AddStringToObject(json_data, "cmd_name", "Bee.data");
+        cJSON_AddStringToObject(json_data, "object_type", object);
+        cJSON_AddNumberToObject(json_data, "values", values);
+        cJSON_AddNumberToObject(json_data, "trans_code", ++u8trans_code);
+
+        char *json_str = cJSON_Print(json_data);
+        esp_mqtt_client_publish(client, cTopic_pub, json_str, 0, 1, 0);
+
+        cJSON_Delete(json_data);
+        free(json_str);
+    }
+
 }
 
 /****************************************************************************/
 /***        Local Functions                                               ***/
 /****************************************************************************/
-static bool check_wifi_connected() {
-    wifi_ap_record_t ap_info;
-    esp_err_t ret = esp_wifi_sta_get_ap_info(&ap_info);
-    return (ret == ESP_OK);
-}
-
 static void send_warning(void)
 {
     cJSON *json_warning = cJSON_CreateObject();
@@ -200,7 +222,7 @@ static void check_warning(void)
             bHumi_diff = 0;
         }
     }
-    /*Sử dụng 5 bit cuối để hiển thị trạng thái cảnh báo*/
+    
     u8tmp_warning_values = (bRead_status << 4) | (bTemp_threshold << 3) | (bHumi_threshold << 2) | (bTemp_diff << 1) | bHumi_diff;
     if (u8tmp_warning_values != u8warning_values)
     {
@@ -273,27 +295,6 @@ static void MQTT_cmd_to_uart(int values)
 }
 
 /****************************************************************************/
-/***        Global Functions                                              ***/
-/****************************************************************************/
-void pub_data(const char *object, int values)
-{
-    if (check_wifi_connected())
-    {
-        cJSON *json_data = cJSON_CreateObject();
-        cJSON_AddStringToObject(json_data, "thing_token", cMac_str);
-        cJSON_AddStringToObject(json_data, "cmd_name", "Bee.data");
-        cJSON_AddStringToObject(json_data, "object_type", object);
-        cJSON_AddNumberToObject(json_data, "values", values);
-        cJSON_AddNumberToObject(json_data, "trans_code", ++u8trans_code);
-
-        char *json_str = cJSON_Print(json_data);
-        esp_mqtt_client_publish(client, cTopic_pub, json_str, 0, 1, 0);
-
-        cJSON_Delete(json_data);
-        free(json_str);
-    }
-}
-/****************************************************************************/
 /***        Tasks                                                         ***/
 /****************************************************************************/
 void send_mqtt_data_task(void *pvParameters)
@@ -302,27 +303,31 @@ void send_mqtt_data_task(void *pvParameters)
     TickType_t lt_send_keep_alive = xTaskGetTickCount();
     TickType_t interval_data_mqtt = pdMS_TO_TICKS(u8data_interval_mqtt * 1000);
     TickType_t interval_keep_alive = pdMS_TO_TICKS(15000);
-    for (;;)
+
+    for(;;)
     {
-        interval_data_mqtt = pdMS_TO_TICKS(u8data_interval_mqtt * 1000);
-        if (u8status == DHT11_OK)
+        if (bMQTT_CONNECTED)
         {
-            if ((xTaskGetTickCount() - lt_send_data_mqtt) >= interval_data_mqtt)
+            interval_data_mqtt = pdMS_TO_TICKS(u8data_interval_mqtt * 1000);
+            if ((u8status == DHT11_OK) && ((xTaskGetTickCount() - lt_send_data_mqtt) >= interval_data_mqtt))
             {
                 lt_send_data_mqtt = xTaskGetTickCount();
                 pub_data("bee_temp", u8temp);
                 pub_data("bee_humi", u8humi);
             }
+
+            check_warning();
+
+            if ((xTaskGetTickCount() - lt_send_keep_alive) >= interval_keep_alive)
+            {
+                lt_send_keep_alive = xTaskGetTickCount();
+                send_keep_alive();
+            }
         }
-
-        check_warning();
-
-        if ((xTaskGetTickCount() - lt_send_keep_alive) >= interval_keep_alive)
+        else
         {
-            lt_send_keep_alive = xTaskGetTickCount();
-            send_keep_alive();
+            vTaskDelay(pdMS_TO_TICKS(50));
         }
-        vTaskDelay(30 / portTICK_PERIOD_MS);
     }
 }
 

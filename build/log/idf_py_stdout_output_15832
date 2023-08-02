@@ -1,0 +1,362 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug  2 2023 00:01:10[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30394h (197524) map[0m
+[0;32mI (177) esp_image: segment 1: paddr=000403bc vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=00043be4 vaddr=40080000 size=0c434h ( 50228) load[0m
+[0;32mI (204) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b2f4ch (733004) map[0m
+[0;32mI (469) esp_image: segment 4: paddr=00102f74 vaddr=4008c434 size=0a12ch ( 41260) load[0m
+[0;32mI (497) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (509) cpu_start: Multicore app[0m
+[0;32mI (509) cpu_start: Pro cpu up.[0m
+[0;32mI (509) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (527) cpu_start: Pro cpu start user code[0m
+[0;32mI (527) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (527) cpu_start: Application information:[0m
+[0;32mI (532) cpu_start: Project name:     bee_main[0m
+[0;32mI (537) cpu_start: App version:      d92fb48-dirty[0m
+[0;32mI (543) cpu_start: Compile time:     Aug  2 2023 12:51:39[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  068044485fa01b87...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (560) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (569) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (581) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (587) heap_init: At 3FFB81A0 len 00027E60 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (600) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (606) heap_init: At 40096560 len 00009AA0 (38 KiB): IRAM[0m
+[0;32mI (614) spi_flash: detected chip: generic[0m
+[0;32mI (617) spi_flash: flash io: dio[0m
+[0;33mW (621) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (635) app_start: Starting scheduler on CPU0[0m
+[0;32mI (639) app_start: Starting scheduler on CPU1[0m
+[0;32mI (639) main_task: Started on CPU0[0m
+[0;32mI (649) main_task: Calling app_main()[0m
+[0;32mI (1689) uart: queue free spaces: 6[0m
+I (1699) wifi:wifi driver task: 3ffc9f48, prio:23, stack:6656, core=0
+I (1709) wifi:wifi firmware version: b2f1f86
+I (1709) wifi:wifi certification version: v7.0
+I (1709) wifi:config NVS flash: enabled
+I (1709) wifi:config nano formating: disabled
+I (1719) wifi:Init data frame dynamic rx buffer num: 32
+I (1719) wifi:Init management frame dynamic rx buffer num: 32
+I (1729) wifi:Init management short buffer num: 32
+I (1729) wifi:Init dynamic tx buffer num: 32
+I (1739) wifi:Init static rx buffer size: 1600
+I (1739) wifi:Init static rx buffer num: 10
+I (1749) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1749) wifi_init: rx ba win: 6[0m
+[0;32mI (1749) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1759) wifi_init: udp mbox: 6[0m
+[0;32mI (1759) wifi_init: tcp mbox: 6[0m
+[0;32mI (1769) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1769) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1769) wifi_init: tcp mss: 1440[0m
+[0;32mI (1779) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1779) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1789) Wifi prov: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1799) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1909) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+I (1909) wifi:enable tsf
+Error reading from DHT11: 255
+Error read count: 1
+I (4319) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (4319) wifi:state: init -> auth (b0)
+I (4329) wifi:state: auth -> assoc (0)
+I (4339) wifi:state: assoc -> run (10)
+I (4349) wifi:connected with TUPEO, aid = 9, channel 1, BW20, bssid = b2:7d:64:d8:92:71
+I (4349) wifi:security: WPA2-PSK, phy: bgn, rssi: -44
+I (4359) wifi:pm start, type: 1
+
+I (4419) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;32mI (5359) Wifi prov: Connected with IP Address:192.168.137.209[0m
+[0;32mI (5359) esp_netif_handlers: sta ip: 192.168.137.209, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (5369) MQTT: Other event id:7[0m
+[0;32mI (5369) MQTT: Topic publish: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/telemetry
+[0m
+[0;32mI (5379) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/Command
+[0m
+[0;32mI (5379) main_task: Returned from app_main()[0m
+[0;32mI (5449) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (5499) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=5882[0m
+Error reading from DHT11: 255
+Error read count: 2
+Error reading from DHT11: 255
+Error read count: 3
+I (9539) wifi:state: run -> init (c0)
+I (9539) wifi:pm stop, total sleep time: 4343183 us / 5189069 us
+
+I (9549) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+[0;32mI (9549) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;31mE (9559) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54[0m
+[0;31mE (9559) mqtt_client: Poll read error: 119, aborting connection[0m
+[0;32mI (9569) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error read count: 4
+Error reading from DHT11: 255
+Error read count: 5
+[0;32mI (11969) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 6
+[0;32mI (14379) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 7
+[0;32mI (16789) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 8
+[0;32mI (19209) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (19579) MQTT: Other event id:7[0m
+[0;31mE (19579) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (19579) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (19579) mqtt_client: Error transport connect[0m
+[0;32mI (19589) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (19589) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error read count: 9
+I (21619) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (21619) wifi:state: init -> auth (b0)
+I (21629) wifi:state: auth -> assoc (0)
+I (21629) wifi:state: assoc -> run (10)
+I (21639) wifi:connected with TUPEO, aid = 10, channel 1, BW20, bssid = b2:7d:64:d8:92:71
+I (21639) wifi:security: WPA2-PSK, phy: bgn, rssi: -39
+I (21649) wifi:pm start, type: 1
+
+Error reading from DHT11: 255
+Error read count: 10
+I (21729) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+Error reading from DHT11: 255
+[0;32mI (24149) Wifi prov: Connected with IP Address:192.168.137.48[0m
+[0;32mI (24149) esp_netif_handlers: sta ip: 192.168.137.48, mask: 255.255.255.0, gw: 192.168.137.1[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (29599) MQTT: Other event id:7[0m
+[0;32mI (29679) MQTT: MQTT_EVENT_CONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (29729) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=48106[0m
+[0;32mI (29759) MQTT: MQTT_EVENT_PUBLISHED, msg_id=48302[0m
+[0;32mI (29799) MQTT: MQTT_EVENT_PUBLISHED, msg_id=44794[0m
+I (29859) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:11, winSize:64
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (35419) MQTT: MQTT_EVENT_PUBLISHED, msg_id=15325[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (49619) UART: Interval send data to host main: 5[0m
+[0;32mI (49669) MQTT: MQTT_EVENT_PUBLISHED, msg_id=45095[0m
+Error reading from DHT11: 255
+[0;32mI (50429) MQTT: MQTT_EVENT_PUBLISHED, msg_id=27770[0m
+Error reading from DHT11: 255
+I (53369) wifi:state: run -> init (c0)
+I (53369) wifi:pm stop, total sleep time: 29359264 us / 31719172 us
+
+I (53369) wifi:<ba-del>idx:0, tid:0
+I (53369) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+[0;32mI (53379) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;31mE (53389) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54[0m
+[0;31mE (53389) mqtt_client: Poll read error: 119, aborting connection[0m
+[0;32mI (53399) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (55799) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (58209) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (58719) UART: Interval send data to host main: 5[0m
+Error reading from DHT11: 255
+[0;32mI (60259) UART: Interval send data to host main: 5[0m
+[0;32mI (60619) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (60969) UART: Interval send data to host main: 5[0m
+Error reading from DHT11: 255
+[0;32mI (62229) UART: Interval send data to host main: 5[0m
+[0;32mI (63039) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (63279) UART: Interval send data to host main: 5[0m
+[0;32mI (63409) MQTT: Other event id:7[0m
+[0;31mE (63409) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (63409) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (63409) mqtt_client: Error transport connect[0m
+[0;32mI (63419) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (63419) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (64559) UART: Interval send data to host main: 5[0m
+[0;32mI (65019) UART: Interval send data to host main: 5[0m
+[0;32mI (65449) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (66159) UART: Interval send data to host main: 10[0m
+[0;32mI (66849) UART: Interval send data to host main: 10[0m
+[0;32mI (67409) UART: Interval send data to host main: 10[0m
+[0;32mI (67609) UART: Interval send data to host main: 10[0m
+Error reading from DHT11: 255
+[0;32mI (67779) UART: Interval send data to host main: 10[0m
+[0;32mI (67879) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (67969) UART: Interval send data to host main: 10[0m
+[0;32mI (68109) UART: Interval send data to host main: 10[0m
+[0;32mI (68279) UART: Interval send data to host main: 10[0m
+[0;32mI (68449) UART: Interval send data to host main: 10[0m
+Error reading from DHT11: 255
+[0;32mI (70289) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (72699) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (73429) MQTT: Other event id:7[0m
+[0;31mE (73429) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (73429) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (73429) mqtt_client: Error transport connect[0m
+[0;32mI (73439) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (73439) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (75119) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (77529) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (79939) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (82359) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (83449) MQTT: Other event id:7[0m
+[0;31mE (83449) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (83449) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (83449) mqtt_client: Error transport connect[0m
+[0;32mI (83459) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (83459) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (84769) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (87189) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (89599) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (92009) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (93469) MQTT: Other event id:7[0m
+[0;31mE (93469) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (93469) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (93469) mqtt_client: Error transport connect[0m
+[0;32mI (93479) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (93479) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (94429) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (96839) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (99269) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (101679) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (103489) MQTT: Other event id:7[0m
+[0;31mE (103489) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (103489) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (103489) mqtt_client: Error transport connect[0m
+[0;32mI (103499) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (103499) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (104119) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (106529) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (108939) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (111359) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (113509) MQTT: Other event id:7[0m
+[0;31mE (113509) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (113509) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (113509) mqtt_client: Error transport connect[0m
+[0;32mI (113519) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (113519) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (113769) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (116189) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (118599) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (121009) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (123419) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (123529) MQTT: Other event id:7[0m
+[0;31mE (123529) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (123529) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (123529) mqtt_client: Error transport connect[0m
+[0;32mI (123539) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (123539) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (125839) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (128249) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (130659) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (133079) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (133549) MQTT: Other event id:7[0m
+[0;31mE (133549) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (133549) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (133549) mqtt_client: Error transport connect[0m
+[0;32mI (133559) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (133559) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (135489) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (137899) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (140319) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (142729) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (143569) MQTT: Other event id:7[0m
+[0;31mE (143569) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (143569) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (143569) mqtt_client: Error transport connect[0m
+[0;32mI (143579) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (143579) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (145139) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (147559) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (149969) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (152379) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (153589) MQTT: Other event id:7[0m
+[0;31mE (153589) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (153589) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (153589) mqtt_client: Error transport connect[0m
+[0;32mI (153599) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (153599) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (154799) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (157209) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255

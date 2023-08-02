@@ -1,0 +1,69 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D "E:\Phase2 beta\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "E:/Phase2 beta/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[2/8] Building C object esp-idf/bee_mqtt/CMakeFiles/__idf_bee_mqtt.dir/bee_mqtt.c.obj
+E:/Phase2 beta/components/bee_mqtt/bee_mqtt.c: In function 'mqtt_event_handler':
+E:/Phase2 beta/components/bee_mqtt/bee_mqtt.c:77:81: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+   77 |                 xTaskCreate(send_mqtt_data_task, "tx_mqtt_data", 2048, NULL, 7, tx_mqtt_data_handle);
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 TaskHandle_t {aka struct tskTaskControlBlock *}
+In file included from C:/Espressif/frameworks/esp-idf-v5.1/components/esp_event/include/esp_event.h:13,
+                 from C:/Espressif/frameworks/esp-idf-v5.1/components/mqtt/esp-mqtt/include/mqtt_client.h:14,
+                 from E:/Phase2 beta/components/bee_mqtt/bee_mqtt.c:12:
+C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:593:50: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  593 |                             TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION
+      |                             ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+E:/Phase2 beta/components/bee_mqtt/bee_mqtt.c:81:88: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+   81 |                 xTaskCreate(receive_mqtt_config_task, "rx_mqtt_config", 2048, NULL, 5, rx_mqtt_config_handle);
+      |                                                                                        ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                                        |
+      |                                                                                        TaskHandle_t {aka struct tskTaskControlBlock *}
+C:/Espressif/frameworks/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:593:50: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  593 |                             TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION
+      |                             ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+E:/Phase2 beta/components/bee_mqtt/bee_mqtt.c: At top level:
+E:/Phase2 beta/components/bee_mqtt/bee_mqtt.c:151:13: warning: 'check_wifi_connected' defined but not used [-Wunused-function]
+  151 | static bool check_wifi_connected() {
+      |             ^~~~~~~~~~~~~~~~~~~~
+[3/8] Linking C static library esp-idf\bee_mqtt\libbee_mqtt.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable bee_main.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated E:/Phase2 beta/build/bee_main.bin
+[7/8] cmd.exe /C "cd /D "E:\Phase2 beta\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "E:/Phase2 beta/build/partition_table/partition-table.bin" "E:/Phase2 beta/build/bee_main.bin""
+bee_main.bin binary size 0xfd0f0 bytes. Smallest app partition is 0x100000 bytes. 0x2f10 bytes (1%) free.
+Warning: The smallest app partition is nearly full (1% free space left)!
+[7/8] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.1\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=E:/Phase2 beta/build" -P C:/Espressif/frameworks/esp-idf-v5.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 bee_main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.6.2
+Serial port COM3
+Connecting.........
+Chip is ESP32-D0WDQ6 (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+WARNING: Detected crystal freq 41.01MHz is quite different to normalized freq 40MHz. Unsupported crystal in use?
+Crystal is 40MHz
+MAC: 7c:9e:bd:61:6d:ac
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0010dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26640 bytes to 16667...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000769f... (100 %)
+Wrote 26640 bytes (16667 compressed) at 0x00001000 in 0.9 seconds (effective 244.7 kbit/s)...
+Hash of data verified.
+Compressed 1036528 bytes to 652036...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001dcc7... (5 %)
+Writing at 0x0002a1c8... (7 %)
+Writing at 0x0002f6e2... (10 %)

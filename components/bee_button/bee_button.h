@@ -17,5 +17,7 @@ void button_init();
 void send_data_button(void* arg);
 void interval_button(void* arg);
 
+void send_data_button(void* arg);
+void interval_button(void* arg);
 
 #endif

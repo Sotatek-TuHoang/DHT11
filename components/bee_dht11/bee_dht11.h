@@ -33,4 +33,6 @@ void read_dht11(void* pvParameters);
 
 struct dht11_reading DHT11_read();
 
+void read_dht11(void* pvParameters);
+
 #endif

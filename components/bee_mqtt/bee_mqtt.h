@@ -23,9 +23,10 @@
 #define PASSWORD            "123abcA@!"
 
 void mqtt_app_start(void);
-void send_mqtt_data_task(void* pvParameters);
-void reveive_mqtt_config_task(void* pvParameters);
 void pub_data(const char *object, int values);
+
+void send_mqtt_data_task(void* pvParameters);
+void receive_mqtt_config_task(void* pvParameters);
 
 #endif /* BEE_MQTT_H */
 
