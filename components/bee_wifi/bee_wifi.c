@@ -8,6 +8,8 @@
  ***************************************************************************/
 
 /****************************************************************************/
+/***        Include files                                                 ***/
+/****************************************************************************/
 #include <stdio.h>
 #include <string.h>
 #include <freertos/FreeRTOS.h>
@@ -22,10 +24,11 @@
 #include "bee_wifi.h"
 #include "bee_nvs.h"
 
-static const char *TAG = "wifi prev";
-
+/****************************************************************************/
+/***        Local Variables                                               ***/
+/****************************************************************************/
+static const char *TAG = "Wifi prov";
 const int WIFI_CONNECTED_EVENT = BIT0;
-static EventGroupHandle_t wifi_event_group;
 
 static bool bProv = false; 
 
@@ -35,6 +38,7 @@ static char cReceived_password[64];
 /****************************************************************************/
 /***        List of Tasks and handle                                      ***/
 /****************************************************************************/
+static EventGroupHandle_t wifi_event_group;
 static TaskHandle_t prov_timeout_handle = NULL;
 static TaskHandle_t prov_fail_handle = NULL;
 
@@ -167,12 +171,12 @@ esp_err_t custom_prov_data_handler(uint32_t session_id, const uint8_t *inbuf, ss
     *outlen = strlen(response) + 1; /* +1 for NULL terminating byte */
     return ESP_OK;
 }
-
+/** @brief Hàm kiểm soát việc cài đặt cấu hình TCP/IP, đăng ký event handle
+ *         Init các cấu hình liên quan phục vụ cho cấu hình cho wifi
+ */
 void wifi_init_func(void)
 {
-
-    /* Initialize TCP/IP */
-    ESP_ERROR_CHECK(esp_netif_init());
+    ESP_ERROR_CHECK(esp_netif_init()); /* Initialize TCP/IP */
 
     /* Initialize the event loop */
     ESP_ERROR_CHECK(esp_event_loop_create_default());
@@ -180,13 +184,11 @@ void wifi_init_func(void)
 
     /* Register our event handler for Wi-Fi, IP and Provisioning related events */
     ESP_ERROR_CHECK(esp_event_handler_register(WIFI_PROV_EVENT, ESP_EVENT_ANY_ID, &event_handler, NULL));
-
     ESP_ERROR_CHECK(esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &event_handler, NULL));
     ESP_ERROR_CHECK(esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &event_handler, NULL));
 
     /* Initialize Wi-Fi including netif with default config */
     esp_netif_create_default_wifi_sta();
-
     esp_netif_create_default_wifi_ap();
 
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
@@ -199,26 +201,24 @@ void wifi_init_func(void)
         .scheme_event_handler = WIFI_PROV_EVENT_HANDLER_NONE
     };
 
+    /*Kiểm tra trạng thái cấu hình wifi đã tồn tại hay chưa*/
     ESP_ERROR_CHECK(wifi_prov_mgr_init(config));
     bool provisioned = false;
     ESP_ERROR_CHECK(wifi_prov_mgr_is_provisioned(&provisioned));
-
-    if (!provisioned)
-    {
-        esp_wifi_stop();
-        esp_wifi_deinit();
-        wifi_prov_mgr_deinit();
-
-    }
-    else
+    if (provisioned)
     {
         ESP_LOGI(TAG, "Already provisioned, starting Wi-Fi STA");
         wifi_prov_mgr_deinit();
         wifi_init_sta();
     }
+    else
+    {
+      wifi_prov_mgr_deinit();  
+    }
     xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_EVENT, true, true, portMAX_DELAY);
 }
 
+/** @brief Hàm kiểm soát việc cấu hình wifi */
 void wifi_prov(void)
 {
     if (!bProv)
@@ -231,19 +231,19 @@ void wifi_prov(void)
             .scheme = wifi_prov_scheme_softap,
             .scheme_event_handler = WIFI_PROV_EVENT_HANDLER_NONE
         };
+
         ESP_ERROR_CHECK(wifi_prov_mgr_init(config));
         char service_name[12];
         get_device_service_name(service_name, sizeof(service_name));
         wifi_prov_security_t security = WIFI_PROV_SECURITY_1;
-        const char *pop = "Bee@1234";
+        const char *pop = "Bee@1234"; /*Mật khẩu cho việc thực hiện cấu hình qua*/
         wifi_prov_security1_params_t *sec_params = pop;
         const char *service_key = NULL;
         wifi_prov_mgr_endpoint_create("custom-data");
-
         /* Start provisioning service */
         ESP_ERROR_CHECK(wifi_prov_mgr_start_provisioning(security, (const void *) sec_params, service_name, service_key));
         wifi_prov_mgr_endpoint_register("custom-data", custom_prov_data_handler, NULL);
-        
+        /*Tạo task cho việc đếm thời gian cấu hình wifi tối đa*/
         xTaskCreate(prov_timeout_task, "prov_timeout", 4096, NULL, 1, &prov_timeout_handle);
     }
 }
@@ -251,10 +251,12 @@ void wifi_prov(void)
 /****************************************************************************/
 /***        Tasks                                                         ***/
 /****************************************************************************/
+/** @brief Đếm thời gian tối đa cho việc cấu hình wifi là 60s
+ * Hết thời gian tự động cấu hình lại bằng thông số wifi cũ */
 void prov_timeout_task(void* pvParameters)
 {
     TickType_t prov_current_time = xTaskGetTickCount();
-    TickType_t prov_timeout = pdMS_TO_TICKS(60000); // Timeout period, adjust as needed
+    TickType_t prov_timeout = pdMS_TO_TICKS(10000); // Timeout period, adjust as needed
 
     while ((xTaskGetTickCount() - prov_current_time) < prov_timeout)
     {
@@ -262,6 +264,7 @@ void prov_timeout_task(void* pvParameters)
     }
 
     ESP_LOGI(TAG,"Prov TIMEOUT!!!\n");
+    wifi_prov_mgr_stop_provisioning();
 
     wifi_config_t wifi_sta_cfg;
 
@@ -291,6 +294,8 @@ void prov_timeout_task(void* pvParameters)
     vTaskDelete(prov_timeout_handle); // Xóa task khi hoàn thành
 }
 
+/** @brief Đếm thời gian tối đa cho việc cấu hình wifi thất bại là 60s
+*          Hết thời gian thì ngừng cấu hình                               */
 void prov_fail_task(void* pvParameters)
 {
     wifi_prov_mgr_reset_sm_state_on_failure();
@@ -309,3 +314,6 @@ void prov_fail_task(void* pvParameters)
 
     vTaskDelete(prov_fail_handle); // Xóa task khi hoàn thành
 }
+/****************************************************************************/
+/***        END OF FILE                                                   ***/
+/****************************************************************************/
