@@ -298,7 +298,7 @@ void wifi_prov(void)
  * Hết thời gian tự động cấu hình lại bằng thông số wifi cũ */
 void prov_timeout_task(void* pvParameters)
 {
-    uint8_t u8time_sc = 10;
+    uint8_t u8time_sc = 60;
     cnt_timeout(&u8time_sc);
     wifi_prov_mgr_stop_provisioning();
     reconnect_old_wifi();
@@ -312,7 +312,7 @@ void prov_fail_task(void* pvParameters)
 {
     wifi_prov_mgr_reset_sm_state_on_failure();
 
-    uint8_t u8time_sc = 10;
+    uint8_t u8time_sc = 60;
     cnt_timeout(&u8time_sc);
     
     wifi_prov_mgr_stop_provisioning();;
