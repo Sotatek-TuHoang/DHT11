@@ -152,3 +152,728 @@ Error reading from DHT11: 255
 [0;32mI (46969) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/Command
 [0m
 [0;32mI (46969) main_task: Returned from app_main()[0m
+I (46999) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:6, winSize:64
+[0;32mI (47029) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (47059) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=11171[0m
+[0;32mI (47109) MQTT: MQTT_EVENT_PUBLISHED, msg_id=61449[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (58129) UART: Interval send data to host main: 5[0m
+[0;32mI (58159) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30942[0m
+[0;32mI (58989) UART: Interval send data to host main: 5[0m
+[0;32mI (59029) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47787[0m
+[0;32mI (59159) UART: Interval send data to host main: 5[0m
+[0;32mI (59199) MQTT: MQTT_EVENT_PUBLISHED, msg_id=29502[0m
+[0;32mI (59329) UART: Interval send data to host main: 5[0m
+[0;32mI (59369) MQTT: MQTT_EVENT_PUBLISHED, msg_id=54441[0m
+[0;32mI (59489) UART: Interval send data to host main: 5[0m
+[0;32mI (59519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=25062[0m
+[0;32mI (59639) UART: Interval send data to host main: 5[0m
+Error reading from DHT11: 255
+[0;32mI (59699) MQTT: MQTT_EVENT_PUBLISHED, msg_id=54953[0m
+[0;32mI (59809) UART: Interval send data to host main: 5[0m
+[0;32mI (59849) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21589[0m
+Error reading from DHT11: 255
+[0;32mI (61999) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47914[0m
+I (62209) wifi:state: run -> init (c0)
+I (62209) wifi:pm stop, total sleep time: 14590878 us / 16762011 us
+
+I (62209) wifi:<ba-del>idx:0, tid:0
+I (62209) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+[0;32mI (62219) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;31mE (62229) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54[0m
+[0;31mE (62229) mqtt_client: Poll read error: 119, aborting connection[0m
+[0;32mI (62239) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (64639) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (67049) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (69459) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (71869) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (72669) UART: Interval send data to host main: 5[0m
+[0;32mI (73089) UART: Interval send data to host main: 5[0m
+[0;32mI (73429) UART: Interval send data to host main: 5[0m
+[0;32mI (73639) UART: Interval send data to host main: 5[0m
+Error reading from DHT11: 255
+[0;32mI (73819) UART: Interval send data to host main: 5[0m
+[0;32mI (74289) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (74369) UART: Interval send data to host main: 10[0m
+[0;32mI (74539) UART: Interval send data to host main: 10[0m
+[0;32mI (74709) UART: Interval send data to host main: 10[0m
+[0;32mI (74879) UART: Interval send data to host main: 10[0m
+[0;32mI (75039) UART: Interval send data to host main: 10[0m
+[0;32mI (75189) UART: Interval send data to host main: 10[0m
+Error reading from DHT11: 255
+[0;32mI (76699) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (77239) MQTT: Other event id:7[0m
+[0;31mE (77239) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (77239) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (77239) mqtt_client: Error transport connect[0m
+[0;32mI (77249) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (77249) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Error reading from DHT11: 255
+[0;32mI (79119) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (81529) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+I (83939) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (83939) wifi:state: init -> auth (b0)
+I (83949) wifi:state: auth -> assoc (0)
+I (83949) wifi:state: assoc -> run (10)
+I (83959) wifi:connected with TUPEO, aid = 10, channel 1, BW20, bssid = b2:7d:64:d8:92:71
+I (83959) wifi:security: WPA2-PSK, phy: bgn, rssi: -51
+I (83969) wifi:pm start, type: 1
+
+I (84029) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+Error reading from DHT11: 255
+[0;32mI (86469) Wifi prov: Connected with IP Address:192.168.137.3[0m
+[0;32mI (86469) esp_netif_handlers: sta ip: 192.168.137.3, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (87259) MQTT: Other event id:7[0m
+I (87439) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:6, winSize:64
+[0;32mI (87449) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (87499) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=58361[0m
+[0;32mI (87529) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18108[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (102529) MQTT: MQTT_EVENT_PUBLISHED, msg_id=61702[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (112379) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (112379) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (112379) task_wdt: Tasks currently running:[0m
+[0;31mE (112379) task_wdt: CPU 0: IDLE[0m
+[0;31mE (112379) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (112379) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D916A:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (117379) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (117379) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (117379) task_wdt: Tasks currently running:[0m
+[0;31mE (117379) task_wdt: CPU 0: IDLE[0m
+[0;31mE (117379) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (117379) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D924E:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+[0;32mI (117539) MQTT: MQTT_EVENT_PUBLISHED, msg_id=13030[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (124699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (124699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (124699) task_wdt: Tasks currently running:[0m
+[0;31mE (124699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (124699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (124699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D916A:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (132519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=33234[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (138699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (138699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (138699) task_wdt: Tasks currently running:[0m
+[0;31mE (138699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (138699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (138699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D916A:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (146479) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (146479) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (146479) task_wdt: Tasks currently running:[0m
+[0;31mE (146479) task_wdt: CPU 0: IDLE[0m
+[0;31mE (146479) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (146479) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9245:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+[0;32mI (147529) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16355[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (156309) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (156309) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (156309) task_wdt: Tasks currently running:[0m
+[0;31mE (156309) task_wdt: CPU 0: IDLE[0m
+[0;31mE (156309) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (156309) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D924E:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (161309) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (161309) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (161309) task_wdt: Tasks currently running:[0m
+[0;31mE (161309) task_wdt: CPU 0: IDLE[0m
+[0;31mE (161309) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (161309) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9210:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+[0;32mI (162679) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46196[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (168699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (168699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (168699) task_wdt: Tasks currently running:[0m
+[0;31mE (168699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (168699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (168699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9204:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (173699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (173699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (173699) task_wdt: Tasks currently running:[0m
+[0;31mE (173699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (173699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (173699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D922B:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+[0;32mI (177519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=36662[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (182699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (182699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (182699) task_wdt: Tasks currently running:[0m
+[0;31mE (182699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (182699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (182699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D916A:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (187699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (187699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (187699) task_wdt: Tasks currently running:[0m
+[0;31mE (187699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (187699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (187699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9207:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (192699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (192699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (192699) task_wdt: Tasks currently running:[0m
+[0;31mE (192699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (192699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (192699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D923F:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+[0;32mI (192789) MQTT: MQTT_EVENT_PUBLISHED, msg_id=1055[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (198089) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (198089) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (198089) task_wdt: Tasks currently running:[0m
+[0;31mE (198089) task_wdt: CPU 0: IDLE[0m
+[0;31mE (198089) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (198089) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D94FA:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (203089) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (203089) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (203089) task_wdt: Tasks currently running:[0m
+[0;31mE (203089) task_wdt: CPU 0: IDLE[0m
+[0;31mE (203089) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (203089) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9500:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (207529) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16682[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (221129) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (221129) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (221129) task_wdt: Tasks currently running:[0m
+[0;31mE (221129) task_wdt: CPU 0: IDLE[0m
+[0;31mE (221129) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (221129) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9216:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+[0;32mI (222529) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46242[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (227809) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (227809) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (227809) task_wdt: Tasks currently running:[0m
+[0;31mE (227809) task_wdt: CPU 0: IDLE[0m
+[0;31mE (227809) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (227809) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D923C:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (232809) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (232809) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (232809) task_wdt: Tasks currently running:[0m
+[0;31mE (232809) task_wdt: CPU 0: IDLE[0m
+[0;31mE (232809) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (232809) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D94BD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (237519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10405[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (242699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (242699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (242699) task_wdt: Tasks currently running:[0m
+[0;31mE (242699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (242699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (242699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (248699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (248699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (248699) task_wdt: Tasks currently running:[0m
+[0;31mE (248699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (248699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (248699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (252519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=58313[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (258699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (258699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (258699) task_wdt: Tasks currently running:[0m
+[0;31mE (258699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (258699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (258699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9204:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (263699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (263699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (263699) task_wdt: Tasks currently running:[0m
+[0;31mE (263699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (263699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (263699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D916A:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (267749) MQTT: MQTT_EVENT_PUBLISHED, msg_id=38664[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (273839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (273839) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (273839) task_wdt: Tasks currently running:[0m
+[0;31mE (273839) task_wdt: CPU 0: IDLE[0m
+[0;31mE (273839) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (273839) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D924E:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (282519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=58290[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (288099) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (288099) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (288099) task_wdt: Tasks currently running:[0m
+[0;31mE (288099) task_wdt: CPU 0: IDLE[0m
+[0;31mE (288099) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (288099) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D94D2:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (293099) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (293099) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (293099) task_wdt: Tasks currently running:[0m
+[0;31mE (293099) task_wdt: CPU 0: IDLE[0m
+[0;31mE (293099) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (293099) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9245:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (297519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=11068[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (302809) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (302809) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (302809) task_wdt: Tasks currently running:[0m
+[0;31mE (302809) task_wdt: CPU 0: IDLE[0m
+[0;31mE (302809) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (302809) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D94D2:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (307809) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (307809) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (307809) task_wdt: Tasks currently running:[0m
+[0;31mE (307809) task_wdt: CPU 0: IDLE[0m
+[0;31mE (307809) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (307809) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9210:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (312519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=27689[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (317569) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (317569) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (317569) task_wdt: Tasks currently running:[0m
+[0;31mE (317569) task_wdt: CPU 0: IDLE[0m
+[0;31mE (317569) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (317569) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9245:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (322569) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (322569) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (322569) task_wdt: Tasks currently running:[0m
+[0;31mE (322569) task_wdt: CPU 0: IDLE[0m
+[0;31mE (322569) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (322569) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9210:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (327519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=49700[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (334579) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (334579) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (334579) task_wdt: Tasks currently running:[0m
+[0;31mE (334579) task_wdt: CPU 0: IDLE[0m
+[0;31mE (334579) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (334579) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D923C:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (339579) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (339579) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (339579) task_wdt: Tasks currently running:[0m
+[0;31mE (339579) task_wdt: CPU 0: IDLE[0m
+[0;31mE (339579) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (339579) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D924E:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (342529) MQTT: MQTT_EVENT_PUBLISHED, msg_id=45377[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (352699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (352699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (352699) task_wdt: Tasks currently running:[0m
+[0;31mE (352699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (352699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (352699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D916A:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (357529) MQTT: MQTT_EVENT_PUBLISHED, msg_id=14825[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (362699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (362699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (362699) task_wdt: Tasks currently running:[0m
+[0;31mE (362699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (362699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (362699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x4008AEE5:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (367699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (367699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (367699) task_wdt: Tasks currently running:[0m
+[0;31mE (367699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (367699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (367699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D916A:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (372519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=64118[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (378109) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (378109) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (378109) task_wdt: Tasks currently running:[0m
+[0;31mE (378109) task_wdt: CPU 0: IDLE[0m
+[0;31mE (378109) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (378109) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D94BD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (387319) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (387319) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (387319) task_wdt: Tasks currently running:[0m
+[0;31mE (387319) task_wdt: CPU 0: IDLE[0m
+[0;31mE (387319) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (387319) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9204:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+[0;32mI (387529) MQTT: MQTT_EVENT_PUBLISHED, msg_id=14279[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (396699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (396699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (396699) task_wdt: Tasks currently running:[0m
+[0;31mE (396699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (396699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (396699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9500:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (401699) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (401699) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (401699) task_wdt: Tasks currently running:[0m
+[0;31mE (401699) task_wdt: CPU 0: IDLE[0m
+[0;31mE (401699) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (401699) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9204:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+[0;32mI (402519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30068[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (408209) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (408209) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (408209) task_wdt: Tasks currently running:[0m
+[0;31mE (408209) task_wdt: CPU 0: IDLE[0m
+[0;31mE (408209) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (408209) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D924E:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (413209) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (413209) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (413209) task_wdt: Tasks currently running:[0m
+[0;31mE (413209) task_wdt: CPU 0: IDLE[0m
+[0;31mE (413209) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (413209) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D94BA:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (417519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=17777[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (423569) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (423569) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (423569) task_wdt: Tasks currently running:[0m
+[0;31mE (423569) task_wdt: CPU 0: IDLE[0m
+[0;31mE (423569) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (423569) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9245:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (428569) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (428569) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (428569) task_wdt: Tasks currently running:[0m
+[0;31mE (428569) task_wdt: CPU 0: IDLE[0m
+[0;31mE (428569) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (428569) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D94BA:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (432519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6889[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (437809) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (437809) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (437809) task_wdt: Tasks currently running:[0m
+[0;31mE (437809) task_wdt: CPU 0: IDLE[0m
+[0;31mE (437809) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (437809) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D922B:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;31mE (442809) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (442809) task_wdt:  - IDLE (CPU 1)[0m
+[0;31mE (442809) task_wdt: Tasks currently running:[0m
+[0;31mE (442809) task_wdt: CPU 0: IDLE[0m
+[0;31mE (442809) task_wdt: CPU 1: send_mqtt_data_[0m
+[0;31mE (442809) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085272:0x3FFB22B0 0x40082E25:0x3FFB22D0 0x400D9216:0x3FFD30F0 0x400D94FD:0x3FFD3110 0x4008C619:0x3FFD3130
+
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (447519) MQTT: MQTT_EVENT_PUBLISHED, msg_id=28723[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255

@@ -323,6 +323,7 @@ void send_mqtt_data_task(void *pvParameters)
                 lt_send_keep_alive = xTaskGetTickCount();
                 send_keep_alive();
             }
+            vTaskDelay(pdMS_TO_TICKS(50));
         }
         else
         {
