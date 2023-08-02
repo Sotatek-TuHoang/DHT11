@@ -8,6 +8,8 @@
  ***************************************************************************/
 
 /****************************************************************************/
+/***        Include files                                                 ***/
+/****************************************************************************/
 #include "esp_timer.h"
 #include "driver/gpio.h"
 #include "rom/ets_sys.h"
@@ -17,16 +19,13 @@
 
 #include "bee_dht11.h"
 
+/****************************************************************************/
+/***        static Variables                                              ***/
+/****************************************************************************/
 static gpio_num_t dht_gpio;
 static int64_t last_read_time = -2000000;
 static struct dht11_reading last_read;
 struct dht11_reading reading;
-
-uint8_t u8status;
-uint8_t u8temp;
-uint8_t u8humi;
-uint8_t u8error_cnt = 0;
-
 static uint8_t max_error_cnt = 10;
 static uint8_t u8count_caculate_diff = 0;
 static uint8_t u8Temp_array[num_readings];
@@ -38,9 +37,19 @@ static uint16_t u16Humi_sum = 0;
 static uint8_t u8Temp_avr = 0;
 static uint8_t u8Humi_avr = 0;
 
+/****************************************************************************/
+/***        Global Variables                                              ***/
+/****************************************************************************/
+uint8_t u8status;
+uint8_t u8temp;
+uint8_t u8humi;
+uint8_t u8error_cnt = 0;
 uint8_t u8temp_diff = 0;
 uint8_t u8humi_diff = 0;
 
+/****************************************************************************/
+/***        Local Functions                                               ***/
+/****************************************************************************/
 static int _waitOrTimeout(uint16_t microSeconds, int level) {
     int micros_ticks = 0;
     while(gpio_get_level(dht_gpio) == level) { 
@@ -89,12 +98,18 @@ static struct dht11_reading _crcError() {
     return crcError;
 }
 
+/****************************************************************************/
+/***        Init Functions                                                ***/
+/****************************************************************************/
 void DHT11_init(gpio_num_t gpio_num) {
     /* Wait 1 seconds to make the device pass its initial unstable status */
     vTaskDelay(1000 / portTICK_PERIOD_MS);
     dht_gpio = gpio_num;
 }
 
+/****************************************************************************/
+/***        struct                                                        ***/
+/****************************************************************************/
 struct dht11_reading DHT11_read() {
     /* Tried to sense too son since last read (dht11 needs ~2 seconds to make a new read) */
     if(esp_timer_get_time() - 2000000 < last_read_time) {
@@ -132,6 +147,9 @@ struct dht11_reading DHT11_read() {
     }
 }
 
+/****************************************************************************/
+/***        Read dht11 and caculate parameter task                        ***/
+/****************************************************************************/
 void read_dht11(void* pvParameters)
 {
     TickType_t last_time_read = xTaskGetTickCount();

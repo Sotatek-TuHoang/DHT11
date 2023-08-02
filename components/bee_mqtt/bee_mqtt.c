@@ -104,31 +104,35 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
     }
 }
 
-static void get_mac(void)
+/****************************************************************************/
+/***        Init Functions in App main                                    ***/
+/****************************************************************************/
+void mqtt_app_start(void)
 {
+    /*Config mqtt client*/
+    esp_mqtt_client_config_t mqtt_cfg = {
+        .broker.address.uri = BROKER_ADDRESS_URI,
+        .credentials.username = USERNAME,
+        .credentials.authentication.password = PASSWORD
+    };
+    client = esp_mqtt_client_init(&mqtt_cfg);
+    esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
+    esp_mqtt_client_start(client);
+
+    /* Get mac Address and set topic*/
     esp_wifi_get_mac(ESP_IF_WIFI_STA, u8mac);
     snprintf(cMac_str, sizeof(cMac_str), "%02X%02X%02X%02X%02X%02X", u8mac[0], u8mac[1], u8mac[2], u8mac[3], u8mac[4], u8mac[5]);
     snprintf(cTopic_pub, sizeof(cTopic_pub), "VB/DMP/VBEEON/CUSTOM/SMH/%s/telemetry", cMac_str);
     snprintf(cTopic_sub, sizeof(cTopic_sub),"VB/DMP/VBEEON/CUSTOM/SMH/%s/Command", cMac_str);
     ESP_LOGI(TAG, "Topic publish: %s\n", cTopic_pub);
     ESP_LOGI(TAG, "Topic subscribe: %s\n", cTopic_sub);
-}
 
-void mqtt_app_start(void)
-{
-    esp_mqtt_client_config_t mqtt_cfg = {
-        .broker.address.uri = BROKER_ADDRESS_URI,
-        .credentials.username = USERNAME,
-        .credentials.authentication.password = PASSWORD
-    };
-
-    client = esp_mqtt_client_init(&mqtt_cfg);
-    esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
-    esp_mqtt_client_start(client);
-    get_mac();
     mqtt_cmd_queue = xQueueCreate(10, sizeof(cJSON*));
 }
 
+/****************************************************************************/
+/***        Global Functions                                              ***/
+/****************************************************************************/
 void pub_data(const char *object, int values)
 {
     cJSON *json_data = cJSON_CreateObject();
@@ -145,6 +149,9 @@ void pub_data(const char *object, int values)
     free(json_str);
 }
 
+/****************************************************************************/
+/***        Local Functions                                               ***/
+/****************************************************************************/
 static void send_warning(void)
 {
     cJSON *json_warning = cJSON_CreateObject();
@@ -278,6 +285,9 @@ static void MQTT_cmd_to_uart(int values)
     uart_write_bytes(UART_NUM, cMQTT_cmd, sizeof(cMQTT_cmd));
 }
 
+/****************************************************************************/
+/***        Tasks                                                         ***/
+/****************************************************************************/
 void send_mqtt_data_task(void *pvParameters)
 {
     TickType_t lt_send_data_mqtt = xTaskGetTickCount();
