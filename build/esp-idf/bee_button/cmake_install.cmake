@@ -1,4 +1,4 @@
-# Install script for directory: E:/Phase2 beta/components/bee_button
+# Install script for directory: E:/Phase2_beta/components/bee_button
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

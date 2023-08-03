@@ -1,4 +1,4 @@
-# Install script for directory: E:/Phase2 beta/main
+# Install script for directory: E:/Phase2_beta/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

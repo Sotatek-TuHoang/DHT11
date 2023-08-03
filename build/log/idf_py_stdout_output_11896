@@ -1,0 +1,335 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Aug  3 2023 15:29:46[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3035ch (197468) map[0m
+[0;32mI (178) esp_image: segment 1: paddr=00040384 vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (184) esp_image: segment 2: paddr=00043bac vaddr=40080000 size=0c46ch ( 50284) load[0m
+[0;32mI (205) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b2f64h (733028) map[0m
+[0;32mI (470) esp_image: segment 4: paddr=00102f8c vaddr=4008c46c size=0a0f4h ( 41204) load[0m
+[0;32mI (498) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (510) cpu_start: Multicore app[0m
+[0;32mI (510) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (528) cpu_start: Pro cpu start user code[0m
+[0;32mI (528) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (528) cpu_start: Application information:[0m
+[0;32mI (533) cpu_start: Project name:     bee_main[0m
+[0;32mI (538) cpu_start: App version:      5a75c47-dirty[0m
+[0;32mI (543) cpu_start: Compile time:     Aug  3 2023 15:29:31[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  dc3119f37dd6c4e0...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (561) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (570) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (588) heap_init: At 3FFB81A0 len 00027E60 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (601) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (607) heap_init: At 40096560 len 00009AA0 (38 KiB): IRAM[0m
+[0;32mI (615) spi_flash: detected chip: generic[0m
+[0;32mI (618) spi_flash: flash io: dio[0m
+[0;33mW (622) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (636) app_start: Starting scheduler on CPU0[0m
+[0;32mI (640) app_start: Starting scheduler on CPU1[0m
+[0;32mI (640) main_task: Started on CPU0[0m
+[0;32mI (650) main_task: Calling app_main()[0m
+[0;32mI (1680) uart: queue free spaces: 6[0m
+I (1690) wifi:wifi driver task: 3ffca050, prio:23, stack:6656, core=0
+I (1700) wifi:wifi firmware version: b2f1f86
+I (1700) wifi:wifi certification version: v7.0
+I (1700) wifi:config NVS flash: enabled
+I (1710) wifi:config nano formating: disabled
+I (1710) wifi:Init data frame dynamic rx buffer num: 32
+I (1710) wifi:Init management frame dynamic rx buffer num: 32
+I (1720) wifi:Init management short buffer num: 32
+I (1720) wifi:Init dynamic tx buffer num: 32
+I (1730) wifi:Init static rx buffer size: 1600
+I (1730) wifi:Init static rx buffer num: 10
+I (1740) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1740) wifi_init: rx ba win: 6[0m
+[0;32mI (1740) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1750) wifi_init: udp mbox: 6[0m
+[0;32mI (1750) wifi_init: tcp mbox: 6[0m
+[0;32mI (1760) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1760) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1760) wifi_init: tcp mss: 1440[0m
+[0;32mI (1770) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1770) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1780) Wifi prov: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1790) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1900) wifi:mode : sta (b8:d6:1a:69:5a:cc)
+I (1900) wifi:enable tsf
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+I (4320) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (4320) wifi:state: init -> auth (b0)
+I (4320) wifi:state: auth -> assoc (0)
+I (4330) wifi:state: assoc -> run (10)
+I (4340) wifi:connected with TUPEO, aid = 8, channel 6, BW20, bssid = b2:7d:64:d8:92:71
+I (4340) wifi:security: WPA2-PSK, phy: bgn, rssi: -40
+I (4340) wifi:pm start, type: 1
+
+I (4390) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;32mI (5350) Wifi prov: Connected with IP Address:192.168.137.224[0m
+[0;32mI (5350) esp_netif_handlers: sta ip: 192.168.137.224, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (5360) MQTT: Other event id:7[0m
+[0;32mI (5360) MQTT: Topic publish: VB/DMP/VBEEON/CUSTOM/SMH/B8D61A695ACC/telemetry
+[0m
+[0;32mI (5370) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/B8D61A695ACC/Command
+[0m
+[0;32mI (5370) main_task: Returned from app_main()[0m
+I (5410) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:5, winSize:64
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (5730) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6140) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=32073[0m
+[0;32mI (6450) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46328[0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (7980) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30054[0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+I (4320) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (4320) wifi:state: init -> auth (b0)
+I (4330) wifi:state: auth -> assoc (0)
+I (4330) wifi:state: assoc -> run (10)
+I (4840) wifi:connected with TUPEO, aid = 9, channel 6, BW20, bssid = b2:7d:64:d8:92:71
+I (4840) wifi:security: WPA2-PSK, phy: bgn, rssi: -41
+I (4850) wifi:pm start, type: 1
+
+I (4940) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (5850) Wifi prov: Connected with IP Address:192.168.137.224[0m
+[0;32mI (5850) esp_netif_handlers: sta ip: 192.168.137.224, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (5860) MQTT: Other event id:7[0m
+[0;32mI (5860) MQTT: Topic publish: VB/DMP/VBEEON/CUSTOM/SMH/B8D61A695ACC/telemetry
+[0m
+[0;32mI (5870) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/B8D61A695ACC/Command
+[0m
+[0;32mI (5870) main_task: Returned from app_main()[0m
+I (6270) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:6, winSize:64
+[0;32mI (6580) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6690) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=1370[0m
+[0;32mI (6780) MQTT: MQTT_EVENT_PUBLISHED, msg_id=34648[0m
+Error reading from DHT11: 254
+Error read count: 1
+Error reading from DHT11: 254
+Error read count: 2
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (21330) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62262[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (1680) uart: queue free spaces: 6[0m
+I (1690) wifi:wifi driver task: 3ffca050, prio:23, stack:6656, core=0
+I (1700) wifi:wifi firmware version: b2f1f86
+I (1700) wifi:wifi certification version: v7.0
+I (1710) wifi:config NVS flash: enabled
+I (1710) wifi:config nano formating: disabled
+I (1710) wifi:Init data frame dynamic rx buffer num: 32
+I (1710) wifi:Init management frame dynamic rx buffer num: 32
+I (1720) wifi:Init management short buffer num: 32
+I (1720) wifi:Init dynamic tx buffer num: 32
+I (1730) wifi:Init static rx buffer size: 1600
+I (1730) wifi:Init static rx buffer num: 10
+I (1740) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1740) wifi_init: rx ba win: 6[0m
+[0;32mI (1740) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1750) wifi_init: udp mbox: 6[0m
+[0;32mI (1750) wifi_init: tcp mbox: 6[0m
+[0;32mI (1760) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1760) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1760) wifi_init: tcp mss: 1440[0m
+[0;32mI (1770) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1770) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1780) Wifi prov: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1790) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1900) wifi:mode : sta (b8:d6:1a:69:5a:cc)
+I (1900) wifi:enable tsf
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+I (4320) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (4320) wifi:state: init -> auth (b0)
+I (4330) wifi:state: auth -> assoc (0)
+I (4330) wifi:state: assoc -> run (10)
+I (4340) wifi:connected with TUPEO, aid = 10, channel 6, BW20, bssid = b2:7d:64:d8:92:71
+I (4340) wifi:security: WPA2-PSK, phy: bgn, rssi: -37
+I (4350) wifi:pm start, type: 1
+
+I (4390) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;32mI (5350) Wifi prov: Connected with IP Address:192.168.137.224[0m
+[0;32mI (5350) esp_netif_handlers: sta ip: 192.168.137.224, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (5360) MQTT: Other event id:7[0m
+[0;32mI (5360) MQTT: Topic publish: VB/DMP/VBEEON/CUSTOM/SMH/B8D61A695ACC/telemetry
+[0m
+[0;32mI (5370) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/B8D61A695ACC/Command
+[0m
+[0;32mI (5370) main_task: Returned from app_main()[0m
+[0;32mI (5520) MQTT: MQTT_EVENT_CONNECTED[0m
+I (5620) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:9, winSize:64
+[0;32mI (5620) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=9723[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (5720) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35908[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (20570) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46017[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (35630) MQTT: MQTT_EVENT_PUBLISHED, msg_id=29124[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (35930) MQTT: MQTT_EVENT_PUBLISHED, msg_id=51810[0m
+[0;32mI (36550) MQTT: MQTT_EVENT_PUBLISHED, msg_id=63167[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%

@@ -1,4 +1,4 @@
-/* * Data converted from E:/Phase2 beta/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from E:/Phase2_beta/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

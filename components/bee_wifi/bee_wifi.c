@@ -211,9 +211,9 @@ esp_err_t custom_prov_data_handler(uint32_t session_id, const uint8_t *inbuf, ss
     *outlen = strlen(response) + 1; /* +1 for NULL terminating byte */
     return ESP_OK;
 }
+
 /** @brief Hàm kiểm soát việc cài đặt cấu hình TCP/IP, đăng ký event handle
- *         Init các cấu hình liên quan phục vụ cho cấu hình cho wifi
- */
+ *         Init các cấu hình liên quan phục vụ cho cấu hình cho wifi*/
 void wifi_init_func(void)
 {
     ESP_ERROR_CHECK(esp_netif_init()); /* Initialize TCP/IP */

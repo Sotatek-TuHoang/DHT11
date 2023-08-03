@@ -1476,7 +1476,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_bee_mqtt_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -S"E:\Phase2 beta" -B"E:\Phase2 beta\build"
+  command = C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -SE:\Phase2_beta -BE:\Phase2_beta\build
   description = Re-running CMake...
   generator = 1
 
