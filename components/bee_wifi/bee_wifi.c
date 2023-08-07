@@ -161,22 +161,25 @@ static void reconnect_old_wifi(void)
 
     load_old_wifi_cred(cSsid, cPassword);
 
-    // Thiết lập cấu hình Wi-Fi với thông tin từ NVS
-    memset(&wifi_sta_cfg, 0, sizeof(wifi_config_t));
-    strncpy((char*)wifi_sta_cfg.sta.ssid, cSsid, sizeof(wifi_sta_cfg.sta.ssid));
-    strncpy((char*)wifi_sta_cfg.sta.password, cPassword, sizeof(wifi_sta_cfg.sta.password));
+    if (strlen(cSsid) > 0)
+    {
+        // Thiết lập cấu hình Wi-Fi với thông tin từ NVS
+        memset(&wifi_sta_cfg, 0, sizeof(wifi_config_t));
+        strncpy((char*)wifi_sta_cfg.sta.ssid, cSsid, sizeof(wifi_sta_cfg.sta.ssid));
+        strncpy((char*)wifi_sta_cfg.sta.password, cPassword, sizeof(wifi_sta_cfg.sta.password));
 
-    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
-    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+        wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+        ESP_ERROR_CHECK(esp_wifi_init(&cfg));
 
-    // Khởi tạo Wi-Fi ở chế độ STA với cấu hình đã đọc từ NVS
-    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
-    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_sta_cfg));
-    ESP_ERROR_CHECK(esp_wifi_start());
+        // Khởi tạo Wi-Fi ở chế độ STA với cấu hình đã đọc từ NVS
+        ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+        ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_sta_cfg));
+        ESP_ERROR_CHECK(esp_wifi_start());
 
-    wifi_prov_mgr_stop_provisioning();
+        wifi_prov_mgr_stop_provisioning();
 
-    ESP_ERROR_CHECK(esp_wifi_connect());
+        ESP_ERROR_CHECK(esp_wifi_connect());
+    }
 }
 
 void cnt_timeout(uint8_t *u8time)

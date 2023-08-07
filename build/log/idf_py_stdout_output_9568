@@ -1,0 +1,839 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug  4 2023 11:23:11[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3045ch (197724) map[0m
+[0;32mI (177) esp_image: segment 1: paddr=00040484 vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=00043cac vaddr=40080000 size=0c36ch ( 50028) load[0m
+[0;32mI (204) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b3098h (733336) map[0m
+[0;32mI (469) esp_image: segment 4: paddr=001030c0 vaddr=4008c36c size=0a204h ( 41476) load[0m
+[0;32mI (498) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (509) cpu_start: Multicore app[0m
+[0;32mI (510) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (528) cpu_start: Pro cpu start user code[0m
+[0;32mI (528) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (528) cpu_start: Application information:[0m
+[0;32mI (532) cpu_start: Project name:     bee_main[0m
+[0;32mI (537) cpu_start: App version:      0a86a63-dirty[0m
+[0;32mI (543) cpu_start: Compile time:     Aug  4 2023 11:19:48[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  76f5f69de45ddfd3...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (560) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (570) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (588) heap_init: At 3FFB81A0 len 00027E60 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (600) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (607) heap_init: At 40096570 len 00009A90 (38 KiB): IRAM[0m
+[0;32mI (614) spi_flash: detected chip: generic[0m
+[0;32mI (618) spi_flash: flash io: dio[0m
+[0;33mW (621) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (635) app_start: Starting scheduler on CPU0[0m
+[0;32mI (640) app_start: Starting scheduler on CPU1[0m
+[0;32mI (640) main_task: Started on CPU0[0m
+[0;32mI (650) main_task: Calling app_main()[0m
+[0;32mI (1690) uart: queue free spaces: 6[0m
+I (1700) wifi:wifi driver task: 3ffca748, prio:23, stack:6656, core=0
+I (1710) wifi:wifi firmware version: b2f1f86
+I (1710) wifi:wifi certification version: v7.0
+I (1710) wifi:config NVS flash: enabled
+I (1710) wifi:config nano formating: disabled
+I (1720) wifi:Init data frame dynamic rx buffer num: 32
+I (1720) wifi:Init management frame dynamic rx buffer num: 32
+I (1730) wifi:Init management short buffer num: 32
+I (1730) wifi:Init dynamic tx buffer num: 32
+I (1740) wifi:Init static rx buffer size: 1600
+I (1740) wifi:Init static rx buffer num: 10
+I (1750) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1750) wifi_init: rx ba win: 6[0m
+[0;32mI (1750) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1760) wifi_init: udp mbox: 6[0m
+[0;32mI (1760) wifi_init: tcp mbox: 6[0m
+[0;32mI (1770) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1770) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1770) wifi_init: tcp mss: 1440[0m
+[0;32mI (1780) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1780) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1790) Wifi prov: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1800) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1910) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+I (1910) wifi:enable tsf
+I (1920) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (1920) wifi:state: init -> auth (b0)
+I (1930) wifi:state: auth -> assoc (0)
+I (1930) wifi:state: assoc -> run (10)
+I (1940) wifi:connected with TUPEO, aid = 1, channel 11, BW20, bssid = b2:7d:64:d8:92:71
+I (1940) wifi:security: WPA2-PSK, phy: bgn, rssi: -41
+I (1950) wifi:pm start, type: 1
+
+I (2040) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;32mI (2950) Wifi prov: Connected with IP Address:192.168.137.73[0m
+[0;32mI (2950) esp_netif_handlers: sta ip: 192.168.137.73, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (2950) MQTT: Other event id:7[0m
+[0;32mI (2970) MQTT: Topic publish: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/telemetry
+[0m
+[0;32mI (2970) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/Command
+[0m
+[0;32mI (2970) Memory Status: IRAM - Total: 338336 bytes, Free: 210524 bytes, Used: 37.78%[0m
+[0;32mI (2980) Memory Status: DRAM - Total: 298768 bytes, Free: 171784 bytes, Used: 42.50%[0m
+[0;32mI (2990) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+[0;32mI (3580) MQTT: MQTT_EVENT_CONNECTED[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (3720) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=22678[0m
+[0;32mI (3890) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46123[0m
+I (4500) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:11, winSize:64
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (8000) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (8000) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (8000) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (13010) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (13010) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (13010) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (18020) Memory Status: IRAM - Total: 338336 bytes, Free: 208272 bytes, Used: 38.44%[0m
+[0;32mI (18020) Memory Status: DRAM - Total: 298768 bytes, Free: 169532 bytes, Used: 43.26%[0m
+[0;32mI (18020) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+[0;32mI (18320) MQTT: MQTT_EVENT_PUBLISHED, msg_id=2989[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (23030) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (23030) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (23030) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (28040) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (28040) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (28040) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (33050) Memory Status: IRAM - Total: 338336 bytes, Free: 206284 bytes, Used: 39.03%[0m
+[0;32mI (33050) Memory Status: DRAM - Total: 298768 bytes, Free: 167544 bytes, Used: 43.92%[0m
+[0;32mI (33050) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+[0;32mI (33380) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4779[0m
+[0;32mI (33680) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47189[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (33760) MQTT: MQTT_EVENT_PUBLISHED, msg_id=20612[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (38060) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (38060) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (38060) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (43070) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (43070) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (43070) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (48080) Memory Status: IRAM - Total: 338336 bytes, Free: 208272 bytes, Used: 38.44%[0m
+[0;32mI (48080) Memory Status: DRAM - Total: 298768 bytes, Free: 169532 bytes, Used: 43.26%[0m
+[0;32mI (48080) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+[0;32mI (48120) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4314[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (53090) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (53090) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (53090) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (58100) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (58100) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (58100) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (63110) Memory Status: IRAM - Total: 338336 bytes, Free: 206284 bytes, Used: 39.03%[0m
+[0;32mI (63110) Memory Status: DRAM - Total: 298768 bytes, Free: 167544 bytes, Used: 43.92%[0m
+[0;32mI (63110) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+[0;32mI (63180) MQTT: MQTT_EVENT_PUBLISHED, msg_id=26716[0m
+[0;32mI (63480) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47429[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (63790) MQTT: MQTT_EVENT_PUBLISHED, msg_id=42913[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (68120) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (68120) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (68120) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (73130) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (73130) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (73130) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (78140) Memory Status: IRAM - Total: 338336 bytes, Free: 208272 bytes, Used: 38.44%[0m
+[0;32mI (78140) Memory Status: DRAM - Total: 298768 bytes, Free: 169532 bytes, Used: 43.26%[0m
+[0;32mI (78140) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+[0;32mI (78230) MQTT: MQTT_EVENT_PUBLISHED, msg_id=7215[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (83150) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (83150) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (83150) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (88160) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (88160) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (88160) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (93170) Memory Status: IRAM - Total: 338336 bytes, Free: 206284 bytes, Used: 39.03%[0m
+[0;32mI (93170) Memory Status: DRAM - Total: 298768 bytes, Free: 167544 bytes, Used: 43.92%[0m
+[0;32mI (93170) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+[0;32mI (93280) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16987[0m
+[0;32mI (93590) MQTT: MQTT_EVENT_PUBLISHED, msg_id=63099[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (93900) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16324[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (98180) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (98180) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (98180) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (103190) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (103190) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (103190) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (108200) Memory Status: IRAM - Total: 338336 bytes, Free: 208272 bytes, Used: 38.44%[0m
+[0;32mI (108200) Memory Status: DRAM - Total: 298768 bytes, Free: 169532 bytes, Used: 43.26%[0m
+[0;32mI (108200) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+[0;32mI (108340) MQTT: MQTT_EVENT_PUBLISHED, msg_id=34744[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (113210) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (113210) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (113210) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (118220) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (118220) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (118220) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (123230) Memory Status: IRAM - Total: 338336 bytes, Free: 206284 bytes, Used: 39.03%[0m
+[0;32mI (123230) Memory Status: DRAM - Total: 298768 bytes, Free: 167544 bytes, Used: 43.92%[0m
+[0;32mI (123230) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+[0;32mI (123390) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46149[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (123720) MQTT: MQTT_EVENT_PUBLISHED, msg_id=1547[0m
+[0;32mI (124310) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41627[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (128240) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (128240) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (128240) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (133250) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (133250) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (133250) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (138110) MQTT: MQTT_EVENT_PUBLISHED, msg_id=44318[0m
+[0;32mI (138260) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (138260) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (138260) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (143270) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (143270) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (143270) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (148280) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (148280) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (148280) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (153190) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18967[0m
+[0;32mI (153290) Memory Status: IRAM - Total: 338336 bytes, Free: 208036 bytes, Used: 38.51%[0m
+[0;32mI (153290) Memory Status: DRAM - Total: 298768 bytes, Free: 169296 bytes, Used: 43.34%[0m
+[0;32mI (153290) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+[0;32mI (153490) MQTT: MQTT_EVENT_PUBLISHED, msg_id=12480[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (153780) MQTT: MQTT_EVENT_PUBLISHED, msg_id=55692[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (158300) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (158300) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (158300) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (163310) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (163310) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (163310) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (168250) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30991[0m
+[0;32mI (168320) Memory Status: IRAM - Total: 338336 bytes, Free: 209896 bytes, Used: 37.96%[0m
+[0;32mI (168320) Memory Status: DRAM - Total: 298768 bytes, Free: 171156 bytes, Used: 42.71%[0m
+[0;32mI (168320) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (173330) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (173330) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (173330) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (178340) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (178340) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (178340) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (183290) MQTT: MQTT_EVENT_PUBLISHED, msg_id=7977[0m
+[0;32mI (183350) Memory Status: IRAM - Total: 338336 bytes, Free: 207912 bytes, Used: 38.55%[0m
+[0;32mI (183350) Memory Status: DRAM - Total: 298768 bytes, Free: 169172 bytes, Used: 43.38%[0m
+[0;32mI (183350) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+[0;32mI (183600) MQTT: MQTT_EVENT_PUBLISHED, msg_id=59248[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (183910) MQTT: MQTT_EVENT_PUBLISHED, msg_id=55772[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (188360) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (188360) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (188360) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (193370) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (193370) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (193370) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (198350) MQTT: MQTT_EVENT_PUBLISHED, msg_id=57631[0m
+[0;32mI (198380) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (198380) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (198380) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (203390) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (203390) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (203390) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (208400) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (208400) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (208400) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (213400) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21711[0m
+[0;32mI (213410) Memory Status: IRAM - Total: 338336 bytes, Free: 208036 bytes, Used: 38.51%[0m
+[0;32mI (213410) Memory Status: DRAM - Total: 298768 bytes, Free: 169296 bytes, Used: 43.34%[0m
+[0;32mI (213410) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (213810) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18067[0m
+[0;32mI (214320) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53068[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (218420) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (218420) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (218420) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (223430) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (223430) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (223430) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (228140) MQTT: MQTT_EVENT_PUBLISHED, msg_id=15426[0m
+[0;32mI (228440) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (228440) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (228440) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (233450) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (233450) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (233450) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (238460) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (238460) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (238460) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (243200) MQTT: MQTT_EVENT_PUBLISHED, msg_id=3509[0m
+[0;32mI (243470) Memory Status: IRAM - Total: 338336 bytes, Free: 208036 bytes, Used: 38.51%[0m
+[0;32mI (243470) Memory Status: DRAM - Total: 298768 bytes, Free: 169296 bytes, Used: 43.34%[0m
+[0;32mI (243470) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+[0;32mI (243510) MQTT: MQTT_EVENT_PUBLISHED, msg_id=33078[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (243790) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62827[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (248480) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (248480) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (248480) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (253490) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (253490) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (253490) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (258250) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18744[0m
+[0;32mI (258500) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (258500) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (258500) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (263510) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (263510) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (263510) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (268520) Memory Status: IRAM - Total: 338336 bytes, Free: 210020 bytes, Used: 37.93%[0m
+[0;32mI (268520) Memory Status: DRAM - Total: 298768 bytes, Free: 171280 bytes, Used: 42.67%[0m
+[0;32mI (268520) Memory Status: Current CPU Frequency: 160 MHz (XTAL Frequency: 40000000 Hz)[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%

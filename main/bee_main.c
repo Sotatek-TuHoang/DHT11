@@ -44,7 +44,7 @@ void app_main()
     button_init();
 
     xTaskCreate(&read_dht11, "read_dht11", 2048, NULL, 31, NULL);
-    xTaskCreate(&uart_send_data_task, "uart_send_data_task", 2048, NULL, 8, NULL);
+    xTaskCreate(&uart_send_data_task, "uart_send_data_task", 4096, NULL, 8, NULL);
     xTaskCreate(&led_control_task, "led_control_task", 1024, NULL, 6, NULL);
     xTaskCreate(&uart_cmd_task, "uart_cmd_task", 4096, NULL, 4, NULL);
     xTaskCreate(interval_button, "interval_button", 2048, NULL, 3, NULL);
@@ -54,10 +54,9 @@ void app_main()
 
     mqtt_app_start();
 
-    xTaskCreate(send_mqtt_data_task, "send_mqtt_data_task", 2048, NULL, 7, NULL);
-    xTaskCreate(receive_mqtt_config_task, "receive_mqtt_config_task", 2048, NULL, 5, NULL);
-
-}
+    xTaskCreate(send_mqtt_data_task, "send_mqtt_data_task", 4096, NULL, 7, NULL);
+    xTaskCreate(receive_mqtt_config_task, "receive_mqtt_config_task", 4096, NULL, 5, NULL);
+}   
 /****************************************************************************/
 /***        END OF FILE                                                   ***/
 /****************************************************************************/
