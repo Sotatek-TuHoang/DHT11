@@ -1,0 +1,1387 @@
+2mI (607) hets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug  4 2023 11:23:11[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3035ch (197468) map[0m
+[0;32mI (177) esp_image: segment 1: paddr=00040384 vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=00043bac vaddr=40080000 size=0c46ch ( 50284) load[0m
+[0;32mI (204) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b2f6ch (733036) map[0m
+[0;32mI (469) esp_image: segment 4: paddr=00102f94 vaddr=4008c46c size=0a0f4h ( 41204) load[0m
+[0;32mI (497) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (509) cpu_start: Multicore app[0m
+[0;32mI (509) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (527) cpu_start: Pro cpu start user code[0m
+[0;32mI (527) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (527) cpu_start: Application information:[0m
+[0;32mI (532) cpu_start: Project name:     bee_main[0m
+[0;32mI (537) cpu_start: App version:      6a0c029-dirty[0m
+[0;32mI (543) cpu_start: Compile time:     Aug  7 2023 09:43:20[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  9864ca70acbabb7f...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (560) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (569) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (587) heap_init: At 3FFB81A0 len 00027E60 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (600) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (607) heap_init: At 40096560 len 00009AA0 (38 KiB): IRAM[0m
+[0;32mI (614) spi_flash: detected chip: generic[0m
+[0;32mI (617) spi_flash: flash io: dio[0m
+[0;33mW (621) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (635) app_start: Starting scheduler on CPU0[0m
+[0;32mI (639) app_start: Starting scheduler on CPU1[0m
+[0;32mI (639) main_task: Started on CPU0[0m
+[0;32mI (649) main_task: Calling app_main()[0m
+[0;32mI (1689) uart: queue free spaces: 6[0m
+I (1699) wifi:wifi driver task: 3ffca748, prio:23, stack:6656, core=0
+I (1709) wifi:wifi firmware version: b2f1f86
+I (1709) wifi:wifi certification version: v7.0
+I (1709) wifi:config NVS flash: enabled
+I (1709) wifi:config nano formating: disabled
+I (1719) wifi:Init data frame dynamic rx buffer num: 32
+I (1719) wifi:Init management frame dynamic rx buffer num: 32
+I (1729) wifi:Init management short buffer num: 32
+I (1729) wifi:Init dynamic tx buffer num: 32
+I (1739) wifi:Init static rx buffer size: 1600
+I (1739) wifi:Init static rx buffer num: 10
+I (1749) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1749) wifi_init: rx ba win: 6[0m
+[0;32mI (1749) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1759) wifi_init: udp mbox: 6[0m
+[0;32mI (1759) wifi_init: tcp mbox: 6[0m
+[0;32mI (1769) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1769) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1769) wifi_init: tcp mss: 1440[0m
+[0;32mI (1779) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1779) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1789) Wifi prov: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1799) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1909) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+I (1909) wifi:enable tsf
+Error reading from DHT11: 255
+Error read count: 1
+[0;32mI (4329) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 2
+[0;32mI (6739) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 3
+[0;32mI (9149) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 4
+[0;32mI (11559) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 5
+Error reading from DHT11: 255
+Error read count: 6
+[0;32mI (13999) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 7
+[0;32mI (16429) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 8
+[0;32mI (18839) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 9
+[0;32mI (21269) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 10
+[0;32mI (23679) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (26119) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 98%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (28529) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 98%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (30939) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 1
+[0;32mI (33359) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 2
+Error reading from DHT11: 255
+Error read count: 3
+[0;32mI (35769) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 4
+[0;32mI (38179) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 5
+[0;32mI (40599) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 6
+[0;32mI (43009) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 7
+[0;32mI (45419) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 8
+Error reading from DHT11: 255
+Error read count: 9
+[0;32mI (47839) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 10
+[0;32mI (50249) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (52659) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (55079) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (57489) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (59899) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (62309) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (64729) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (67139) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (69549) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Temperature: 31 C
+Humidity: 98%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (71969) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 98%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (74379) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 1
+[0;32mI (76789) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 2
+[0;32mI (79209) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 3
+[0;32mI (81629) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 4
+Error reading from DHT11: 255
+Error read count: 5
+[0;32mI (84069) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 6
+[0;32mI (86479) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 7
+[0;32mI (88909) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 8
+[0;32mI (91319) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error read count: 9
+Error reading from DHT11: 255
+Error read count: 10
+[0;32mI (93749) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (96169) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (98579) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (100989) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+[0;32mI (103409) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Error reading from DHT11: 255
+Error reading from DHT11: 255
+[0;32mI (105819) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 98%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (108229) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 98%
+Temperature Different: 1 C
+Humidity Different: 0%
+[0;32mI (110649) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 98%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (113059) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 98%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (115469) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 95%
+Temperature Different: 1 C
+Humidity Different: 2%
+Temperature: 32 C
+Humidity: 95%
+Temperature Different: 1 C
+Humidity Different: 1%
+[0;32mI (117879) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 94%
+Temperature Different: 1 C
+Humidity Different: 2%
+[0;32mI (120299) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 94%
+Temperature Different: 1 C
+Humidity Different: 1%
+[0;32mI (122709) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 94%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (125119) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 94%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (127539) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 94%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 32 C
+Humidity: 94%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (129949) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (132359) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (134779) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (137189) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (139599) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 32 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (142019) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (144429) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (146839) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (149279) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 32 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (151709) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (154129) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (156539) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (158949) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (161359) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 32 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (163779) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (166189) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (168599) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 32 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (171019) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (173429) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (175839) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (178259) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (180669) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (183079) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (185519) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (187929) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (190339) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (192759) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (195169) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (197579) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (199999) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (202409) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (204819) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (207239) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (209649) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (212069) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (214479) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (216909) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (219329) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (221759) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (224169) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (226579) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (228999) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (231409) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (233819) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (236239) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (238649) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (241059) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (243479) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (245889) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (248299) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (250719) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (253149) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (255569) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (257999) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (260429) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (262849) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (265279) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (267709) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (270129) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (272539) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (274949) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (277369) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (279779) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (280959) Button: Send data button clicked: 1[0m
+[0;32mI (280969) Button: Send data button clicked: 0[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (282189) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (284609) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (284839) Button: Send data button clicked: 1[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (287019) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (289429) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (291849) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (294259) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (296669) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (299089) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (301519) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (303929) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (306339) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (308759) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (311169) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+flash read err, 1000
+ets_main.c 371 
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Aug  4 2023 11:23:11[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3035ch (197468) map[0m
+[0;32mI (177) esp_image: segment 1: paddr=00040384 vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=00043bac vaddr=40080000 size=0c46ch ( 50284) load[0m
+[0;32mI (204) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b2f6ch (733036) map[0m
+[0;32mI (469) esp_image: segment 4: paddr=00102f94 vaddr=4008c46c size=0a0f4h ( 41204) load[0m
+[0;32mI (498) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (509) cpu_start: Multicore app[0m
+[0;32mI (510) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (528) cpu_start: Pro cpu start user code[0m
+[0;32mI (528) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (528) cpu_start: Application information:[0m
+[0;32mI (532) cpu_start: Project name:     bee_main[0m
+[0;32mI (537) cpu_start: App version:      6a0c029-dirty[0m
+[0;32mI (543) cpu_start: Compile time:     Aug  7 2023 09:43:20[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  9864ca70acbabb7f...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (560) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (570) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (588) heap_init: At 3FFB81A0 len 00027E60 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (600) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (607) heap_init: At 40096560 len 00009AA0 (38 KiB): IRAM[0m
+[0;32mI (614) spi_flash: detected chip: generic[0m
+[0;32mI (618) spi_flash: flash io: dio[0m
+[0;33mW (621) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (635) app_start: Starting scheduler on CPU0[0m
+[0;32mI (640) app_start: Starting scheduler on CPU1[0m
+[0;32mI (640) main_task: Started on CPU0[0m
+[0;32mI (650) main_task: Calling app_main()[0m
+[0;32mI (1690) uart: queue free spaces: 6[0m
+I (1700) wifi:wifi driver task: 3ffca748, prio:23, stack:6656, core=0
+I (1710) wifi:wifi firmware version: b2f1f86
+I (1710) wifi:wifi certification version: v7.0
+I (1710) wifi:config NVS flash: enabled
+I (1710) wifi:config nano formating: disabled
+I (1720) wifi:Init data frame dynamic rx buffer num: 32
+I (1720) wifi:Init management frame dynamic rx buffer num: 32
+I (1730) wifi:Init management short buffer num: 32
+I (1730) wifi:Init dynamic tx buffer num: 32
+I (1740) wifi:Init static rx buffer size: 1600
+I (1740) wifi:Init static rx buffer num: 10
+I (1750) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1750) wifi_init: rx ba win: 6[0m
+[0;32mI (1750) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1760) wifi_init: udp mbox: 6[0m
+[0;32mI (1760) wifi_init: tcp mbox: 6[0m
+[0;32mI (1770) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1770) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1770) wifi_init: tcp mss: 1440[0m
+[0;32mI (1780) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1780) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1790) Wifi prov: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1800) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1910) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+I (1910) wifi:enable tsf
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (4320) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (6740) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (9150) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (11570) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (14000) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (16430) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (18850) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (21280) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (23710) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (26130) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (28540) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (30950) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (33370) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (35780) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (38190) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (40610) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (43020) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (45430) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (47850) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (50260) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (52670) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (55090) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (57520) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (59930) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (62340) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (64760) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (67170) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (69580) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (72000) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (74410) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (76820) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (79240) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (81650) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (84070) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (86480) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (88910) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (91330) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (91730) UART: Interval send data to host main: 5[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (93760) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (96170) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (98590) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (101000) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (103410) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (105830) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (108240) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (110650) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (113070) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (115480) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (117890) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (120310) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (122720) Wifi prov: Disconnected. Connecting to the AP again...[0m
+I (122870) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (122870) wifi:state: init -> auth (b0)
+I (122880) wifi:state: auth -> assoc (0)
+I (122890) wifi:state: assoc -> run (10)
+I (122940) wifi:connected with TUPEO, aid = 1, channel 1, BW20, bssid = b2:7d:64:d8:92:71
+I (122940) wifi:security: WPA2-PSK, phy: bgn, rssi: -43
+I (122950) wifi:pm start, type: 1
+
+I (122970) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (125460) Wifi prov: Connected with IP Address:192.168.137.195[0m
+[0;32mI (125460) esp_netif_handlers: sta ip: 192.168.137.195, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (125470) MQTT: Other event id:7[0m
+[0;32mI (125470) MQTT: Topic publish: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/telemetry
+[0m
+[0;32mI (125480) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/Command
+[0m
+[0;32mI (125480) main_task: Returned from app_main()[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (126150) MQTT: MQTT_EVENT_CONNECTED[0m
+I (126450) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:8, winSize:64
+[0;32mI (126460) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=39907[0m
+[0;32mI (126690) MQTT: MQTT_EVENT_PUBLISHED, msg_id=11957[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (140900) MQTT: MQTT_EVENT_PUBLISHED, msg_id=57911[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (155950) MQTT: MQTT_EVENT_PUBLISHED, msg_id=63301[0m
+[0;32mI (156260) MQTT: MQTT_EVENT_PUBLISHED, msg_id=32141[0m
+[0;32mI (156560) MQTT: MQTT_EVENT_PUBLISHED, msg_id=27908[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 1%
+[0;32mI (170690) MQTT: MQTT_EVENT_PUBLISHED, msg_id=48147[0m
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 1%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (185640) MQTT: MQTT_EVENT_PUBLISHED, msg_id=60874[0m
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (186060) MQTT: MQTT_EVENT_PUBLISHED, msg_id=29837[0m
+[0;32mI (186670) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46880[0m
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (200800) MQTT: MQTT_EVENT_PUBLISHED, msg_id=13780[0m
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (215850) MQTT: MQTT_EVENT_PUBLISHED, msg_id=26706[0m
+[0;32mI (216160) MQTT: MQTT_EVENT_PUBLISHED, msg_id=26070[0m
+[0;32mI (216470) MQTT: MQTT_EVENT_PUBLISHED, msg_id=22808[0m
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+[0;32mI (230600) MQTT: MQTT_EVENT_PUBLISHED, msg_id=60358[0m
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+Temperature: 29 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%

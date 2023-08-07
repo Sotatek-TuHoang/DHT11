@@ -1,0 +1,1972 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug  4 2023 11:23:11[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3035ch (197468) map[0m
+[0;32mI (177) esp_image: segment 1: paddr=00040384 vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=00043bac vaddr=40080000 size=0c46ch ( 50284) load[0m
+[0;32mI (204) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b2f68h (733032) map[0m
+[0;32mI (469) esp_image: segment 4: paddr=00102f90 vaddr=4008c46c size=0a0f4h ( 41204) load[0m
+[0;32mI (497) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (509) cpu_start: Multicore app[0m
+[0;32mI (509) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (527) cpu_start: Pro cpu start user code[0m
+[0;32mI (527) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (527) cpu_start: Application information:[0m
+[0;32mI (532) cpu_start: Project name:     bee_main[0m
+[0;32mI (537) cpu_start: App version:      6a0c029-dirty[0m
+[0;32mI (543) cpu_start: Compile time:     Aug  7 2023 09:43:20[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  243372966d54e972...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (560) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (569) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (587) heap_init: At 3FFB81A0 len 00027E60 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (600) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (606) heap_init: At 40096560 len 00009AA0 (38 KiB): IRAM[0m
+[0;32mI (614) spi_flash: detected chip: generic[0m
+[0;32mI (617) spi_flash: flash io: dio[0m
+[0;33mW (621) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (635) app_start: Starting scheduler on CPU0[0m
+[0;32mI (639) app_start: Starting scheduler on CPU1[0m
+[0;32mI (639) main_task: Started on CPU0[0m
+[0;32mI (649) main_task: Calling app_main()[0m
+Error opening NVS handle! (ESP_ERR_NVS_NOT_FOUND)
+[0;32mI (1659) uart: queue free spaces: 6[0m
+I (1669) wifi:wifi driver task: 3ffca5c0, prio:23, stack:6656, core=0
+I (1669) wifi:wifi firmware version: b2f1f86
+I (1669) wifi:wifi certification version: v7.0
+I (1669) wifi:config NVS flash: enabled
+I (1669) wifi:config nano formating: disabled
+I (1679) wifi:Init data frame dynamic rx buffer num: 32
+I (1679) wifi:Init management frame dynamic rx buffer num: 32
+I (1689) wifi:Init management short buffer num: 32
+I (1689) wifi:Init dynamic tx buffer num: 32
+I (1699) wifi:Init static rx buffer size: 1600
+I (1699) wifi:Init static rx buffer num: 10
+I (1699) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1709) wifi_init: rx ba win: 6[0m
+[0;32mI (1709) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1719) wifi_init: udp mbox: 6[0m
+[0;32mI (1719) wifi_init: tcp mbox: 6[0m
+[0;32mI (1719) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1729) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1729) wifi_init: tcp mss: 1440[0m
+[0;32mI (1739) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1739) wifi_init: WiFi RX IRAM OP enabled[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (49849) UART: Start wifi prov: 17[0m
+[0;32mI (49849) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+[0;33mW (49849) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+I (50029) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+I (50029) wifi:enable tsf
+I (50039) wifi:mode : sta (7c:9e:bd:61:6d:ac) + softAP (7c:9e:bd:61:6d:ad)
+I (50039) wifi:Total power save buffer number: 16
+I (50049) wifi:Init max length of beacon: 752/752
+I (50049) wifi:Init max length of beacon: 752/752
+I (50049) wifi:Total power save buffer number: 16
+[0;32mI (50059) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (50069) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (50079) wifi_prov_mgr: Provisioning started with service name : BEE_616DAC [0m
+[0;32mI (50079) Wifi prov: Provisioning started[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (51909) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1
+I (51909) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (51909) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (52039) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (52429) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (54309) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (54309) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (66989) Wifi prov: SoftAP transport: Disconnected![0m
+I (66999) wifi:<ba-del>idx:2, tid:0
+I (66999) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<0,0>, prof:1
+I (66999) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (66999) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (67079) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (67589) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (68029) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (68029) security1: Closing old session with id 972966937[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (71829) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (71829) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (73079) Wifi prov: SoftAP transport: Disconnected![0m
+I (73079) wifi:<ba-del>idx:2, tid:0
+I (73079) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<0,0>, prof:1
+I (73089) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (73089) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (73209) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (73549) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+[0;33mW (73559) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (73559) security1: Closing old session with id 972966937[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (77399) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (77399) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (77609) Wifi prov: SoftAP transport: Disconnected![0m
+I (77609) wifi:<ba-del>idx:2, tid:0
+I (77609) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<0,0>, prof:1
+I (77609) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (77619) Wifi prov: SoftAP transport: Connected![0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (77679) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (78619) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (79839) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (79839) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (82629) Wifi prov: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : f[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (86469) wifi:primary chan differ, old=1, new=11, start CSA timer
+I (86869) wifi:switch to channel 11
+I (86869) wifi:ap channel adjust o:1,1 n:11,2
+I (86869) wifi:new:<11,0>, old:<1,0>, ap:<11,2>, sta:<0,0>, prof:1
+I (86869) wifi:new:<11,2>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (87599) wifi:state: init -> auth (b0)
+I (87609) wifi:state: auth -> assoc (0)
+I (87609) wifi:state: assoc -> run (10)
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (90149) wifi:state: run -> init (fc0)
+I (90149) wifi:new:<11,0>, old:<11,2>, ap:<11,2>, sta:<11,0>, prof:1
+[0;32mI (90149) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;31mE (90159) wifi_prov_mgr: STA Disconnected[0m
+[0;31mE (90159) wifi_prov_mgr: Disconnect reason : 15[0m
+[0;31mE (90159) wifi_prov_mgr: STA Auth Error[0m
+[0;31mE (90169) Wifi prov: Provisioning failed!
+	Reason : Wi-Fi station authentication failed
+	Please reset to factory and retry provisioning[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (91989) Wifi prov: SoftAP transport: Disconnected![0m
+[0;32mI (92019) Wifi prov: SoftAP transport: Disconnected![0m
+[0;32mI (92059) Wifi prov: SoftAP transport: Disconnected![0m
+[0;32mI (92099) Wifi prov: SoftAP transport: Disconnected![0m
+[0;32mI (92149) Wifi prov: SoftAP transport: Disconnected![0m
+[0;32mI (92179) Wifi prov: SoftAP transport: Disconnected![0m
+I (92179) wifi:<ba-del>idx:2, tid:0
+I (92179) wifi:new:<11,0>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (92189) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (92189) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (92599) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (92999) Wifi prov: Disconnected. Connecting to the AP again...[0m
+I (93299) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (95099) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (95099) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (99579) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (99579) security1: Closing old session with id 972966937[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (103329) Wifi prov: SoftAP transport: Disconnected![0m
+I (103339) wifi:<ba-del>idx:2, tid:0
+I (103339) wifi:new:<11,0>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (103339) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (103339) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (103479) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (103859) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:17, winSize:64
+[0;33mW (104269) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (104269) security1: Closing old session with id 972966937[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (108079) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (108079) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (108679) Wifi prov: SoftAP transport: Disconnected![0m
+I (108679) wifi:<ba-del>idx:2, tid:0
+I (108679) wifi:new:<11,0>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (108679) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (108689) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (108779) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (109069) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (109899) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (109909) security1: Closing old session with id 972966937[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (113699) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (113699) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (117939) Wifi prov: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : yttt[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+I (121769) wifi:primary chan differ, old=11, new=11, start CSA timer
+I (121779) wifi:new:<11,2>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (122499) wifi:state: init -> auth (b0)
+I (122509) wifi:state: auth -> assoc (0)
+I (122519) wifi:state: assoc -> run (10)
+[0;32mI (122899) Wifi prov: SoftAP transport: Disconnected![0m
+I (122909) wifi:<ba-del>idx:2, tid:0
+I (122909) wifi:new:<11,0>, old:<11,2>, ap:<11,2>, sta:<11,0>, prof:1
+I (122909) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (122919) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (123089) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (123429) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+I (125069) wifi:state: run -> init (fc0)
+I (125069) wifi:new:<11,0>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+[0;32mI (125069) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;31mE (125069) wifi_prov_mgr: STA Disconnected[0m
+[0;31mE (125079) wifi_prov_mgr: Disconnect reason : 15[0m
+[0;31mE (125079) wifi_prov_mgr: STA Auth Error[0m
+[0;31mE (125089) Wifi prov: Provisioning failed!
+	Reason : Wi-Fi station authentication failed
+	Please reset to factory and retry provisioning[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (126899) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (126899) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (127909) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;32mI (128549) Wifi prov: SoftAP transport: Disconnected![0m
+I (128559) wifi:<ba-del>idx:2, tid:0
+I (128559) wifi:new:<11,0>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (128559) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (128569) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (128799) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (129189) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (130979) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (130979) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (142839) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (142839) security1: Closing old session with id 972966937[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (148659) Wifi prov: SoftAP transport: Disconnected![0m
+I (148669) wifi:<ba-del>idx:2, tid:0
+I (148669) wifi:new:<11,0>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (148669) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (148679) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (148789) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;33mW (149119) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+I (149159) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (149919) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (149919) security1: Closing old session with id 972966937[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (153689) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (153689) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (154599) Wifi prov: SoftAP transport: Disconnected![0m
+I (154599) wifi:<ba-del>idx:2, tid:0
+I (154599) wifi:new:<11,0>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (154599) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (154609) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (154749) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (155119) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (156159) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (156159) security1: Closing old session with id 972966937[0m
+[0;33mW (157589) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (157589) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;31mE (161239) proto_wifi_scan: Unable to unpack scan message[0m
+[0;31mE (161239) protocomm: Request handler for prov-scan failed[0m
+[0;31mE (161239) protocomm_httpd: Data handler failed[0m
+[0;33mW (161249) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;31mE (161279) proto_wifi_scan: Unable to unpack scan message[0m
+[0;31mE (161279) protocomm: Request handler for prov-scan failed[0m
+[0;31mE (161279) protocomm_httpd: Data handler failed[0m
+[0;33mW (161279) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;31mE (161319) proto_wifi_scan: Unable to unpack scan message[0m
+[0;31mE (161319) protocomm: Request handler for prov-scan failed[0m
+[0;31mE (161319) protocomm_httpd: Data handler failed[0m
+[0;33mW (161329) httpd_uri: httpd_uri: uri handler execution failed[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (162779) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (162779) security1: Closing old session with id 972966937[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (167429) Wifi prov: SoftAP transport: Disconnected![0m
+I (167429) wifi:<ba-del>idx:2, tid:0
+I (167429) wifi:new:<11,0>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (167429) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (167439) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (167519) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (167839) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+[0;33mW (168119) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (169849) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (169849) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (169869) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (169869) security1: Closing old session with id 972966937[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;31mE (175399) proto_wifi_scan: Unable to unpack scan message[0m
+[0;31mE (175399) protocomm: Request handler for prov-scan failed[0m
+[0;31mE (175399) protocomm_httpd: Data handler failed[0m
+[0;33mW (175409) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;31mE (175439) proto_wifi_scan: Unable to unpack scan message[0m
+[0;31mE (175439) protocomm: Request handler for prov-scan failed[0m
+[0;31mE (175439) protocomm_httpd: Data handler failed[0m
+[0;33mW (175449) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;31mE (175479) proto_wifi_scan: Unable to unpack scan message[0m
+[0;31mE (175479) protocomm: Request handler for prov-scan failed[0m
+[0;31mE (175479) protocomm_httpd: Data handler failed[0m
+[0;33mW (175489) httpd_uri: httpd_uri: uri handler execution failed[0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (185139) Wifi prov: TIMEOUT!!!
+[0m
+Error opening NVS handle! (ESP_ERR_NVS_NOT_FOUND)
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (186239) wifi:station: 70:5e:55:70:34:ed leave, AID = 1, bss_flags is 134259, bss:0x3ffd4868
+I (186239) wifi:new:<11,0>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (186239) wifi:<ba-del>idx:2, tid:0
+I (186239) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+[0;32mI (186259) wifi_prov_mgr: Provisioning stopped[0m
+[0;32mI (186259) Wifi prov: SoftAP transport: Disconnected![0m
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 93%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (240289) UART: Start wifi prov: 17[0m
+I (240299) wifi:mode : sta (7c:9e:bd:61:6d:ac) + softAP (7c:9e:bd:61:6d:ad)
+I (240309) wifi:Total power save buffer number: 16
+I (240309) wifi:Total power save buffer number: 16
+[0;32mI (240309) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (240319) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (240329) wifi_prov_mgr: Provisioning started with service name : BEE_616DAC [0m
+[0;32mI (240339) Wifi prov: Provisioning started[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (249189) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<11,0>, prof:1
+I (249189) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (249189) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (249319) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (249679) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+[0;33mW (251449) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (251449) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (266349) Wifi prov: SoftAP transport: Disconnected![0m
+I (266349) wifi:<ba-del>idx:2, tid:0
+I (266349) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<11,0>, prof:1
+I (266349) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (266359) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (266439) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (266779) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+[0;33mW (267619) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (268559) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (268559) security1: Closing old session with id 2016940624[0m
+[0;33mW (269289) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (269289) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (276259) Wifi prov: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : g[0m
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 92%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (280099) wifi:primary chan differ, old=1, new=11, start CSA timer
+I (280499) wifi:switch to channel 11
+I (280499) wifi:ap channel adjust o:1,1 n:11,2
+I (280499) wifi:new:<11,0>, old:<1,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (280499) wifi:new:<11,2>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (281239) wifi:state: init -> auth (b0)
+I (281249) wifi:state: auth -> assoc (0)
+I (281249) wifi:state: assoc -> run (10)
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (283799) wifi:state: run -> init (fc0)
+I (283799) wifi:new:<11,0>, old:<11,2>, ap:<11,2>, sta:<11,0>, prof:1
+[0;32mI (283799) Wifi prov: Disconnected. Connecting to the AP again...[0m
+[0;31mE (283809) wifi_prov_mgr: STA Disconnected[0m
+[0;31mE (283809) wifi_prov_mgr: Disconnect reason : 15[0m
+[0;31mE (283809) wifi_prov_mgr: STA Auth Error[0m
+[0;31mE (283819) Wifi prov: Provisioning failed!
+	Reason : Wi-Fi station authentication failed
+	Please reset to factory and retry provisioning[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (286639) Wifi prov: Disconnected. Connecting to the AP again...[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (287839) Wifi prov: SoftAP transport: Disconnected![0m
+I (287839) wifi:<ba-del>idx:2, tid:0
+I (287839) wifi:new:<11,0>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (287849) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (287849) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (287909) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (288289) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (290009) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (290009) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (297499) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[0;31mE (297499) security1: Closing old session with id 2016940624[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (308349) Wifi prov: Received Wi-Fi credentials
+	SSID     : TUPEO
+	Password : tu123456[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (312189) wifi:primary chan differ, old=11, new=11, start CSA timer
+I (312189) wifi:new:<11,2>, old:<11,0>, ap:<11,2>, sta:<11,0>, prof:1
+I (312919) wifi:state: init -> auth (b0)
+I (312919) wifi:station: 70:5e:55:70:34:ed leave, AID = 1, bss_flags is 134259, bss:0x3ffd83dc
+I (312929) wifi:new:<11,0>, old:<11,2>, ap:<11,2>, sta:<11,0>, prof:1
+I (312929) wifi:<ba-del>idx:2, tid:0
+I (312929) wifi:state: auth -> assoc (0)
+[0;32mI (312939) Wifi prov: SoftAP transport: Disconnected![0m
+I (312939) wifi:state: assoc -> run (10)
+I (312959) wifi:connected with TUPEO, aid = 10, channel 11, BW20, bssid = b2:7d:64:d8:92:71
+I (312959) wifi:security: WPA2-PSK, phy: bgn, rssi: -41
+I (312969) wifi:pm start, type: 1
+
+I (312989) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (313979) Wifi prov: Connected with IP Address:192.168.137.101[0m
+[0;32mI (313979) esp_netif_handlers: sta ip: 192.168.137.101, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (313979) wifi_prov_mgr: STA Got IP[0m
+[0;32mI (313989) Wifi prov: Provisioning successful[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4008d235  PS      : 0x00060f33  A0      : 0x8008b6c3  A1      : 0x3ffc7930  
+A2      : 0x3ffd06d4  A3      : 0x00060f20  A4      : 0x00000000  A5      : 0x00060f23  
+A6      : 0xb33fffff  A7      : 0xb33fffff  A8      : 0x016c001a  A9      : 0x00000001  
+A10     : 0x3ffd0700  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x3ffbb4f4  
+A14     : 0x3f412c8c  A15     : 0xb33fffff  SAR     : 0x00000019  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000005  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4008d232:0x3ffc7930 0x4008b6c0:0x3ffc7950 0x400d8781:0x3ffc7970 0x401802a9:0x3ffc79a0 0x4017fd4e:0x3ffc79d0 0x4017fe25:0x3ffc7a10 0x4008c619:0x3ffc7a30
+
+
+
+
+ELF file SHA256: 243372966d54e972
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug  4 2023 11:23:11[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3035ch (197468) map[0m
+[0;32mI (178) esp_image: segment 1: paddr=00040384 vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=00043bac vaddr=40080000 size=0c46ch ( 50284) load[0m
+[0;32mI (205) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b2f68h (733032) map[0m
+[0;32mI (469) esp_image: segment 4: paddr=00102f90 vaddr=4008c46c size=0a0f4h ( 41204) load[0m
+[0;32mI (498) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (510) cpu_start: Multicore app[0m
+[0;32mI (510) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (497) cpu_start: App cpu up.[0m
+[0;32mI (528) cpu_start: Pro cpu start user code[0m
+[0;32mI (528) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (528) cpu_start: Application information:[0m
+[0;32mI (533) cpu_start: Project name:     bee_main[0m
+[0;32mI (538) cpu_start: App version:      6a0c029-dirty[0m
+[0;32mI (543) cpu_start: Compile time:     Aug  7 2023 09:43:20[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  243372966d54e972...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (561) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (570) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (588) heap_init: At 3FFB81A0 len 00027E60 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (601) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (607) heap_init: At 40096560 len 00009AA0 (38 KiB): IRAM[0m
+[0;32mI (615) spi_flash: detected chip: generic[0m
+[0;32mI (618) spi_flash: flash io: dio[0m
+[0;33mW (622) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (636) app_start: Starting scheduler on CPU0[0m
+[0;32mI (640) app_start: Starting scheduler on CPU1[0m
+[0;32mI (640) main_task: Started on CPU0[0m
+[0;32mI (650) main_task: Calling app_main()[0m
+Error opening NVS handle! (ESP_ERR_NVS_NOT_FOUND)
+[0;32mI (1680) uart: queue free spaces: 6[0m
+I (1690) wifi:wifi driver task: 3ffca728, prio:23, stack:6656, core=0
+I (1700) wifi:wifi firmware version: b2f1f86
+I (1700) wifi:wifi certification version: v7.0
+I (1700) wifi:config NVS flash: enabled
+I (1710) wifi:config nano formating: disabled
+I (1710) wifi:Init data frame dynamic rx buffer num: 32
+I (1710) wifi:Init management frame dynamic rx buffer num: 32
+I (1720) wifi:Init management short buffer num: 32
+I (1720) wifi:Init dynamic tx buffer num: 32
+I (1730) wifi:Init static rx buffer size: 1600
+I (1730) wifi:Init static rx buffer num: 10
+I (1740) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1740) wifi_init: rx ba win: 6[0m
+[0;32mI (1740) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1750) wifi_init: udp mbox: 6[0m
+[0;32mI (1750) wifi_init: tcp mbox: 6[0m
+[0;32mI (1760) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1760) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1760) wifi_init: tcp mss: 1440[0m
+[0;32mI (1770) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1770) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1780) Wifi prov: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1800) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1910) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+I (1910) wifi:enable tsf
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (4320) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (4320) wifi:state: init -> auth (b0)
+I (4330) wifi:state: auth -> assoc (0)
+I (4340) wifi:state: assoc -> run (10)
+I (4350) wifi:connected with TUPEO, aid = 1, channel 11, BW20, bssid = b2:7d:64:d8:92:71
+I (4350) wifi:security: WPA2-PSK, phy: bgn, rssi: -43
+I (4360) wifi:pm start, type: 1
+
+I (4430) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;32mI (5360) Wifi prov: Connected with IP Address:192.168.137.101[0m
+[0;32mI (5360) esp_netif_handlers: sta ip: 192.168.137.101, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (5360) MQTT: Other event id:7[0m
+[0;32mI (5370) MQTT: Topic publish: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/telemetry
+[0m
+[0;32mI (5370) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/Command
+[0m
+[0;32mI (5380) main_task: Returned from app_main()[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (5680) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (5770) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=55346[0m
+[0;32mI (6080) MQTT: MQTT_EVENT_PUBLISHED, msg_id=49015[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (10680) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:11, winSize:64
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (20520) MQTT: MQTT_EVENT_PUBLISHED, msg_id=33774[0m
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (35570) MQTT: MQTT_EVENT_PUBLISHED, msg_id=25869[0m
+[0;32mI (35650) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46918[0m
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (36180) MQTT: MQTT_EVENT_PUBLISHED, msg_id=40905[0m
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (50620) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46959[0m
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (65680) MQTT: MQTT_EVENT_PUBLISHED, msg_id=3631[0m
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (65980) MQTT: MQTT_EVENT_PUBLISHED, msg_id=19368[0m
+[0;32mI (66290) MQTT: MQTT_EVENT_PUBLISHED, msg_id=54000[0m
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (80730) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18097[0m
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (95450) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30967[0m
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (95780) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41778[0m
+[0;32mI (95970) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35002[0m
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (110530) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10723[0m
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (125580) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53695[0m
+[0;32mI (125660) MQTT: MQTT_EVENT_PUBLISHED, msg_id=34387[0m
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (126190) MQTT: MQTT_EVENT_PUBLISHED, msg_id=54306[0m
+[0;32mI (127190) UART: Start wifi prov: 17[0m
+I (127200) wifi:state: run -> init (0)
+I (127200) wifi:pm stop, total sleep time: 116495897 us / 122847747 us
+
+I (127200) wifi:<ba-del>idx:0, tid:0
+I (127210) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (127210) Wifi prov: Disconnected. Connecting to the AP again...[0m
+I (127220) wifi:mode : sta (7c:9e:bd:61:6d:ac) + softAP (7c:9e:bd:61:6d:ad)
+I (127230) wifi:Total power save buffer number: 16
+I (127230) wifi:Init max length of beacon: 752/752
+I (127230) wifi:Init max length of beacon: 752/752
+I (127240) wifi:Total power save buffer number: 16
+[0;31mE (127240) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54[0m
+[0;32mI (127250) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;31mE (127260) mqtt_client: Poll read error: 119, aborting connection[0m
+[0;32mI (127260) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (127280) wifi_prov_mgr: Provisioning started with service name : BEE_616DAC [0m
+[0;32mI (127280) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (127290) Wifi prov: Provisioning started[0m
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (137290) MQTT: Other event id:7[0m
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (144830) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<11,0>, prof:1
+I (144830) wifi:station: 70:5e:55:70:34:ed join, AID=1, bgn, 20
+[0;32mI (144830) Wifi prov: SoftAP transport: Connected![0m
+[0;32mI (144950) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (145300) wifi:<ba-add>idx:2 (ifx:1, 70:5e:55:70:34:ed), tid:0, ssn:16, winSize:64
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;33mW (147240) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (147240) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;31mE (147300) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (147300) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (147300) mqtt_client: Error transport connect[0m
+[0;32mI (147300) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (147310) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (162310) MQTT: Other event id:7[0m
+Temperature: 28 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;31mE (172320) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (172320) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (172320) mqtt_client: Error transport connect[0m
+[0;32mI (172320) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (172330) MQTT: MQTT_EVENT_DISCONNECTED[0m
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (187290) Wifi prov: TIMEOUT!!!
+[0m
+[0;32mI (187290) wifi_init: rx ba win: 6[0m
+[0;32mI (187290) wifi_init: tcpip mbox: 32[0m
+[0;32mI (187290) wifi_init: udp mbox: 6[0m
+[0;32mI (187290) wifi_init: tcp mbox: 6[0m
+[0;32mI (187290) wifi_init: tcp tx win: 5744[0m
+[0;32mI (187300) wifi_init: tcp rx win: 5744[0m
+[0;32mI (187300) wifi_init: tcp mss: 1440[0m
+[0;32mI (187310) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (187310) wifi_init: WiFi RX IRAM OP enabled[0m
+I (187320) wifi:station: 70:5e:55:70:34:ed leave, AID = 1, bss_flags is 134259, bss:0x3ffd53e0
+I (187330) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<11,0>, prof:1
+[0;32mI (187330) MQTT: Other event id:7[0m
+I (187330) wifi:<ba-del>idx:2, tid:0
+I (187340) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+[0;32mI (187330) Wifi prov: SoftAP transport: Disconnected![0m
+[0;31mE (187350) esp-tls: [sock=54] delayed connect error: Software caused connection abort[0m
+[0;31mE (187360) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (187360) mqtt_client: Error transport connect[0m
+[0;32mI (187370) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (187370) MQTT: MQTT_EVENT_DISCONNECTED[0m
+I (187430) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+Temperature: 28 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (188160) wifi:state: init -> auth (b0)
+I (188240) wifi:state: auth -> assoc (0)
+I (188250) wifi:state: assoc -> run (10)
+I (188260) wifi:connected with TUPEO, aid = 2, channel 11, BW20, bssid = b2:7d:64:d8:92:71
+I (188260) wifi:security: WPA2-PSK, phy: bgn, rssi: -42
+I (188280) wifi:pm start, type: 1
+
+I (188350) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;32mI (188390) wifi_prov_mgr: Provisioning stopped[0m
+[0;32mI (189280) Wifi prov: Connected with IP Address:192.168.137.101[0m
+[0;32mI (189280) esp_netif_handlers: sta ip: 192.168.137.101, mask: 255.255.255.0, gw: 192.168.137.1[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (197380) MQTT: Other event id:7[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (197770) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:6, winSize:64
+[0;32mI (197770) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (198080) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=37441[0m
+[0;32mI (198160) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21980[0m
+[0;32mI (198690) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62023[0m
+[0;32mI (198700) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10851[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (213130) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4253[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (228190) MQTT: MQTT_EVENT_PUBLISHED, msg_id=629[0m
+[0;32mI (228490) MQTT: MQTT_EVENT_PUBLISHED, msg_id=24914[0m
+[0;32mI (228680) MQTT: MQTT_EVENT_PUBLISHED, msg_id=51339[0m
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 28 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 

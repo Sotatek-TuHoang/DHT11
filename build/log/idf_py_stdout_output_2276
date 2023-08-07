@@ -1,0 +1,6231 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug  4 2023 11:23:11[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3035ch (197468) map[0m
+[0;32mI (177) esp_image: segment 1: paddr=00040384 vaddr=3ffb0000 size=03820h ( 14368) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=00043bac vaddr=40080000 size=0c46ch ( 50284) load[0m
+[0;32mI (204) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b2f6ch (733036) map[0m
+[0;32mI (469) esp_image: segment 4: paddr=00102f94 vaddr=4008c46c size=0a0f4h ( 41204) load[0m
+[0;32mI (498) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (509) cpu_start: Multicore app[0m
+[0;32mI (509) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (527) cpu_start: Pro cpu start user code[0m
+[0;32mI (527) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (527) cpu_start: Application information:[0m
+[0;32mI (532) cpu_start: Project name:     bee_main[0m
+[0;32mI (537) cpu_start: App version:      6a0c029-dirty[0m
+[0;32mI (543) cpu_start: Compile time:     Aug  7 2023 09:43:20[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  41bbb16a0d0751c1...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (560) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (569) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (587) heap_init: At 3FFB81A0 len 00027E60 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (600) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (607) heap_init: At 40096560 len 00009AA0 (38 KiB): IRAM[0m
+[0;32mI (614) spi_flash: detected chip: generic[0m
+[0;32mI (617) spi_flash: flash io: dio[0m
+[0;33mW (621) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (635) app_start: Starting scheduler on CPU0[0m
+[0;32mI (640) app_start: Starting scheduler on CPU1[0m
+[0;32mI (640) main_task: Started on CPU0[0m
+[0;32mI (650) main_task: Calling app_main()[0m
+[0;32mI (1690) uart: queue free spaces: 6[0m
+I (1700) wifi:wifi driver task: 3ffca728, prio:23, stack:6656, core=0
+I (1710) wifi:wifi firmware version: b2f1f86
+I (1710) wifi:wifi certification version: v7.0
+I (1710) wifi:config NVS flash: enabled
+I (1710) wifi:config nano formating: disabled
+I (1720) wifi:Init data frame dynamic rx buffer num: 32
+I (1720) wifi:Init management frame dynamic rx buffer num: 32
+I (1730) wifi:Init management short buffer num: 32
+I (1730) wifi:Init dynamic tx buffer num: 32
+I (1740) wifi:Init static rx buffer size: 1600
+I (1740) wifi:Init static rx buffer num: 10
+I (1750) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1750) wifi_init: rx ba win: 6[0m
+[0;32mI (1750) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1760) wifi_init: udp mbox: 6[0m
+[0;32mI (1760) wifi_init: tcp mbox: 6[0m
+[0;32mI (1770) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1770) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1770) wifi_init: tcp mss: 1440[0m
+[0;32mI (1780) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1780) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1790) Wifi prov: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1800) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1910) wifi:mode : sta (7c:9e:bd:61:6d:ac)
+I (1910) wifi:enable tsf
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+I (4320) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (4320) wifi:state: init -> auth (b0)
+I (4330) wifi:state: auth -> assoc (0)
+I (4330) wifi:state: assoc -> run (10)
+I (4350) wifi:connected with TUPEO, aid = 6, channel 1, BW20, bssid = b2:7d:64:d8:92:71
+I (4350) wifi:security: WPA2-PSK, phy: bgn, rssi: -36
+I (4350) wifi:pm start, type: 1
+
+I (4400) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;32mI (5360) Wifi prov: Connected with IP Address:192.168.137.195[0m
+[0;32mI (5360) esp_netif_handlers: sta ip: 192.168.137.195, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (5360) MQTT: Other event id:7[0m
+[0;32mI (5370) MQTT: Topic publish: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/telemetry
+[0m
+[0;32mI (5370) MQTT: Topic subscribe: VB/DMP/VBEEON/CUSTOM/SMH/7C9EBD616DAC/Command
+[0m
+[0;32mI (5380) main_task: Returned from app_main()[0m
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (6250) MQTT: MQTT_EVENT_CONNECTED[0m
+I (6550) wifi:<ba-add>idx:0 (ifx:0, b2:7d:64:d8:92:71), tid:0, ssn:9, winSize:64
+[0;32mI (6560) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=7810[0m
+[0;32mI (6870) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21057[0m
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (20690) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4558[0m
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (35750) MQTT: MQTT_EVENT_PUBLISHED, msg_id=12424[0m
+[0;32mI (36050) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6219[0m
+[0;32mI (36250) MQTT: MQTT_EVENT_PUBLISHED, msg_id=28990[0m
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (50800) MQTT: MQTT_EVENT_PUBLISHED, msg_id=56109[0m
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (65530) MQTT: MQTT_EVENT_PUBLISHED, msg_id=57964[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (65840) MQTT: MQTT_EVENT_PUBLISHED, msg_id=17979[0m
+[0;32mI (66150) MQTT: MQTT_EVENT_PUBLISHED, msg_id=63685[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (80590) MQTT: MQTT_EVENT_PUBLISHED, msg_id=48100[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (95640) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10783[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (95950) MQTT: MQTT_EVENT_PUBLISHED, msg_id=17518[0m
+[0;32mI (96570) MQTT: MQTT_EVENT_PUBLISHED, msg_id=49261[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (110490) MQTT: MQTT_EVENT_PUBLISHED, msg_id=17788[0m
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (125750) MQTT: MQTT_EVENT_PUBLISHED, msg_id=25874[0m
+[0;32mI (126060) MQTT: MQTT_EVENT_PUBLISHED, msg_id=19745[0m
+[0;32mI (126360) MQTT: MQTT_EVENT_PUBLISHED, msg_id=13348[0m
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (140590) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16719[0m
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (155550) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6641[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (155860) MQTT: MQTT_EVENT_PUBLISHED, msg_id=56954[0m
+[0;32mI (156160) MQTT: MQTT_EVENT_PUBLISHED, msg_id=14223[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (170600) MQTT: MQTT_EVENT_PUBLISHED, msg_id=40990[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (185660) MQTT: MQTT_EVENT_PUBLISHED, msg_id=24736[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (185960) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4001[0m
+[0;32mI (186270) MQTT: MQTT_EVENT_PUBLISHED, msg_id=26167[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (200710) MQTT: MQTT_EVENT_PUBLISHED, msg_id=44636[0m
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 29 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 1 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 1 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 1 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 1 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (215540) MQTT: MQTT_EVENT_PUBLISHED, msg_id=17770[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (215760) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21321[0m
+[0;32mI (216070) MQTT: MQTT_EVENT_PUBLISHED, msg_id=64177[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (230810) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6513[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (245550) MQTT: MQTT_EVENT_PUBLISHED, msg_id=15821[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (245870) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46365[0m
+[0;32mI (246170) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21952[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (260610) MQTT: MQTT_EVENT_PUBLISHED, msg_id=59365[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (275670) MQTT: MQTT_EVENT_PUBLISHED, msg_id=44430[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (275970) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16240[0m
+[0;32mI (276280) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53429[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (290720) MQTT: MQTT_EVENT_PUBLISHED, msg_id=48435[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (305770) MQTT: MQTT_EVENT_PUBLISHED, msg_id=17366[0m
+[0;32mI (305860) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47204[0m
+[0;32mI (306080) MQTT: MQTT_EVENT_PUBLISHED, msg_id=33966[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (320820) MQTT: MQTT_EVENT_PUBLISHED, msg_id=26225[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (335880) MQTT: MQTT_EVENT_PUBLISHED, msg_id=13440[0m
+[0;32mI (336180) MQTT: MQTT_EVENT_PUBLISHED, msg_id=60115[0m
+[0;32mI (336490) MQTT: MQTT_EVENT_PUBLISHED, msg_id=22620[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (350620) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62431[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (365680) MQTT: MQTT_EVENT_PUBLISHED, msg_id=626[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (365980) MQTT: MQTT_EVENT_PUBLISHED, msg_id=12823[0m
+[0;32mI (366290) MQTT: MQTT_EVENT_PUBLISHED, msg_id=57929[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (380730) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37575[0m
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 91%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (395890) MQTT: MQTT_EVENT_PUBLISHED, msg_id=2547[0m
+[0;32mI (395970) MQTT: MQTT_EVENT_PUBLISHED, msg_id=1149[0m
+[0;32mI (396390) MQTT: MQTT_EVENT_PUBLISHED, msg_id=5470[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (410840) MQTT: MQTT_EVENT_PUBLISHED, msg_id=61097[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (425890) MQTT: MQTT_EVENT_PUBLISHED, msg_id=7658[0m
+[0;32mI (426200) MQTT: MQTT_EVENT_PUBLISHED, msg_id=27870[0m
+[0;32mI (426810) MQTT: MQTT_EVENT_PUBLISHED, msg_id=31644[0m
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (440940) MQTT: MQTT_EVENT_PUBLISHED, msg_id=32309[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (455990) MQTT: MQTT_EVENT_PUBLISHED, msg_id=57844[0m
+[0;32mI (456300) MQTT: MQTT_EVENT_PUBLISHED, msg_id=63937[0m
+[0;32mI (456500) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35561[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (470740) MQTT: MQTT_EVENT_PUBLISHED, msg_id=58113[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (485790) MQTT: MQTT_EVENT_PUBLISHED, msg_id=57870[0m
+[0;32mI (486100) MQTT: MQTT_EVENT_PUBLISHED, msg_id=12919[0m
+[0;32mI (486410) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18088[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (500630) MQTT: MQTT_EVENT_PUBLISHED, msg_id=38274[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (515900) MQTT: MQTT_EVENT_PUBLISHED, msg_id=42049[0m
+[0;32mI (516200) MQTT: MQTT_EVENT_PUBLISHED, msg_id=32964[0m
+[0;32mI (516510) MQTT: MQTT_EVENT_PUBLISHED, msg_id=29023[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (530950) MQTT: MQTT_EVENT_PUBLISHED, msg_id=48884[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (546000) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47106[0m
+[0;32mI (546310) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62453[0m
+[0;32mI (546620) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30560[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (560750) MQTT: MQTT_EVENT_PUBLISHED, msg_id=12745[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (575800) MQTT: MQTT_EVENT_PUBLISHED, msg_id=43460[0m
+[0;32mI (576110) MQTT: MQTT_EVENT_PUBLISHED, msg_id=63303[0m
+[0;32mI (576410) MQTT: MQTT_EVENT_PUBLISHED, msg_id=54791[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (590640) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39188[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (605910) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41529[0m
+[0;32mI (606220) MQTT: MQTT_EVENT_PUBLISHED, msg_id=29348[0m
+[0;32mI (606520) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23899[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (620960) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53958[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (636010) MQTT: MQTT_EVENT_PUBLISHED, msg_id=7059[0m
+[0;32mI (636110) MQTT: MQTT_EVENT_PUBLISHED, msg_id=11240[0m
+[0;32mI (636320) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6036[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (651060) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6446[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (665700) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41757[0m
+[0;32mI (666120) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16350[0m
+[0;32mI (666420) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62776[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (680860) MQTT: MQTT_EVENT_PUBLISHED, msg_id=36999[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (695710) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47201[0m
+[0;32mI (695920) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4943[0m
+[0;32mI (696540) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16856[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (710970) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18925[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (726020) MQTT: MQTT_EVENT_PUBLISHED, msg_id=45754[0m
+[0;32mI (726330) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37979[0m
+[0;32mI (726640) MQTT: MQTT_EVENT_PUBLISHED, msg_id=59876[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (741070) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23120[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (755710) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39576[0m
+[0;32mI (756130) MQTT: MQTT_EVENT_PUBLISHED, msg_id=20134[0m
+[0;32mI (756740) MQTT: MQTT_EVENT_PUBLISHED, msg_id=5907[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (770770) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62885[0m
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (785930) MQTT: MQTT_EVENT_PUBLISHED, msg_id=54111[0m
+[0;32mI (786240) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53332[0m
+[0;32mI (786430) MQTT: MQTT_EVENT_PUBLISHED, msg_id=27457[0m
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (800990) MQTT: MQTT_EVENT_PUBLISHED, msg_id=28547[0m
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (816030) MQTT: MQTT_EVENT_PUBLISHED, msg_id=64888[0m
+[0;32mI (816340) MQTT: MQTT_EVENT_PUBLISHED, msg_id=1761[0m
+[0;32mI (816650) MQTT: MQTT_EVENT_PUBLISHED, msg_id=64135[0m
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (831090) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62539[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (845830) MQTT: MQTT_EVENT_PUBLISHED, msg_id=51384[0m
+[0;32mI (846140) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30714[0m
+[0;32mI (846440) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30357[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (860880) MQTT: MQTT_EVENT_PUBLISHED, msg_id=36207[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (875830) MQTT: MQTT_EVENT_PUBLISHED, msg_id=8620[0m
+[0;32mI (876240) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10553[0m
+[0;32mI (876860) MQTT: MQTT_EVENT_PUBLISHED, msg_id=31756[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (890990) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30441[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (905730) MQTT: MQTT_EVENT_PUBLISHED, msg_id=9823[0m
+[0;32mI (906150) MQTT: MQTT_EVENT_PUBLISHED, msg_id=34664[0m
+[0;32mI (906660) MQTT: MQTT_EVENT_PUBLISHED, msg_id=19930[0m
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (921100) MQTT: MQTT_EVENT_PUBLISHED, msg_id=24210[0m
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 90%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (935840) MQTT: MQTT_EVENT_PUBLISHED, msg_id=8219[0m
+[0;32mI (936150) MQTT: MQTT_EVENT_PUBLISHED, msg_id=3625[0m
+[0;32mI (936450) MQTT: MQTT_EVENT_PUBLISHED, msg_id=38178[0m
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 89%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (950890) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39257[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (965950) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41629[0m
+[0;32mI (966250) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62846[0m
+[0;32mI (966560) MQTT: MQTT_EVENT_PUBLISHED, msg_id=22256[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (981000) MQTT: MQTT_EVENT_PUBLISHED, msg_id=64584[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (995840) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23931[0m
+[0;32mI (996050) MQTT: MQTT_EVENT_PUBLISHED, msg_id=20608[0m
+[0;32mI (996360) MQTT: MQTT_EVENT_PUBLISHED, msg_id=15657[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (1011110) MQTT: MQTT_EVENT_PUBLISHED, msg_id=63348[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1026160) MQTT: MQTT_EVENT_PUBLISHED, msg_id=26180[0m
+[0;32mI (1026470) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30336[0m
+[0;32mI (1027080) MQTT: MQTT_EVENT_PUBLISHED, msg_id=52735[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1040900) MQTT: MQTT_EVENT_PUBLISHED, msg_id=38777[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1055960) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10723[0m
+[0;32mI (1056260) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37835[0m
+[0;32mI (1056580) MQTT: MQTT_EVENT_PUBLISHED, msg_id=34077[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1071010) MQTT: MQTT_EVENT_PUBLISHED, msg_id=8490[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1086060) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23452[0m
+[0;32mI (1086370) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18901[0m
+[0;32mI (1086990) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47670[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1101130) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39034[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1116170) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35394[0m
+[0;32mI (1116580) MQTT: MQTT_EVENT_PUBLISHED, msg_id=28402[0m
+[0;32mI (1117090) MQTT: MQTT_EVENT_PUBLISHED, msg_id=52769[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (1131220) MQTT: MQTT_EVENT_PUBLISHED, msg_id=34593[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1145970) MQTT: MQTT_EVENT_PUBLISHED, msg_id=54195[0m
+[0;32mI (1146280) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53812[0m
+[0;32mI (1146590) MQTT: MQTT_EVENT_PUBLISHED, msg_id=31578[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1161020) MQTT: MQTT_EVENT_PUBLISHED, msg_id=13802[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (1176070) MQTT: MQTT_EVENT_PUBLISHED, msg_id=26092[0m
+[0;32mI (1176380) MQTT: MQTT_EVENT_PUBLISHED, msg_id=57794[0m
+[0;32mI (1177000) MQTT: MQTT_EVENT_PUBLISHED, msg_id=2320[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (1191130) MQTT: MQTT_EVENT_PUBLISHED, msg_id=8755[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1206180) MQTT: MQTT_EVENT_PUBLISHED, msg_id=44836[0m
+[0;32mI (1206490) MQTT: MQTT_EVENT_PUBLISHED, msg_id=32762[0m
+[0;32mI (1206790) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47132[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1221230) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6741[0m
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1235980) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23773[0m
+[0;32mI (1236290) MQTT: MQTT_EVENT_PUBLISHED, msg_id=40679[0m
+[0;32mI (1236590) MQTT: MQTT_EVENT_PUBLISHED, msg_id=26826[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1250920) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35403[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1266090) MQTT: MQTT_EVENT_PUBLISHED, msg_id=31933[0m
+[0;32mI (1266390) MQTT: MQTT_EVENT_PUBLISHED, msg_id=12182[0m
+[0;32mI (1266690) MQTT: MQTT_EVENT_PUBLISHED, msg_id=50643[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1281140) MQTT: MQTT_EVENT_PUBLISHED, msg_id=60741[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1296190) MQTT: MQTT_EVENT_PUBLISHED, msg_id=43517[0m
+[0;32mI (1296500) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10052[0m
+[0;32mI (1296700) MQTT: MQTT_EVENT_PUBLISHED, msg_id=64003[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (1310930) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37301[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1325990) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30789[0m
+[0;32mI (1326080) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16800[0m
+[0;32mI (1326190) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46621[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1341040) MQTT: MQTT_EVENT_PUBLISHED, msg_id=9174[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1356100) MQTT: MQTT_EVENT_PUBLISHED, msg_id=36719[0m
+[0;32mI (1356400) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62673[0m
+[0;32mI (1357020) MQTT: MQTT_EVENT_PUBLISHED, msg_id=56423[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1371150) MQTT: MQTT_EVENT_PUBLISHED, msg_id=29095[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1386200) MQTT: MQTT_EVENT_PUBLISHED, msg_id=60326[0m
+[0;32mI (1386510) MQTT: MQTT_EVENT_PUBLISHED, msg_id=48552[0m
+[0;32mI (1386810) MQTT: MQTT_EVENT_PUBLISHED, msg_id=22637[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1401250) MQTT: MQTT_EVENT_PUBLISHED, msg_id=7090[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1416310) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21248[0m
+[0;32mI (1416610) MQTT: MQTT_EVENT_PUBLISHED, msg_id=40027[0m
+[0;32mI (1416920) MQTT: MQTT_EVENT_PUBLISHED, msg_id=1696[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1431050) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21434[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1446110) MQTT: MQTT_EVENT_PUBLISHED, msg_id=59430[0m
+[0;32mI (1446410) MQTT: MQTT_EVENT_PUBLISHED, msg_id=27454[0m
+[0;32mI (1447030) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6307[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1461160) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30665[0m
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 88%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1476210) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18387[0m
+[0;32mI (1476520) MQTT: MQTT_EVENT_PUBLISHED, msg_id=42865[0m
+[0;32mI (1476720) MQTT: MQTT_EVENT_PUBLISHED, msg_id=32214[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1491270) MQTT: MQTT_EVENT_PUBLISHED, msg_id=19995[0m
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 1 C
+Humidity Different: 0%
+ 
+[0;32mI (1496180) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10543[0m
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 1 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 1 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 1 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1506010) MQTT: MQTT_EVENT_PUBLISHED, msg_id=25814[0m
+[0;32mI (1506320) MQTT: MQTT_EVENT_PUBLISHED, msg_id=31967[0m
+[0;32mI (1506630) MQTT: MQTT_EVENT_PUBLISHED, msg_id=8657[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1517990) MQTT: MQTT_EVENT_PUBLISHED, msg_id=50577[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1521060) MQTT: MQTT_EVENT_PUBLISHED, msg_id=34589[0m
+Temperature: 30 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1536120) MQTT: MQTT_EVENT_PUBLISHED, msg_id=60151[0m
+[0;32mI (1536420) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37244[0m
+[0;32mI (1537040) MQTT: MQTT_EVENT_PUBLISHED, msg_id=14314[0m
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1550960) MQTT: MQTT_EVENT_PUBLISHED, msg_id=7125[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1566220) MQTT: MQTT_EVENT_PUBLISHED, msg_id=30454[0m
+[0;32mI (1566530) MQTT: MQTT_EVENT_PUBLISHED, msg_id=12175[0m
+[0;32mI (1566840) MQTT: MQTT_EVENT_PUBLISHED, msg_id=44417[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1581280) MQTT: MQTT_EVENT_PUBLISHED, msg_id=59481[0m
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1596330) MQTT: MQTT_EVENT_PUBLISHED, msg_id=34852[0m
+[0;32mI (1596630) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39354[0m
+[0;32mI (1597250) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47527[0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1604010) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18925[0m
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (1607790) MQTT: MQTT_EVENT_PUBLISHED, msg_id=267[0m
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1610150) MQTT: MQTT_EVENT_PUBLISHED, msg_id=14181[0m
+[0;32mI (1611380) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41811[0m
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1626430) MQTT: MQTT_EVENT_PUBLISHED, msg_id=43666[0m
+[0;32mI (1626740) MQTT: MQTT_EVENT_PUBLISHED, msg_id=24478[0m
+[0;32mI (1627350) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62365[0m
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (1637790) MQTT: MQTT_EVENT_PUBLISHED, msg_id=36634[0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (1641180) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46986[0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1656230) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4376[0m
+[0;32mI (1656540) MQTT: MQTT_EVENT_PUBLISHED, msg_id=51178[0m
+[0;32mI (1656850) MQTT: MQTT_EVENT_PUBLISHED, msg_id=48241[0m
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1671070) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41399[0m
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1686030) MQTT: MQTT_EVENT_PUBLISHED, msg_id=22644[0m
+[0;32mI (1686130) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35910[0m
+[0;32mI (1686650) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6863[0m
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1701080) MQTT: MQTT_EVENT_PUBLISHED, msg_id=3025[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1716140) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4460[0m
+[0;32mI (1716440) MQTT: MQTT_EVENT_PUBLISHED, msg_id=11391[0m
+[0;32mI (1716740) MQTT: MQTT_EVENT_PUBLISHED, msg_id=32657[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1731190) MQTT: MQTT_EVENT_PUBLISHED, msg_id=36637[0m
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 30 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 1 C
+Humidity Different: 0%
+ 
+[0;32mI (1743770) MQTT: MQTT_EVENT_PUBLISHED, msg_id=55606[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 1 C
+Humidity Different: 0%
+ 
+[0;32mI (1746030) MQTT: MQTT_EVENT_PUBLISHED, msg_id=27670[0m
+[0;32mI (1746240) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23551[0m
+[0;32mI (1746550) MQTT: MQTT_EVENT_PUBLISHED, msg_id=15447[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 1 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 1 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (1761300) MQTT: MQTT_EVENT_PUBLISHED, msg_id=26496[0m
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1776350) MQTT: MQTT_EVENT_PUBLISHED, msg_id=24923[0m
+[0;32mI (1776660) MQTT: MQTT_EVENT_PUBLISHED, msg_id=1106[0m
+[0;32mI (1776960) MQTT: MQTT_EVENT_PUBLISHED, msg_id=9463[0m
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1791400) MQTT: MQTT_EVENT_PUBLISHED, msg_id=9778[0m
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1806450) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21824[0m
+[0;32mI (1806760) MQTT: MQTT_EVENT_PUBLISHED, msg_id=17184[0m
+[0;32mI (1807070) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39781[0m
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (1821200) MQTT: MQTT_EVENT_PUBLISHED, msg_id=14577[0m
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1836250) MQTT: MQTT_EVENT_PUBLISHED, msg_id=43416[0m
+[0;32mI (1836350) MQTT: MQTT_EVENT_PUBLISHED, msg_id=25565[0m
+[0;32mI (1836450) MQTT: MQTT_EVENT_PUBLISHED, msg_id=29957[0m
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (1851310) MQTT: MQTT_EVENT_PUBLISHED, msg_id=3213[0m
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1866360) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6964[0m
+[0;32mI (1866670) MQTT: MQTT_EVENT_PUBLISHED, msg_id=49397[0m
+[0;32mI (1867280) MQTT: MQTT_EVENT_PUBLISHED, msg_id=45383[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1881410) MQTT: MQTT_EVENT_PUBLISHED, msg_id=55949[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1896160) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37842[0m
+[0;32mI (1896250) MQTT: MQTT_EVENT_PUBLISHED, msg_id=51620[0m
+[0;32mI (1896770) MQTT: MQTT_EVENT_PUBLISHED, msg_id=8915[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1911210) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6044[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1926260) MQTT: MQTT_EVENT_PUBLISHED, msg_id=56558[0m
+[0;32mI (1926570) MQTT: MQTT_EVENT_PUBLISHED, msg_id=61653[0m
+[0;32mI (1926880) MQTT: MQTT_EVENT_PUBLISHED, msg_id=32755[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1941100) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23813[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1956370) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62943[0m
+[0;32mI (1956470) MQTT: MQTT_EVENT_PUBLISHED, msg_id=29143[0m
+[0;32mI (1956770) MQTT: MQTT_EVENT_PUBLISHED, msg_id=17510[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1971420) MQTT: MQTT_EVENT_PUBLISHED, msg_id=40766[0m
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 87%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (1986480) MQTT: MQTT_EVENT_PUBLISHED, msg_id=45149[0m
+[0;32mI (1986780) MQTT: MQTT_EVENT_PUBLISHED, msg_id=309[0m
+[0;32mI (1987090) MQTT: MQTT_EVENT_PUBLISHED, msg_id=22544[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2001530) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6351[0m
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 86%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2016270) MQTT: MQTT_EVENT_PUBLISHED, msg_id=33576[0m
+[0;32mI (2016580) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16507[0m
+[0;32mI (2016890) MQTT: MQTT_EVENT_PUBLISHED, msg_id=63199[0m
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 85%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2031330) MQTT: MQTT_EVENT_PUBLISHED, msg_id=47436[0m
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 84%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2046380) MQTT: MQTT_EVENT_PUBLISHED, msg_id=60880[0m
+[0;32mI (2046690) MQTT: MQTT_EVENT_PUBLISHED, msg_id=51437[0m
+[0;32mI (2047300) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62551[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2061430) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18001[0m
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 83%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2076490) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46384[0m
+[0;32mI (2076580) MQTT: MQTT_EVENT_PUBLISHED, msg_id=28453[0m
+[0;32mI (2076790) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23491[0m
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2091230) MQTT: MQTT_EVENT_PUBLISHED, msg_id=6159[0m
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2095830) MQTT: MQTT_EVENT_PUBLISHED, msg_id=48708[0m
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2106290) MQTT: MQTT_EVENT_PUBLISHED, msg_id=42942[0m
+[0;32mI (2106590) MQTT: MQTT_EVENT_PUBLISHED, msg_id=33744[0m
+[0;32mI (2106900) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39891[0m
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2121340) MQTT: MQTT_EVENT_PUBLISHED, msg_id=28661[0m
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2136390) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23678[0m
+[0;32mI (2136490) MQTT: MQTT_EVENT_PUBLISHED, msg_id=52496[0m
+[0;32mI (2137000) MQTT: MQTT_EVENT_PUBLISHED, msg_id=242[0m
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (2151450) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41221[0m
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2166180) MQTT: MQTT_EVENT_PUBLISHED, msg_id=44161[0m
+[0;32mI (2166290) MQTT: MQTT_EVENT_PUBLISHED, msg_id=34623[0m
+[0;32mI (2166490) MQTT: MQTT_EVENT_PUBLISHED, msg_id=28509[0m
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2181550) MQTT: MQTT_EVENT_PUBLISHED, msg_id=39720[0m
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 78%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (2196180) MQTT: MQTT_EVENT_PUBLISHED, msg_id=14037[0m
+[0;32mI (2196290) MQTT: MQTT_EVENT_PUBLISHED, msg_id=32644[0m
+[0;32mI (2196600) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35425[0m
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2211350) MQTT: MQTT_EVENT_PUBLISHED, msg_id=62582[0m
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2226400) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4094[0m
+[0;32mI (2226710) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53561[0m
+[0;32mI (2227010) MQTT: MQTT_EVENT_PUBLISHED, msg_id=23077[0m
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2241240) MQTT: MQTT_EVENT_PUBLISHED, msg_id=19542[0m
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 79%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (2256510) MQTT: MQTT_EVENT_PUBLISHED, msg_id=65272[0m
+[0;32mI (2256600) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10549[0m
+[0;32mI (2256700) MQTT: MQTT_EVENT_PUBLISHED, msg_id=36205[0m
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2271250) MQTT: MQTT_EVENT_PUBLISHED, msg_id=49525[0m
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 80%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (2275860) MQTT: MQTT_EVENT_PUBLISHED, msg_id=15539[0m
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2286610) MQTT: MQTT_EVENT_PUBLISHED, msg_id=28070[0m
+[0;32mI (2286920) MQTT: MQTT_EVENT_PUBLISHED, msg_id=56806[0m
+[0;32mI (2287230) MQTT: MQTT_EVENT_PUBLISHED, msg_id=10770[0m
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 81%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+[0;32mI (2301250) MQTT: MQTT_EVENT_PUBLISHED, msg_id=57753[0m
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 1%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+[0;32mI (2316410) MQTT: MQTT_EVENT_PUBLISHED, msg_id=64412[0m
+[0;32mI (2316500) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46206[0m
+[0;32mI (2316720) MQTT: MQTT_EVENT_PUBLISHED, msg_id=42855[0m
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 
+Temperature: 31 C
+Humidity: 82%
+Temperature Different: 0 C
+Humidity Different: 0%
+ 

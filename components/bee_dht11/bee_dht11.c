@@ -202,7 +202,7 @@ void read_dht11(void* pvParameters)
                 }
 
                 printf("Temperature: %d C\nHumidity: %d%%\n", u8temp, u8humi);
-                printf("Temperature Different: %d C\nHumidity Different: %d%%\n", u8temp_diff, u8humi_diff);
+                printf("Temperature Different: %d C\nHumidity Different: %d%%\n \n", u8temp_diff, u8humi_diff);
                 
             }
             else if ((u8status != DHT11_OK) && (u8error_cnt < max_error_cnt))

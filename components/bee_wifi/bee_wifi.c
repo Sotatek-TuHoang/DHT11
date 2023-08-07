@@ -84,14 +84,20 @@ static void event_handler(void* arg, esp_event_base_t event_base,
                 {
                     vTaskDelete(prov_fail_handle);
                 }
-                xTaskCreate(prov_fail_task, "prov_fail", 4096, NULL, 2, &prov_fail_handle);
-                
+                xTaskCreate(prov_fail_task, "prov_fail", 4096, NULL, 2, &prov_fail_handle);                
                 break;
             }
             case WIFI_PROV_CRED_SUCCESS:
                 ESP_LOGI(TAG, "Provisioning successful");
                 save_wifi_cred_to_nvs(cReceived_ssid, cReceived_password);
-                vTaskDelete(prov_timeout_handle);
+                if (xTaskGetHandle("prov_timeout") != NULL)
+                {
+                    vTaskDelete(prov_timeout_handle);
+                }
+                if (xTaskGetHandle("prov_fail") != NULL)
+                {
+                    vTaskDelete(prov_fail_handle);
+                }
                 break;
             case WIFI_PROV_END:
                 /* De-initialize manager once provisioning is finished */
@@ -175,9 +181,6 @@ static void reconnect_old_wifi(void)
         ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
         ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_sta_cfg));
         ESP_ERROR_CHECK(esp_wifi_start());
-
-        wifi_prov_mgr_stop_provisioning();
-
         ESP_ERROR_CHECK(esp_wifi_connect());
     }
 }
@@ -214,9 +217,11 @@ esp_err_t custom_prov_data_handler(uint32_t session_id, const uint8_t *inbuf, ss
     *outlen = strlen(response) + 1; /* +1 for NULL terminating byte */
     return ESP_OK;
 }
-
+/****************************************************************************/
+/***        initializing wifi function                                    ***/
+/****************************************************************************/
 /** @brief Hàm kiểm soát việc cài đặt cấu hình TCP/IP, đăng ký event handle
- *         Init các cấu hình liên quan phục vụ cho cấu hình cho wifi*/
+ *         Init các cấu hình liên quan phục vụ cho cấu hình cho wifi        */
 void wifi_init_func(void)
 {
     ESP_ERROR_CHECK(esp_netif_init()); /* Initialize TCP/IP */
@@ -301,8 +306,8 @@ void wifi_prov(void)
  * Hết thời gian tự động cấu hình lại bằng thông số wifi cũ */
 void prov_timeout_task(void* pvParameters)
 {
-    uint8_t u8time_sc = 60;
-    cnt_timeout(&u8time_sc);
+    uint8_t u8timeout_set = 60; // Đơn vị tính bằng giây
+    cnt_timeout(&u8timeout_set);
     wifi_prov_mgr_stop_provisioning();
     reconnect_old_wifi();
     
@@ -310,15 +315,15 @@ void prov_timeout_task(void* pvParameters)
 }
 
 /** @brief Đếm thời gian tối đa cho việc cấu hình wifi thất bại là 60s
-*          Hết thời gian thì ngừng cấu hình                               */
+*          Hết thời gian thì ngừng cấu hình*/
 void prov_fail_task(void* pvParameters)
 {
     wifi_prov_mgr_reset_sm_state_on_failure();
 
-    uint8_t u8time_sc = 60;
-    cnt_timeout(&u8time_sc);
+    uint8_t u8timeout_set = 60; // Đơn vị tính bằng giây
+    cnt_timeout(&u8timeout_set);
     
-    wifi_prov_mgr_stop_provisioning();;
+    wifi_prov_mgr_stop_provisioning();
 
     reconnect_old_wifi();
 
