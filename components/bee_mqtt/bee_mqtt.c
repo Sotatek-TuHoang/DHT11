@@ -347,11 +347,11 @@ void receive_mqtt_config_task(void *pvParameters)
                 int values = cJSON_GetObjectItemCaseSensitive(root, "values")->valueint;
                 int trans_code = cJSON_GetObjectItemCaseSensitive(root, "trans_code")->valueint;
 
-                ESP_LOGI(TAG, "Received MQTT command:\n");
-                ESP_LOGI(TAG, "thing_token: %s\n", cThing_token);
-                ESP_LOGI(TAG, "cmd_name: %s\n", cCmd_name);
-                ESP_LOGI(TAG, "object: %s\n", cObject_type);
-                ESP_LOGI(TAG, "values: %d\n", values);
+                ESP_LOGI(TAG, "\n Received MQTT command:");
+                ESP_LOGI(TAG, "thing_token: %s", cThing_token);
+                ESP_LOGI(TAG, "cmd_name: %s", cCmd_name);
+                ESP_LOGI(TAG, "object: %s", cObject_type);
+                ESP_LOGI(TAG, "values: %d", values);
                 ESP_LOGI(TAG, "trans_code: %d\n", trans_code);
                 
                 if ((strcmp(cCmd_name, "Bee.conf") == 0) && (strcmp(cObject_type, "data") == 0) && (values == 1))

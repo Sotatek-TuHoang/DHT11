@@ -1,10 +1,9 @@
 /*****************************************************************************
  *
- * @file 	main.c
- * @author 	tuha
- * @date 	3 July 2023
- * @brief	module for project read signal DHT11, upload data to host main,
- *          receive command from host main and button.
+ * @file     main.c
+ * @author   tuha
+ * @date     3 July 2023
+ * @brief    Module for project reading data from SHT3x sensor and performing various tasks.
  *
  ***************************************************************************/
 
@@ -19,12 +18,13 @@
 #include "bee_button.h"
 #include "bee_mqtt.h"
 
+
 /****************************************************************************/
 /***        Global variables                                              ***/
 /****************************************************************************/
-bool bsend_data = true; // Flag control on/off upload data throught uart
-uint8_t u8data_interval_uart = 2; // Deffault interval upload data uart
-uint8_t u8data_interval_mqtt = 30; // Deffault interval upload data mqtt
+bool bsend_data = true; // Flag control on/off upload data through UART
+uint8_t u8data_interval_uart = 2; // Default interval to upload data via UART
+uint8_t u8data_interval_mqtt = 30; // Default interval to upload data via MQTT
 
 /****************************************************************************/
 
@@ -34,12 +34,12 @@ void app_main()
 
     load_data_from_nvs(&bsend_data, &u8data_interval_uart, &u8data_interval_mqtt); // Read status from NVS
 
-    DHT11_init(DHT11_PIN); //Initialize DHT11
+    DHT11_init(DHT11_PIN); // Initialize DHT11
 
     led_rgb_init(LED_TEMP_RED_PIN, LED_TEMP_GREEN_PIN, LED_TEMP_BLUE_PIN);
     led_rgb_init(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN);
 
-    uart_init(); //Initialize uart
+    uart_init(); // Initialize UART
     
     button_init();
 
@@ -49,14 +49,15 @@ void app_main()
     xTaskCreate(&uart_cmd_task, "uart_cmd_task", 4096, NULL, 4, NULL);
     xTaskCreate(interval_button, "interval_button", 2048, NULL, 3, NULL);
     xTaskCreate(send_data_button, "send_data_button", 2048, NULL, 2, NULL);
-    
+
     wifi_init_func();
 
     mqtt_app_start();
 
     xTaskCreate(send_mqtt_data_task, "send_mqtt_data_task", 4096, NULL, 7, NULL);
     xTaskCreate(receive_mqtt_config_task, "receive_mqtt_config_task", 4096, NULL, 5, NULL);
-}   
+
+}
 /****************************************************************************/
 /***        END OF FILE                                                   ***/
 /****************************************************************************/

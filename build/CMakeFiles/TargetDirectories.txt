@@ -581,6 +581,13 @@ E:/Phase2_beta/build/esp-idf/spiffs/CMakeFiles/list_install_components.dir
 E:/Phase2_beta/build/esp-idf/spiffs/CMakeFiles/install.dir
 E:/Phase2_beta/build/esp-idf/spiffs/CMakeFiles/install/local.dir
 E:/Phase2_beta/build/esp-idf/spiffs/CMakeFiles/install/strip.dir
+E:/Phase2_beta/build/esp-idf/ssd_1306/CMakeFiles/__idf_ssd_1306.dir
+E:/Phase2_beta/build/esp-idf/ssd_1306/CMakeFiles/edit_cache.dir
+E:/Phase2_beta/build/esp-idf/ssd_1306/CMakeFiles/rebuild_cache.dir
+E:/Phase2_beta/build/esp-idf/ssd_1306/CMakeFiles/list_install_components.dir
+E:/Phase2_beta/build/esp-idf/ssd_1306/CMakeFiles/install.dir
+E:/Phase2_beta/build/esp-idf/ssd_1306/CMakeFiles/install/local.dir
+E:/Phase2_beta/build/esp-idf/ssd_1306/CMakeFiles/install/strip.dir
 E:/Phase2_beta/build/esp-idf/ulp/CMakeFiles/edit_cache.dir
 E:/Phase2_beta/build/esp-idf/ulp/CMakeFiles/rebuild_cache.dir
 E:/Phase2_beta/build/esp-idf/ulp/CMakeFiles/list_install_components.dir
@@ -656,3 +663,10 @@ E:/Phase2_beta/build/esp-idf/bee_mqtt/CMakeFiles/list_install_components.dir
 E:/Phase2_beta/build/esp-idf/bee_mqtt/CMakeFiles/install.dir
 E:/Phase2_beta/build/esp-idf/bee_mqtt/CMakeFiles/install/local.dir
 E:/Phase2_beta/build/esp-idf/bee_mqtt/CMakeFiles/install/strip.dir
+E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/__idf_sht3x.dir
+E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/edit_cache.dir
+E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/rebuild_cache.dir
+E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/list_install_components.dir
+E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/install.dir
+E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/install/local.dir
+E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/install/strip.dir

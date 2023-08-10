@@ -58,6 +58,7 @@ E:/Phase2_beta/build/esp-idf/json/libjson.a
 E:/Phase2_beta/build/esp-idf/mqtt/libmqtt.a
 E:/Phase2_beta/build/esp-idf/perfmon/libperfmon.a
 E:/Phase2_beta/build/esp-idf/spiffs/libspiffs.a
+E:/Phase2_beta/build/esp-idf/ssd_1306/libssd_1306.a
 E:/Phase2_beta/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 E:/Phase2_beta/build/esp-idf/main/libmain.a
 E:/Phase2_beta/build/esp-idf/bee_nvs/libbee_nvs.a
@@ -67,3 +68,4 @@ E:/Phase2_beta/build/esp-idf/bee_led_rgb/libbee_led_rgb.a
 E:/Phase2_beta/build/esp-idf/bee_wifi/libbee_wifi.a
 E:/Phase2_beta/build/esp-idf/bee_uart/libbee_uart.a
 E:/Phase2_beta/build/esp-idf/bee_mqtt/libbee_mqtt.a
+E:/Phase2_beta/build/esp-idf/sht3x/libsht3x.a

@@ -1,12 +1,0 @@
-[0/1] cmd.exe /C "cd /D E:\Phase2_beta\build && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_SIZE_TOOL=C:/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;-m;esp_idf_size -D MAP_FILE=E:/Phase2_beta/build/bee_main.map -D OUTPUT_JSON= -P C:/Espressif/frameworks/esp-idf-v5.1/tools/cmake/run_size_tool.cmake"
-Total sizes:
-Used static DRAM:   33184 bytes ( 147552 remain, 18.4% used)
-      .data size:   14368 bytes
-      .bss  size:   18816 bytes
-Used static IRAM:   91486 bytes (  39586 remain, 69.8% used)
-      .text size:   90459 bytes
-   .vectors size:    1027 bytes
-Used Flash size :  934145 bytes
-           .text:  727651 bytes
-         .rodata:  206238 bytes
-Total image size: 1039999 bytes (.bin may be padded larger)
