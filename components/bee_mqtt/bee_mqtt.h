@@ -7,7 +7,6 @@
  * @brief	and receive command from host main through mqtt
  ***************************************************************************/
 
-/****************************************************************************/
 #include <stdint.h>
 #ifndef BEE_MQTT_H
 #define BEE_MQTT_H
@@ -21,6 +20,10 @@
 #define BROKER_ADDRESS_URI  "mqtt://61.28.238.97:1993"
 #define USERNAME            "VBeeHome"
 #define PASSWORD            "123abcA@!"
+
+/****************************************************************************/
+/***        Exported Functions                                            ***/
+/****************************************************************************/
 
 /**
  * @brief   Initialize MQTT functionality.
@@ -78,3 +81,6 @@ void receive_mqtt_config_task(void* pvParameters);
 
 #endif /* BEE_MQTT_H */
 
+/****************************************************************************/
+/***        END OF FILE                                                   ***/
+/****************************************************************************/

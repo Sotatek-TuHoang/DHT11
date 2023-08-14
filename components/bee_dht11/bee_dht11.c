@@ -20,7 +20,7 @@
 #include "bee_dht11.h"
 
 /****************************************************************************/
-/***        static Variables                                              ***/
+/***        Static Variables                                              ***/
 /****************************************************************************/
 static gpio_num_t dht_gpio;
 static int64_t last_read_time = -2000000;
@@ -28,7 +28,7 @@ static struct dht11_reading last_read;
 struct dht11_reading reading;
 
 /****************************************************************************/
-/***        Global Variables                                              ***/
+/***        Export Variables                                              ***/
 /****************************************************************************/
 uint8_t u8status;
 uint8_t u8temp;
@@ -40,6 +40,7 @@ uint8_t u8humi_diff = 0;
 /****************************************************************************/
 /***        Local Functions                                               ***/
 /****************************************************************************/
+
 static int _waitOrTimeout(uint16_t microSeconds, int level) {
     int micros_ticks = 0;
     while(gpio_get_level(dht_gpio) == level) { 
@@ -91,6 +92,7 @@ static struct dht11_reading _crcError() {
 /****************************************************************************/
 /***        Init Functions                                                ***/
 /****************************************************************************/
+
 void DHT11_init(gpio_num_t gpio_num) {
     /* Wait 1 seconds to make the device pass its initial unstable status */
     vTaskDelay(1000 / portTICK_PERIOD_MS);
@@ -100,6 +102,7 @@ void DHT11_init(gpio_num_t gpio_num) {
 /****************************************************************************/
 /***        struct                                                        ***/
 /****************************************************************************/
+
 struct dht11_reading DHT11_read() {
     /* Tried to sense too son since last read (dht11 needs ~2 seconds to make a new read) */
     if(esp_timer_get_time() - 2000000 < last_read_time) {
@@ -140,8 +143,10 @@ struct dht11_reading DHT11_read() {
 /****************************************************************************/
 /***        Read dht11 and caculate parameter task                        ***/
 /****************************************************************************/
+
 static uint8_t max_error_cnt = 10;
 static uint8_t u8count_caculate_diff = 0;
+#define num_readings 5
 static uint8_t u8Temp_array[num_readings];
 static uint8_t u8Humi_array[num_readings];
 static uint8_t u8Temp_index = 0;
@@ -151,7 +156,7 @@ static uint16_t u16Humi_sum = 0;
 static uint8_t u8Temp_avr = 0;
 static uint8_t u8Humi_avr = 0;
 
-void read_dht11(void* pvParameters)
+void read_dht11_task(void* pvParameters)
 {
     TickType_t last_time_read = xTaskGetTickCount();
     TickType_t interval_read = pdMS_TO_TICKS(2000);

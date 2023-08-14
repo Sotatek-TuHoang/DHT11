@@ -18,7 +18,6 @@
 #include "bee_button.h"
 #include "bee_mqtt.h"
 
-
 /****************************************************************************/
 /***        Global variables                                              ***/
 /****************************************************************************/
@@ -32,23 +31,23 @@ void app_main()
 {
     nvs_flash_func_init();
 
-    load_data_from_nvs(&bsend_data, &u8data_interval_uart, &u8data_interval_mqtt); // Read status from NVS
+    load_data_from_nvs(&bsend_data, &u8data_interval_uart, &u8data_interval_mqtt);
 
-    DHT11_init(DHT11_PIN); // Initialize DHT11
+    DHT11_init(DHT11_PIN);
 
-    led_rgb_init(LED_TEMP_RED_PIN, LED_TEMP_GREEN_PIN, LED_TEMP_BLUE_PIN);
-    led_rgb_init(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN);
+    led_rgb_init(LED_TEMP_RED_PIN, LED_TEMP_GREEN_PIN, LED_TEMP_BLUE_PIN); //init temperatute led
+    led_rgb_init(LED_HUMI_RED_PIN, LED_HUMI_GREEN_PIN, LED_HUMI_BLUE_PIN); //init humidity led
 
-    uart_init(); // Initialize UART
+    uart_init();
     
     button_init();
 
-    xTaskCreate(&read_dht11, "read_dht11", 2048, NULL, 31, NULL);
-    xTaskCreate(&uart_send_data_task, "uart_send_data_task", 4096, NULL, 8, NULL);
-    xTaskCreate(&led_control_task, "led_control_task", 1024, NULL, 6, NULL);
-    xTaskCreate(&uart_cmd_task, "uart_cmd_task", 4096, NULL, 4, NULL);
-    xTaskCreate(interval_button, "interval_button", 2048, NULL, 3, NULL);
-    xTaskCreate(send_data_button, "send_data_button", 2048, NULL, 2, NULL);
+    xTaskCreate(read_dht11_task, "read_dht11", 2048, NULL, 31, NULL);
+    xTaskCreate(uart_send_data_task, "uart_send_data_task", 4096, NULL, 8, NULL);
+    xTaskCreate(led_control_task, "led_control_task", 1024, NULL, 6, NULL);
+    xTaskCreate(uart_cmd_task, "uart_cmd_task", 4096, NULL, 4, NULL);
+    xTaskCreate(interval_button_isr, "interval_button", 2048, NULL, 3, NULL);
+    xTaskCreate(send_data_button_isr, "send_data_button", 2048, NULL, 2, NULL);
 
     wifi_func_init();
 

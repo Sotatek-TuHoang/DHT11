@@ -447,8 +447,3 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("E:/Phase2_beta/build/esp-idf/bee_mqtt/cmake_install.cmake")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("E:/Phase2_beta/build/esp-idf/sht3x/cmake_install.cmake")
-endif()
-

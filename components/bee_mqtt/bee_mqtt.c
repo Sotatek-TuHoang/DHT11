@@ -24,6 +24,7 @@
 /****************************************************************************/
 /***        Extern Variables                                              ***/
 /****************************************************************************/
+
 extern uint8_t u8temp;
 extern uint8_t u8humi;
 extern uint8_t u8status;
@@ -31,6 +32,7 @@ extern uint8_t u8error_cnt;
 extern uint8_t u8temp_diff;
 extern uint8_t u8humi_diff;
 extern uint8_t u8data_interval_mqtt;
+
 /****************************************************************************/
 /***        Local Variables                                               ***/
 /****************************************************************************/
@@ -109,7 +111,7 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
 }
 
 /****************************************************************************/
-/***        Init Functions in App main                                    ***/
+/***        Exported Functions                                            ***/
 /****************************************************************************/
 
 void mqtt_func_init(void)
@@ -135,10 +137,6 @@ void mqtt_func_init(void)
     mqtt_cmd_queue = xQueueCreate(10, sizeof(cJSON*));
 
 }
-
-/****************************************************************************/
-/***        Global Functions                                              ***/
-/****************************************************************************/
 
 void pub_data(const char *object, int values)
 {

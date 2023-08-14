@@ -663,10 +663,3 @@ E:/Phase2_beta/build/esp-idf/bee_mqtt/CMakeFiles/list_install_components.dir
 E:/Phase2_beta/build/esp-idf/bee_mqtt/CMakeFiles/install.dir
 E:/Phase2_beta/build/esp-idf/bee_mqtt/CMakeFiles/install/local.dir
 E:/Phase2_beta/build/esp-idf/bee_mqtt/CMakeFiles/install/strip.dir
-E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/__idf_sht3x.dir
-E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/edit_cache.dir
-E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/rebuild_cache.dir
-E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/list_install_components.dir
-E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/install.dir
-E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/install/local.dir
-E:/Phase2_beta/build/esp-idf/sht3x/CMakeFiles/install/strip.dir

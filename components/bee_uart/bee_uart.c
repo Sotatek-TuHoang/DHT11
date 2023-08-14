@@ -6,7 +6,11 @@
  * @brief	module for project control uart
  *
  ***************************************************************************/
+
 /****************************************************************************/
+/***        Include files                                                 ***/
+/****************************************************************************/
+
 #include "driver/gpio.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -21,14 +25,26 @@
 #include "bee_mqtt.h"
 #include "bee_wifi.h"
 
-static const char *TAG = "UART";
+/****************************************************************************/
+/***        Static Variable                                               ***/
+/****************************************************************************/
 
-QueueHandle_t  uart_cmd_queue;
+static const char *TAG = "UART";
+static QueueHandle_t  uart_cmd_queue;
+
+/****************************************************************************/
+/***        Extern Variable                                               ***/
+/****************************************************************************/
+
 extern uint8_t u8status;
 extern uint8_t u8temp;
 extern uint8_t u8humi;
 extern bool    bsend_data;
 extern uint8_t u8data_interval_uart;
+
+/****************************************************************************/
+/***        Exported Functions                                            ***/
+/****************************************************************************/
 
 void uart_init(void)
 {
@@ -47,8 +63,6 @@ void uart_init(void)
     uart_driver_install(UART_NUM, UART_BUFFER_SIZE, UART_BUFFER_SIZE, 6, &uart_cmd_queue, 0);
 }
 
-/** @brief Caculate Checksum
- */
 char calculate_checksum(const char *data, size_t length) {
     uint8_t u8checksum = 0;
     for (size_t i = 0; i < length; i++)
@@ -59,8 +73,6 @@ char calculate_checksum(const char *data, size_t length) {
     return u8checksum;
 }
 
-/** @brief Send data to Host main throught UART
- */
 void uart_send_data_task(void* pvParameters)
 {
     TickType_t last_time_send = xTaskGetTickCount();
@@ -101,8 +113,7 @@ void uart_send_data_task(void* pvParameters)
     }
 }
 
-/** @brief Control module from Host main througt UART
- */
+
 void uart_cmd_task(void* pvParameters)
 {   
     uart_event_t event;
@@ -159,5 +170,8 @@ void uart_cmd_task(void* pvParameters)
     free(uart_data_recei);
     vTaskDelete(NULL); 
 }
+/****************************************************************************/
+/***        END OF FILE                                                   ***/
+/****************************************************************************/
 
 

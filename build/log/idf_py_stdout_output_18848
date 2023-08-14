@@ -1,0 +1,24 @@
+[1/17] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D E:\Phase2_beta\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 E:/Phase2_beta/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[2/15] Building C object esp-idf/bee_dht11/CMakeFiles/__idf_bee_dht11.dir/bee_dht11.c.obj
+[3/15] Building C object esp-idf/bee_led_rgb/CMakeFiles/__idf_bee_led_rgb.dir/bee_led_rgb.c.obj
+[4/15] Building C object esp-idf/bee_uart/CMakeFiles/__idf_bee_uart.dir/bee_uart.c.obj
+[5/15] Linking C static library esp-idf\bee_dht11\libbee_dht11.a
+[6/15] Linking C static library esp-idf\bee_led_rgb\libbee_led_rgb.a
+[7/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/bee_main.c.obj
+[8/15] Building C object esp-idf/bee_mqtt/CMakeFiles/__idf_bee_mqtt.dir/bee_mqtt.c.obj
+[9/15] Linking C static library esp-idf\bee_mqtt\libbee_mqtt.a
+[10/15] Linking C static library esp-idf\bee_uart\libbee_uart.a
+[11/15] Linking C static library esp-idf\main\libmain.a
+[12/15] Generating ld/sections.ld
+[13/15] Linking CXX executable bee_main.elf
+[14/15] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated E:/Phase2_beta/build/bee_main.bin
+[15/15] cmd.exe /C "cd /D E:\Phase2_beta\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app E:/Phase2_beta/build/partition_table/partition-table.bin E:/Phase2_beta/build/bee_main.bin"
+bee_main.bin binary size 0xfd0c0 bytes. Smallest app partition is 0x100000 bytes. 0x2f40 bytes (1%) free.
+Warning: The smallest app partition is nearly full (1% free space left)!

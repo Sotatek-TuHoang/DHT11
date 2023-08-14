@@ -23,8 +23,9 @@ extern uint8_t     u8temp;
 extern uint8_t     u8humi;
 
 /****************************************************************************/
-/***        Init Functions in App main                                    ***/
+/***        Init Functions            S                                    ***/
 /****************************************************************************/
+
 void led_rgb_init(gpio_num_t red_pin, gpio_num_t green_pin, gpio_num_t blue_pin) {
     esp_rom_gpio_pad_select_gpio(red_pin);
     gpio_set_direction(red_pin, GPIO_MODE_OUTPUT);
@@ -43,6 +44,7 @@ void led_rgb_set_color(gpio_num_t red_pin, gpio_num_t green_pin, gpio_num_t blue
 /****************************************************************************/
 /***        Led control task                                              ***/
 /****************************************************************************/
+
 void led_control_task(void* pvParameters)
 {
     for (;;)

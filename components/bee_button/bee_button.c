@@ -7,6 +7,10 @@
  *
  ***************************************************************************/
 
+/****************************************************************************/
+/***        Include files                                                 ***/
+/****************************************************************************/
+
 #include "bee_button.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -16,12 +20,24 @@
 
 #include"bee_nvs.h"
 
-static const char *TAG = "Button";
+/****************************************************************************/
+/***        Static variable                                               ***/
+/****************************************************************************/
 
-QueueHandle_t       send_data_evt_queue;
-QueueHandle_t       interval_evt_queue;
+static const char *TAG = "Button";
+static QueueHandle_t       send_data_evt_queue;
+static QueueHandle_t       interval_evt_queue;
+
+/****************************************************************************/
+/***        Extern variable                                               ***/
+/****************************************************************************/
+
 extern bool bsend_data; // Flag control on/off upload data throught uart
 extern uint8_t u8data_interval_uart; // Deffault interval upload data uart
+
+/****************************************************************************/
+/***        Static function                                               ***/
+/****************************************************************************/
 
 static void IRAM_ATTR send_data_button_isr_handler(void* arg)
 {
@@ -45,9 +61,11 @@ static void IRAM_ATTR interval_button_isr_handler(void* arg)
     }
 }
 
-/** @brief Button control upload data to Host
- */
-void send_data_button(void* arg)
+/****************************************************************************/
+/***        Exported Functions                                            ***/
+/****************************************************************************/
+
+void send_data_button_isr(void* arg)
 {
     uint8_t gpio_num;
     for (;;) {
@@ -60,9 +78,7 @@ void send_data_button(void* arg)
     }
 }
 
-/** @brief Button control upload interval to Host
- */
-void interval_button(void* arg)
+void interval_button_isr(void* arg)
 {
     uint8_t gpio_num;
     for (;;) {
@@ -88,8 +104,7 @@ void interval_button(void* arg)
     }
 }
 
-
-void button_init()
+void button_init(void)
 {
     gpio_install_isr_service(0);
     gpio_isr_handler_add(SEND_DATA_BUTTON, send_data_button_isr_handler, (void*) SEND_DATA_BUTTON);
@@ -109,5 +124,7 @@ void button_init()
 
     send_data_evt_queue = xQueueCreate(5, sizeof(uint8_t));
     interval_evt_queue = xQueueCreate(5, sizeof(uint8_t));
-
 }
+/****************************************************************************/
+/***        END OF FILE                                                   ***/
+/****************************************************************************/
