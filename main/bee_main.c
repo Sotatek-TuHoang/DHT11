@@ -30,7 +30,7 @@ uint8_t u8data_interval_mqtt = 30; // Default interval to upload data via MQTT
 
 void app_main()
 {
-    nvs_flash_function_init();
+    nvs_flash_func_init();
 
     load_data_from_nvs(&bsend_data, &u8data_interval_uart, &u8data_interval_mqtt); // Read status from NVS
 
@@ -50,9 +50,9 @@ void app_main()
     xTaskCreate(interval_button, "interval_button", 2048, NULL, 3, NULL);
     xTaskCreate(send_data_button, "send_data_button", 2048, NULL, 2, NULL);
 
-    wifi_init_func();
+    wifi_func_init();
 
-    mqtt_app_start();
+    mqtt_func_init();
 
     xTaskCreate(send_mqtt_data_task, "send_mqtt_data_task", 4096, NULL, 7, NULL);
     xTaskCreate(receive_mqtt_config_task, "receive_mqtt_config_task", 4096, NULL, 5, NULL);

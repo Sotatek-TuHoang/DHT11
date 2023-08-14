@@ -26,16 +26,6 @@ static gpio_num_t dht_gpio;
 static int64_t last_read_time = -2000000;
 static struct dht11_reading last_read;
 struct dht11_reading reading;
-static uint8_t max_error_cnt = 10;
-static uint8_t u8count_caculate_diff = 0;
-static uint8_t u8Temp_array[num_readings];
-static uint8_t u8Humi_array[num_readings];
-static uint8_t u8Temp_index = 0;
-static uint8_t u8Humi_index = 0;
-static uint16_t u16Temp_sum = 0;
-static uint16_t u16Humi_sum = 0;
-static uint8_t u8Temp_avr = 0;
-static uint8_t u8Humi_avr = 0;
 
 /****************************************************************************/
 /***        Global Variables                                              ***/
@@ -150,6 +140,17 @@ struct dht11_reading DHT11_read() {
 /****************************************************************************/
 /***        Read dht11 and caculate parameter task                        ***/
 /****************************************************************************/
+static uint8_t max_error_cnt = 10;
+static uint8_t u8count_caculate_diff = 0;
+static uint8_t u8Temp_array[num_readings];
+static uint8_t u8Humi_array[num_readings];
+static uint8_t u8Temp_index = 0;
+static uint8_t u8Humi_index = 0;
+static uint16_t u16Temp_sum = 0;
+static uint16_t u16Humi_sum = 0;
+static uint8_t u8Temp_avr = 0;
+static uint8_t u8Humi_avr = 0;
+
 void read_dht11(void* pvParameters)
 {
     TickType_t last_time_read = xTaskGetTickCount();

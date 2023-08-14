@@ -111,7 +111,8 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
 /****************************************************************************/
 /***        Init Functions in App main                                    ***/
 /****************************************************************************/
-void mqtt_app_start(void)
+
+void mqtt_func_init(void)
 {
     /*Config mqtt client*/
     esp_mqtt_client_config_t mqtt_cfg = {
@@ -138,6 +139,7 @@ void mqtt_app_start(void)
 /****************************************************************************/
 /***        Global Functions                                              ***/
 /****************************************************************************/
+
 void pub_data(const char *object, int values)
 {
     if (bMQTT_CONNECTED == true)
@@ -155,7 +157,6 @@ void pub_data(const char *object, int values)
         cJSON_Delete(json_data);
         free(json_str);
     }
-
 }
 
 /****************************************************************************/
@@ -177,6 +178,13 @@ static void send_warning(void)
     free(json_str);
 }
 
+/**
+ * @brief Checks sensor warnings and sends a warning message if conditions are met.
+ * This function evaluates sensor error conditions and threshold crossings for temperature and humidity.
+ * Depending on the conditions, it sets warning flags and triggers sending a warning message.
+ * The warning values are composed into a byte, and if they differ from the previous state,
+ * a warning message is sent using the `send_warning()` function.
+ */
 static void check_warning(void)
 {
     if (u8error_cnt == 10)
@@ -231,6 +239,15 @@ static void check_warning(void)
     }
 }
 
+/**
+ * @brief Sends a keep-alive MQTT message to indicate device status.
+ *
+ * This function constructs a JSON message containing device status information such as the thing token,
+ * event type, and status. The message is then published to the MQTT broker using the configured client.
+ * The transmission code is also incremented for each message sent.
+ *
+ * @note The MQTT client (client) and topic (cTopic_pub) must be properly configured before calling this function.
+ */
 static void send_keep_alive(void)
 {
     cJSON *json_keep_alive = cJSON_CreateObject();
@@ -247,6 +264,14 @@ static void send_keep_alive(void)
     free(json_str);
 }
 
+/**
+ * @brief Send MQTT command to UART.
+ *
+ * This function prepares an MQTT command based on the provided values and sends
+ * it to the UART for communication with an external device.
+ *
+ * @param values The value indicating the type of MQTT command.
+ */
 static void MQTT_cmd_to_uart(int values)
 {
     uint8_t ID_MQTT = 0x00;
@@ -297,6 +322,7 @@ static void MQTT_cmd_to_uart(int values)
 /****************************************************************************/
 /***        Tasks                                                         ***/
 /****************************************************************************/
+
 void send_mqtt_data_task(void *pvParameters)
 {
     TickType_t lt_send_data_mqtt = xTaskGetTickCount();
