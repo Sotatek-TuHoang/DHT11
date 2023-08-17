@@ -3,7 +3,8 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:\\Espressif\\frameworks\\esp-idf-v5.1\\components\\**"
             ],
             "defines": [
                 "_DEBUG",
@@ -13,7 +14,8 @@
             "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
             "cStandard": "c11",
             "cppStandard": "gnu++14",
-            "intelliSenseMode": "windows-gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86",
+            "compileCommands": "${workspaceFolder}/build/bootloader/compile_commands.json"
         }
     ],
     "version": 4

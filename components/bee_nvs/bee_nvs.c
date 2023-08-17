@@ -65,6 +65,7 @@ void save_wifi_cred_to_nvs(const char *cSsid, const char *cPassword)
 
     // Đóng NVS handle
     nvs_close(nvs_handle);
+    
 }
 
 void load_old_wifi_cred(char *cSsid, char *cPassword)

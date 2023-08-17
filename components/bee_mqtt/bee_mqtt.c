@@ -160,21 +160,6 @@ void pub_data(const char *object, int values)
 /****************************************************************************/
 /***        Local Functions                                               ***/
 /****************************************************************************/
-static void send_warning(void)
-{
-    cJSON *json_warning = cJSON_CreateObject();
-    cJSON_AddStringToObject(json_warning, "thing_token", cMac_str);
-    cJSON_AddStringToObject(json_warning, "cmd_name", "Bee.data");
-    cJSON_AddStringToObject(json_warning, "object_type", "bee_warning");
-    cJSON_AddNumberToObject(json_warning, "values", u8warning_values);
-    cJSON_AddNumberToObject(json_warning, "trans_code", ++u8trans_code);
-    
-    char *json_str = cJSON_Print(json_warning);
-    esp_mqtt_client_publish(client, cTopic_pub, json_str, 0, 1, 0);
-
-    cJSON_Delete(json_warning);
-    free(json_str);
-}
 
 /**
  * @brief Checks sensor warnings and sends a warning message if conditions are met.
@@ -233,7 +218,7 @@ static void check_warning(void)
     if (u8tmp_warning_values != u8warning_values)
     {
         u8warning_values = u8tmp_warning_values;
-        send_warning();
+        pub_data("bee_warning", u8warning_values)
     }
 }
 

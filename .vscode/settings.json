@@ -17,6 +17,7 @@
         "algorithm": "c",
         "random": "c",
         "stdbool.h": "c",
-        "bee_led_rgb.h": "c"
+        "bee_led_rgb.h": "c",
+        "esp_system.h": "c"
     }
 }
