@@ -37,12 +37,7 @@ extern uint8_t u8data_interval_mqtt;
 /***        Local Variables                                               ***/
 /****************************************************************************/
 static uint8_t u8warning_values;
-static uint8_t u8tmp_warning_values;
-static bool bRead_status    = 0;
-static bool bTemp_threshold = 0;
-static bool bHumi_threshold = 0;
-static bool bTemp_diff      = 0;
-static bool bHumi_diff      = 0;
+static bool bRead_status = 0;
 
 static uint8_t u8mac[6];
 static char cMac_str[13];
@@ -91,7 +86,7 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
             break;
 
         case MQTT_EVENT_DATA:
-            if (event->data != NULL)
+            if ((event->data) != NULL)
             {
                 ESP_LOGI(TAG, "MQTT_EVENT_DATA");
                 snprintf(rxBuffer_MQTT, event->data_len + 1, event->data);
@@ -170,57 +165,33 @@ void pub_data(const char *object, int values)
  */
 static void check_warning(void)
 {
+    uint8_t u8tmp_warning_values;
+    bool bTemp_threshold = false;
+    bool bHumi_threshold = false;
+    bool bTemp_diff = false;
+    bool bHumi_diff = false;
+
     if (u8error_cnt == 10)
     {
         bRead_status = 1;
     }
-    else if (u8status == DHT11_OK)
+    else if (u8error_cnt == 0)
     {
         bRead_status = 0;
-        if (u8temp > TEMP_THRESHOLD)
-        {
-            bTemp_threshold = 1;
-        }
-        else
-        {
-            bTemp_threshold = 0;
-        }
-
-        if (u8humi > HUMI_THRESHOLD)
-        {
-            bHumi_threshold = 1;
-        }
-        else
-        {
-            bHumi_threshold = 0;
-        }
-
-        if (u8temp_diff > TEMP_DIFF_THRESHOLD)
-        {
-            bTemp_diff = 1;
-        }
-        else
-        {
-            bTemp_diff = 0;
-        }
-
-        if (u8humi_diff > HUMI_DIFF_THRESHOLD)
-        {
-            bHumi_diff = 1;
-        }
-        else
-        {
-            bHumi_diff = 0;
-        }
+        bTemp_threshold = u8temp > TEMP_THRESHOLD;
+        bHumi_threshold = u8humi > HUMI_THRESHOLD;
+        bTemp_diff = u8temp_diff > TEMP_DIFF_THRESHOLD;
+        bHumi_diff = u8humi_diff > HUMI_DIFF_THRESHOLD;
     }
     
     u8tmp_warning_values = (bRead_status << 4) | (bTemp_threshold << 3) | (bHumi_threshold << 2) | (bTemp_diff << 1) | bHumi_diff;
     if (u8tmp_warning_values != u8warning_values)
     {
         u8warning_values = u8tmp_warning_values;
-        pub_data("bee_warning", u8warning_values)
+        pub_data("bee_warning", u8warning_values);
     }
 }
+
 
 /**
  * @brief Sends a keep-alive MQTT message to indicate device status.
@@ -318,7 +289,7 @@ void send_mqtt_data_task(void *pvParameters)
         if (bMQTT_CONNECTED)
         {
             interval_data_mqtt = pdMS_TO_TICKS(u8data_interval_mqtt * 1000);
-            if ((u8status == DHT11_OK) && ((xTaskGetTickCount() - lt_send_data_mqtt) >= interval_data_mqtt))
+            if ((u8error_cnt == 0) && ((xTaskGetTickCount() - lt_send_data_mqtt) >= interval_data_mqtt))
             {
                 lt_send_data_mqtt = xTaskGetTickCount();
                 pub_data("bee_temp", u8temp);
